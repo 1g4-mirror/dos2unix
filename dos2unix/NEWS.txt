@@ -1,3 +1,8 @@
+7.5.3
+
+  * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Friulian
+    translations.
+
 2024-01-22: Version 7.5.2
 
   * Dos2unix can print info about the line break type of the last line,

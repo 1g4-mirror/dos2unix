@@ -75,13 +75,13 @@ TRANSLATORS
 
         Brazilian Portuguese  Enrico Nicoletto             Version 6.0.5
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.6 - 7.2
-        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.4.0
-        Catalan               Jordi Mas i Hernàndez        Version 7.4.4
+        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.2
+        Catalan               Jordi Mas i Hernàndez        Version 7.4.4 - 7.5.2
         Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0
                                                            7.5.1
         Chinese (simplified)  Boyuan Yang                  Version 7.5.0 - 7.5.2
         Chinese (traditional) mail6543210                  Version 6.0.5
-        Chinese (traditional) Yi-Jyun Pan                  Version 7.4.2 - 7.5.1
+        Chinese (traditional) Yi-Jyun Pan                  Version 7.4.2 - 7.5.2
         Danish                Thomas Pryds                 Version 6.0.5 - 6.0.6
         Danish                Joe Hansen                   Version 7.2.3 - 7.4.1
         Dutch                 Erwin Waterlander            Version 4.0   - 6.0.4
@@ -90,7 +90,7 @@ TRANSLATORS
         Esperanto             Benno Schulenberg            Version 6.0.5 - 7.3
         Esperanto             Felipe Castro                Version 7.4.3
         French                Frédéric Marchal             Version 6.0.5 - 7.5.2
-        Friulian              Fabio Tomat                  Version 7.4.2
+        Friulian              Fabio Tomat                  Version 7.4.2 - 7.5.2
         Georgian              Temuri Doghonadze            Version 7.4.4
         German                Philipp Thomas               Version 5.0   - 6.0.3, 7.0,
                                                            7.2.2 - 7.4.1
@@ -121,7 +121,7 @@ TRANSLATORS
         See https://translationproject.org/domain/dos2unix-man.html
 
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.5 - 7.2
-        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.4.0
+        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.2
         Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0
                                                            7.5.1
         Chinese (simplified)  Boyuan Yang, Tianze Wang     Version 7.4.4
