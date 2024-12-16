@@ -1,7 +1,7 @@
 7.5.3
 
-  * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Friulian
-    translations.
+  * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Friulian,
+    Serbian translations.
 
 2024-01-22: Version 7.5.2
 

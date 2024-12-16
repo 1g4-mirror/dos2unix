@@ -1,5 +1,8 @@
+2024-12-16 Мирослав Николић <miroslavnikolic@rocketmail.com>
+	* po-man/sr.po: Updated Serbian translation of the manual.
+
 2024-12-01 Yi-Jyun Pan <pan93412@gmail.com>
-	* po/zh_TW: Updated traditional Chinese translation.
+	* po/zh_TW.po: Updated traditional Chinese translation.
 
 2024-10-09 Fabio Tomat <f.t.public@gmail.com>
 	* po/fur.po: Updated Friulian translation.
