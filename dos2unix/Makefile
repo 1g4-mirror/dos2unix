@@ -1,6 +1,6 @@
 # Author: Erwin Waterlander
 #
-#   Copyright (C) 2009-2024 Erwin Waterlander
+#   Copyright (C) 2009-2025 Erwin Waterlander
 #   All rights reserved.
 #
 #   Redistribution and use in source and binary forms, with or without
@@ -505,11 +505,14 @@ man/es/man1/$(PACKAGE).$(HTMLEXT) : man/es/man1/$(PACKAGE).pod
 man/fr/man1/$(PACKAGE).$(HTMLEXT) : man/fr/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - Convertit les fichiers textes du format DOS/Mac vers Unix et inversement" $< > $@
 
-man/nl/man1/$(PACKAGE).$(HTMLEXT) : man/nl/man1/$(PACKAGE).pod
-	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter" $< > $@
+man/it/man1/$(PACKAGE).$(HTMLEXT) : man/it/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - convertitore del file testo da dos/mac a unix e viceversa" $< > $@
 
 man/ko/man1/$(PACKAGE).$(HTMLEXT) : man/ko/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/맥 에서 유닉스에서, 그 반대로의 텍스트 파일 형식 변환 프로그램" $< > $@
+
+man/nl/man1/$(PACKAGE).$(HTMLEXT) : man/nl/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter" $< > $@
 
 man/pl/man1/$(PACKAGE).$(HTMLEXT) : man/pl/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - konwerter formatu plików tekstowych między systemami DOS/Mac a Uniksem" $< > $@
@@ -517,11 +520,8 @@ man/pl/man1/$(PACKAGE).$(HTMLEXT) : man/pl/man1/$(PACKAGE).pod
 man/pt_BR/man1/$(PACKAGE).$(HTMLEXT) : man/pt_BR/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - Conversor de formato de arquivo texto de DOS/Mac para Unix e vice-versa" $< > $@
 
-man/uk/man1/$(PACKAGE).$(HTMLEXT) : man/uk/man1/$(PACKAGE).pod
-	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - програма для перетворення даних у текстовому форматі DOS/Mac у формат Unix, і навпаки" $< > $@
-
-man/zh_CN/man1/$(PACKAGE).$(HTMLEXT) : man/zh_CN/man1/$(PACKAGE).pod
-	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac - Unix文件格式转换器" $< > $@
+man/ro/man1/$(PACKAGE).$(HTMLEXT) : man/ro/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - Convertor de format de fișier text din DOS/Mac în Unix și viceversa" $< > $@
 
 man/sr/man1/$(PACKAGE).$(HTMLEXT) : man/sr/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - претварач формата текстуалних датотека из ДОС/Мек-а у Јуникс и обратно" $< > $@
@@ -529,8 +529,11 @@ man/sr/man1/$(PACKAGE).$(HTMLEXT) : man/sr/man1/$(PACKAGE).pod
 man/sv/man1/$(PACKAGE).$(HTMLEXT) : man/sv/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - textfilsformatskonverterare från DOS/Mac till Unix och vice versa" $< > $@
 
-man/ro/man1/$(PACKAGE).$(HTMLEXT) : man/ro/man1/$(PACKAGE).pod
-	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - Convertor de format de fișier text din DOS/Mac în Unix și viceversa" $< > $@
+man/uk/man1/$(PACKAGE).$(HTMLEXT) : man/uk/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - програма для перетворення даних у текстовому форматі DOS/Mac у формат Unix, і навпаки" $< > $@
+
+man/zh_CN/man1/$(PACKAGE).$(HTMLEXT) : man/zh_CN/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac - Unix文件格式转换器" $< > $@
 
 test: all
 ifneq ($(DJGPP),)

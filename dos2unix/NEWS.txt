@@ -1,5 +1,6 @@
 7.5.3
 
+  * New Italian translations of the UI messages and manual.
   * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Friulian,
     Serbian translations.
 

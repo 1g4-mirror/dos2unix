@@ -59,7 +59,7 @@ HISTORY
 
 AUTHORS
 
-        Erwin Waterlander       version 3.2 - 7.5.2  2009-2024
+        Erwin Waterlander       version 3.2 - 7.5.2  2009-2025
         Christian Wurll         version 3.1          1998
         Bernd Johannes Wuebben  version 3.0          1998
         Benjamin Lin            version 1.1 - 2.3    1994-1995
@@ -100,6 +100,7 @@ TRANSLATORS
         Hungarian             Balázs Úr                    Version 6.0.5 - 7.2.3,
                                                            7.4.0 - 7.4.1
         Hungarian             Gabor Kelemen                Version 7.3.4
+        Italian               bovirus                      Version 7.5.2
         Japanese              Yasuaki Taniguchi            Version 7.1.1
         Japanese              Takeshi Hamasaki             Version 7.3.4 - 7.4.1
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.2
@@ -131,6 +132,7 @@ TRANSLATORS
         French                Frédéric Marchal             Version 6.0.5 - 7.5.2
         German                Mario Blättermann            Version 6.0.5 - 7.5.2
         German                Roland Illig                 Version 7.4.2
+        Italian               bovirus                      Version 7.5.2
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.2
         Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.2
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.2
