@@ -77,7 +77,7 @@ TRANSLATORS
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.6 - 7.2
         Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.2
         Catalan               Jordi Mas i Hernàndez        Version 7.4.4 - 7.5.2
-        Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0
+        Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0,
                                                            7.5.1
         Chinese (simplified)  Boyuan Yang                  Version 7.5.0 - 7.5.2
         Chinese (traditional) mail6543210                  Version 6.0.5
@@ -123,12 +123,13 @@ TRANSLATORS
 
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.5 - 7.2
         Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.2
-        Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0
+        Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0,
                                                            7.5.1
         Chinese (simplified)  Boyuan Yang, Tianze Wang     Version 7.4.4
         Chinese (simplified)  Boyuan Yang                  Version 7.5.0
-        Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4
-        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.3.3
+        Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4,
+                                                           7.5.2
+        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0
         French                Frédéric Marchal             Version 6.0.5 - 7.5.2
         German                Mario Blättermann            Version 6.0.5 - 7.5.2
         German                Roland Illig                 Version 7.4.2
