@@ -129,7 +129,8 @@ TRANSLATORS
         Chinese (simplified)  Boyuan Yang                  Version 7.5.0
         Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4,
                                                            7.5.2
-        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0
+        Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0,
+                                                           7.5.2
         French                Frédéric Marchal             Version 6.0.5 - 7.5.2
         German                Mario Blättermann            Version 6.0.5 - 7.5.2
         German                Roland Illig                 Version 7.4.2

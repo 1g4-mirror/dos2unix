@@ -8,17 +8,17 @@
 # Benno Schulenberg <benno@vertaalt.nl>, 2014, 2015, 2016, 2020.
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man-7.5.3-beta6\n"
-"POT-Creation-Date: 2023-11-27 21:39+0100\n"
-"PO-Revision-Date: 2025-03-18 23:05+0100\n"
+"Project-Id-Version: dos2unix-man-7.5.2-beta3\n"
+"POT-Creation-Date: 2023-11-27 22:01+0100\n"
+"PO-Revision-Date: 2025-03-28 18:36+0100\n"
 "Last-Translator: Erwin Waterlander <waterlan@xs4all.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
 
 #. type: =head1
@@ -151,7 +151,7 @@ msgstr "B<-ascii>"
 #. type: textblock
 #: dos2unix.pod:121
 msgid "Default conversion mode. See also section CONVERSION MODES."
-msgstr "Conversie tussen de tekensets DOS en ISO-8859-1.  Zie ook de sectie CONVERSIEMODI."
+msgstr "Standaard conversiemodus. Zie ook de sectie B<CONVERSIEMODI>."
 
 #. type: =item
 #: dos2unix.pod:123
@@ -161,7 +161,7 @@ msgstr "B<-iso>"
 #. type: textblock
 #: dos2unix.pod:125
 msgid "Conversion between DOS and ISO-8859-1 character set. See also section CONVERSION MODES."
-msgstr "Conversie tussen de tekensets DOS en ISO-8859-1.  Zie ook de sectie CONVERSIEMODI."
+msgstr "Conversie tussen de tekensets DOS en ISO-8859-1.  Zie ook de sectie B<CONVERSIEMODI>."
 
 #. type: =item
 #: dos2unix.pod:128
@@ -271,7 +271,7 @@ msgstr "Deze optie is alleen beschikbaar in dos2unix voor Windows met Unicode-be
 #. type: textblock
 #: dos2unix.pod:178
 msgid "There are several methods for displaying text in a Windows console based on the encoding of the text. They all have their own advantages and disadvantages."
-msgstr "Er zijn verscheidene methoden om tekst weer te geven in een Windows console gebaseerd op de codering van de tekst. Ze hebben allemaal hun eigen voor- en nadelen."
+msgstr "Er zijn verscheidene methoden om tekst weer te geven in een Windows-console gebaseerd op de codering van de tekst. Ze hebben allemaal hun eigen voor- en nadelen."
 
 #. type: =item
 #: dos2unix.pod:184
@@ -281,12 +281,12 @@ msgstr "B<ansi>"
 #. type: textblock
 #: dos2unix.pod:186
 msgid "Dos2unix's default method is to use ANSI encoded text. The advantage is that it is backwards compatible. It works with raster and TrueType fonts. In some regions you may need to change the active DOS OEM code page to the Windows system ANSI code page using the C<chcp> command, because dos2unix uses the Windows system code page."
-msgstr "Dos2unix gebruikt standaard ANSI gecodeerde tekst. Het voordeel hiervan is dat het achterwaarts compatibel is. Het werkt met raster en TrueType lettertypen. In sommige regio's moet je de actieve DOS OEM codepagina veranderen in de Windows systeem ANSI codepagina met het C<chcp> commando, omdat dos2unix de Windows systeem codepagina gebruikt."
+msgstr "Dos2unix gebruikt standaard ANSI-gecodeerde tekst. Het voordeel hiervan is dat het achterwaarts compatibel is. Het werkt met raster- en TrueType-lettertypen. In sommige regio's moet je de actieve DOS OEM-codepagina veranderen in de Windows systeem ANSI-codepagina met het C<chcp> commando, omdat dos2unix de Windows systeem-codepagina gebruikt."
 
 #. type: textblock
 #: dos2unix.pod:192
 msgid "The disadvantage of ansi is that international file names with characters not inside the system default code page are not displayed properly. You will see a question mark, or a wrong symbol instead. When you don't work with foreign file names this method is OK."
-msgstr "Het nadeel van ANSI is dat internationale bestandsnamen met letters buiten de standaard systeem code page niet goed worden weergegeven. U ziet in plaats daarvan een vraagteken of een verkeerd symbool. Wanneer u niet werkt met buitenlands bestandsnamen is de methode Oké."
+msgstr "Het nadeel van ANSI is dat internationale bestandsnamen met letters buiten de standaard systeem-codepagina niet goed worden weergegeven. U ziet in plaats daarvan een vraagteken of een verkeerd symbool. Wanneer u niet werkt met buitenlands bestandsnamen is de methode oké."
 
 #. type: =item
 #: dos2unix.pod:197
@@ -301,7 +301,7 @@ msgstr "Het voordeel van unicode (de Windows-naam voor UTF-16) codering is dat t
 #. type: textblock
 #: dos2unix.pod:205
 msgid "When you use the ConEmu console all text is displayed properly, because ConEmu automatically selects a good font."
-msgstr "Wanneer je de ConEmu console gebruikt wordt alle tekst goed weergegeven, omdat ConEmu automatisch een goed lettertype selecteert."
+msgstr "Wanneer je de ConEmu-console gebruikt wordt alle tekst goed weergegeven, omdat ConEmu automatisch een goed lettertype selecteert."
 
 #. type: textblock
 #: dos2unix.pod:208
@@ -321,17 +321,17 @@ msgstr "B<utf8>, B<utf8bom>"
 #. type: textblock
 #: dos2unix.pod:218
 msgid "The advantage of utf8 is that it is compatible with ASCII. You need to set the console's font to a TrueType font. With a TrueType font the text is displayed similar as with the C<unicode> encoding."
-msgstr "Het voordeel van utf8 is dat het compatibel is met ASCII. Je moet het lettertype van de console instellen op een TrueType lettertype. Met een TrueType font wordt de tekst hetzelfde weergegeven als met de C<unicode> codering."
+msgstr "Het voordeel van utf8 is dat het compatibel is met ASCII. Je moet het lettertype van de console instellen op een TrueType-lettertype. Met een TrueType-lettertype wordt de tekst hetzelfde weergegeven als met de C<unicode>-codering."
 
 #. type: textblock
 #: dos2unix.pod:222
 msgid "The disadvantage is that when you use the default raster font all non-ASCII characters are displayed wrong. Not only unicode file names, but also translated messages become unreadable. On Windows configured for an East-Asian region you may see a lot of flickering of the console when the messages are displayed."
-msgstr "Het nadeel is dat wanneer je het standaard raster lettertype gebruikt all niet-ASCII letters verkeerd worden weergegeven. Niet alleen unicode bestandsnamen, maar ook vertaalde berichten worden onleesbaar. Op Windows, ingesteld voor een Oost Aziatische regio, is het mogelijk dat je veel flikkering in de console ziet wanneer de berichten weergegeven worden."
+msgstr "Het nadeel is dat wanneer je het standaard raster-lettertype gebruikt alle niet-ASCII letters verkeerd worden weergegeven. Niet alleen unicode bestandsnamen, maar ook vertaalde berichten worden onleesbaar. Op Windows, ingesteld voor een Oost-Aziatische regio, is het mogelijk dat je veel flikkering in de console ziet wanneer de berichten weergegeven worden."
 
 #. type: textblock
 #: dos2unix.pod:228
 msgid "In a ConEmu console the utf8 encoding method works well."
-msgstr "In een ConEmu console werkt de utf8 codering goed."
+msgstr "In een ConEmu-console werkt de utf8-codering goed."
 
 #. type: textblock
 #: dos2unix.pod:230
@@ -351,12 +351,12 @@ msgstr "B<-e>, B<--add-eol>"
 #. type: textblock
 #: dos2unix.pod:242
 msgid "Add a line break to the last line if there isn't one. This works for every conversion."
-msgstr "Voeg een regeleinde toe aan de laatste regel als er nog geen is. Dit werkt voor alle conversies."
+msgstr "Een regeleinde toevoegen aan de laatste regel als er nog geen is. Dit werkt voor alle conversies."
 
 #. type: textblock
 #: dos2unix.pod:245
 msgid "A file converted from DOS to Unix format may lack a line break on the last line. There are text editors that write text files without a line break on the last line. Some Unix programs have problems processing these files, because the POSIX standard defines that every line in a text file must end with a terminating newline character. For instance concatenating files may not give the expected result."
-msgstr "Een bestand dat is geconverteerd van DOS naar Unix-formaat kan een regeleinde op de laatste regel missen. Er zijn tekstbewerkers die tekstbestanden schrijven zonder een regeleinde op de laatste regel. Sommige Unix-programma's hebben problemen met het verwerken van deze bestanden, omdat de POSIX-standaard definieert dat elke regel in een tekstbestand moet eindigen met een afsluitend regeleindeteken. Het samenvoegen van bestanden kan bijvoorbeeld niet het verwachte resultaat opleveren."
+msgstr "Een bestand dat is geconverteerd van DOS- naar Unix-indeling kan een regeleinde op de laatste regel missen. Er zijn tekstbewerkers die tekstbestanden schrijven zonder een regeleinde op de laatste regel. Sommige Unix-programma's hebben problemen met het verwerken van deze bestanden, omdat de POSIX-standaard definieert dat elke regel in een tekstbestand moet eindigen met een afsluitend regeleindeteken. Het samenvoegen van bestanden kan bijvoorbeeld niet het verwachte resultaat opleveren."
 
 #. type: =item
 #: dos2unix.pod:252
@@ -471,7 +471,7 @@ msgstr "B<0>"
 #. type: textblock
 #: dos2unix.pod:304
 msgid "Print the file information lines followed by a null character instead of a newline character. This enables correct interpretation of file names with spaces or quotes when flag c is used. Use this flag in combination with xargs(1) option C<-0> or C<--null>."
-msgstr "Druk de bestandsinformatieregels af gevolgd door een null-teken in plaats van een regeleinde-teken. Dit maakt correcte interpretatie van bestandsnamen met spaties of aanhalingstekens mogelijk wanneer vlag c wordt gebruikt. Gebruik deze vlag in combinatie met xargs(1) optie C<-0> of C<--null>."
+msgstr "De bestandsinformatieregels afdrukken gevolgd door een null-byte in plaats van een regeleindeteken. Dit maakt correcte interpretatie van bestandsnamen met spaties of aanhalingstekens mogelijk wanneer vlag c wordt gebruikt. Gebruik deze vlag in combinatie met xargs(1) optie C<-0> of C<--null>."
 
 #. type: =item
 #: dos2unix.pod:309
@@ -531,7 +531,7 @@ msgstr "B<e>"
 #. type: textblock
 #: dos2unix.pod:331
 msgid "Print the type of the line break of the last line, or C<noeol> if there is none."
-msgstr "Druk het type van het regeleinde-teken van de laatste regel af, of C<noeol> als er geen regeleinde is."
+msgstr "Het type van het regeleinde van de laatste regel afdrukken, of C<noeol> als er geen regeleinde is."
 
 #. type: =item
 #: dos2unix.pod:333
@@ -656,7 +656,7 @@ msgstr ""
 #. type: textblock
 #: dos2unix.pod:375
 msgid "List the files that have DOS line breaks or lack a line break on the last line:"
-msgstr "De bestanden opsommen met DOS-regeleinden of met een ontbrekende regeleinde op de laatste regel:"
+msgstr "De bestanden opsommen met DOS-regeleindes of met een ontbrekend regeleinde op de laatste regel:"
 
 #. type: verbatim
 #: dos2unix.pod:377
@@ -796,7 +796,7 @@ msgstr "B<--no-add-eol>"
 #. type: textblock
 #: dos2unix.pod:440
 msgid "Do not add a line break to the last line if there isn't one."
-msgstr "Voeg geen regeleinde toe aan de laatste regel als er geen is."
+msgstr "Geen regeleinde toevoegen aan de laatste regel als er geen is."
 
 #. type: =item
 #: dos2unix.pod:442
@@ -806,7 +806,7 @@ msgstr "B<-O, --to-stdout>"
 #. type: textblock
 #: dos2unix.pod:444
 msgid "Write to standard output, like a Unix filter. Use option C<-o> to go back to old file (in-place) mode."
-msgstr "Schrijf naar standaarduitvoer, zoals een Unix-filter. Gebruik optie C<-o> om terug te gaan naar de oud-bestand-modus (vervangend)."
+msgstr "Naar standaarduitvoer schrijven, zoals een Unix-filter. Gebruik optie C<-o> om terug te gaan naar de oud-bestand-modus (vervangend)."
 
 #. type: textblock
 #: dos2unix.pod:447
@@ -1051,7 +1051,7 @@ msgstr "Dit is de standaard conversiemodus. Deze modus is voor het converteren v
 #. type: textblock
 #: dos2unix.pod:582
 msgid "If dos2unix has UTF-16 support, UTF-16 encoded files are converted to the current locale character encoding on POSIX systems and to UTF-8 on Windows.  Enabling B<ascii> mode disables the option to keep UTF-16 encoding (C<-u>) and the options to assume UTF-16 input (C<-ul> and C<-ub>).  To see if dos2unix has UTF-16 support type C<dos2unix -V>. See also section UNICODE."
-msgstr "Als dos2unix UTF-16-ondersteuning heeft, worden UTF-16-gecodeerde bestanden geconverteerd naar de huidige locale tekensetcodering op POSIX-systemen en naar UTF-8 op Windows. Als u de B<ascii>-modus inschakelt, worden de optie om UTF-16-codering te behouden (C<-u>) en de opties om UTF-16-invoer aan te nemen (C<-ul> en C<-ub>) uitgeschakeld. Om te zien of dos2unix UTF-16-ondersteuning heeft, typt u C<dos2unix -V>. Zie ook sectie UNICODE."
+msgstr "Als dos2unix UTF-16-ondersteuning heeft, worden UTF-16-gecodeerde bestanden geconverteerd naar de tekencodering van de ingestelde taalregio op POSIX-systemen en naar UTF-8 op Windows. Als u de B<ascii>-modus inschakelt, worden de optie om UTF-16-codering te behouden (C<-u>) en de opties om UTF-16-invoer aan te nemen (C<-ul> en C<-ub>) uitgeschakeld. Om te zien of dos2unix UTF-16-ondersteuning heeft, typt u C<dos2unix -V>. Zie ook de sectie UNICODE."
 
 #. type: =item
 #: dos2unix.pod:588
@@ -1236,7 +1236,7 @@ msgstr "Conversie"
 #. type: textblock
 #: dos2unix.pod:661
 msgid "Unicode text files can have DOS, Unix or Mac line breaks, like ASCII text files."
-msgstr "Unicode-tekstbestanden kunnen DOS-, Unix- of Mac-regeleindes hebben, net als ASCII tekstbestanden."
+msgstr "Unicode-tekstbestanden kunnen DOS-, Unix- of Mac-regeleindes hebben, net als ASCII-tekstbestanden."
 
 #. type: textblock
 #: dos2unix.pod:664
@@ -1622,7 +1622,7 @@ msgstr "RECURSIEVE CONVERSIE"
 #. type: textblock
 #: dos2unix.pod:819
 msgid "In a Unix shell the find(1) and xargs(1) commands can be used to run dos2unix recursively over all text files in a directory tree. For instance to convert all .txt files in the directory tree under the current directory type:"
-msgstr "In een Unix shell kunnen de find(1) en xargs(1) commando's gebruikt worden om dos2unix recursief uit te voeren over alle tekstbestanden in een directoryboomstructuur. Bijvoorbeeld om alle .txt bestanden in de directoryboomstructuur onder het huidige directory type te converteren:"
+msgstr "In een Unix-shell kunnen de find(1) en xargs(1) commando's gebruikt worden om dos2unix recursief uit te voeren over alle tekstbestanden in een mappenboomstructuur. Bijvoorbeeld om alle .txt-bestanden in de mappenboomstructuur onder het huidige maptype te converteren:"
 
 #. type: verbatim
 #: dos2unix.pod:823
