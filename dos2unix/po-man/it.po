@@ -1,16 +1,17 @@
-# Italian translation of the dos2unix man page.
-# Copyright (C) 2014 Erwin Waterlander (msgids)
-# This file is distributed under the same license as the dos2unix package.
-# bovirus <bovirus@gmail.com>, 2025.
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix (manual) - IT 05.02.2024\n"
 "POT-Creation-Date: 2023-11-27 22:01+0100\n"
-"PO-Revision-Date: 2025-02-06 16:58+0100\n"
-"Last-Translator: bovirus <bovirus@gmail.com>\n"
-"Language-Team: \n"
-"Language: it\n"
+"PO-Revision-Date: 2025-03-25 07:48+0100\n"
+"Last-Translator: \n"
+"Language-Team: bovirus (bovirus@gmail.com)\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -136,7 +137,7 @@ msgstr ""
 "Questa versione esegue in modo predefinito conversione sul posto (vecchia "
 "modalità file), mentre la versione originale SunOS/Solaris supporta solo la "
 "conversione accoppiata (nuova modalità file). \n"
-"Vedi anche opzioni C <-o> e C <-n>. \n"
+"Vedi anche opzioni C<-o> e C<-n>. \n"
 "Un'altra differenza è che la versione SunOS/Solaris usa in modo predefinito "
 "la conversione della modalità <iso> mentre questa versione usa in modo "
 "predefinito la conversione della modalità <ascii>."
@@ -215,7 +216,7 @@ msgstr ""
 "essere preservate in modalità vecchio file. \n"
 "La conversione continuerà e il file convertito otterrà la stessa nuova "
 "proprietà come se fosse stato convertito in modalità nuova file. \n"
-"Vedi anche opzioni C <-o> e C <-n>. \n"
+"Vedi anche opzioni C<-o> e C<-n>. \n"
 "Questa opzione è disponibile solo se DOS2Unix supporto il mantenimento delle "
 "proprietà degli utenti e del gruppo dei file."
 
@@ -336,7 +337,7 @@ msgstr ""
 "destinazione. \n"
 "Questo è il comportamento predefinito durante la conversione di un file DOS "
 "con interruzioni di riga. \n"
-"Vedi anche l'opzione C <-r>."
+"Vedi anche l'opzione C<-r>."
 
 #. type: =item
 #: dos2unix.pod:162
@@ -726,7 +727,7 @@ msgstr ""
 "anziché da un carattere interruzione riga. \n"
 "Ciò consente l'interpretazione corretta dei nomi di file con spazi o "
 "virgolette quando viene usata il flag c.\n"
-"Usa questo flag in combinazione con l'opzione Xargs (1) C<-0> o ​C<-null>."
+"Usa questo flag in combinazione con l'opzione Xargs (1) C<-0> o C<-null>."
 
 #. type: =item
 #: dos2unix.pod:309
@@ -1332,7 +1333,7 @@ msgstr ""
 "Per evitare errori i file binari vengono ignorati. \n"
 "Tieni presente che il rilevamento di file binari non è infallibile al "
 "100%. \n"
-"I file sorgenti sono scansionati alal ricerca di simboli binari che in "
+"I file sorgenti sono scansionati alla ricerca di simboli binari che in "
 "genere non si trovano nei file di testo. \n"
 "È possibile che un file binario contenga solo caratteri di testo normali. \n"
 "Un tale file binario sarà erroneamente visto come un file di testo."
@@ -1546,7 +1547,7 @@ msgstr ""
 "Se dos2unix ha il supporto UTF-16, i file codificati UTF-16 verranno "
 "convertiti nell'attuale codifica dei caratteri locali nei sistemi POSIX e in "
 "UTF-8 in Windows. \n"
-"Abilitando lla modalità B<ascii> disabilita l'opzione (C <-u>) per il "
+"Abilitando lla modalità B<ascii> disabilita l'opzione (C<-u>) per il "
 "mantenimento della codifica UTF-16 e le opzioni per l'assunzione della "
 "codifiac del file sorgente UTF-16 (C<-ul> e C<-ub>).\n"
 "Per verificare se dos2inix supporta UTF -16 digita C<dos2unix -v>. \n"
@@ -2232,7 +2233,7 @@ msgstr ""
 #. type: textblock
 #: dos2unix.pod:799
 msgid "Convert a.txt and write to e.txt:"
-msgstr "Converti a.txt e scrivi in ​​e.txt:"
+msgstr "Converti a.txt e scrivi in e.txt:"
 
 #. type: verbatim
 #: dos2unix.pod:801
@@ -2249,7 +2250,7 @@ msgstr ""
 msgid ""
 "Convert a.txt and write to e.txt, keep date stamp of e.txt same as a.txt:"
 msgstr ""
-"Converti a.txt e scrivi in ​​e.txt, usa come data/ora di e.txt data/ora di a."
+"Converti a.txt e scrivi in e.txt, usa come data/ora di e.txt data/ora di a."
 "txt:"
 
 #. type: verbatim
@@ -2285,8 +2286,8 @@ msgid ""
 "Convert c.txt and write to e.txt, convert and replace a.txt, convert and "
 "replace b.txt, convert d.txt and write to f.txt:"
 msgstr ""
-"Converti c.txt e scrivi in ​​e.txt, converti e sostituisci a.txt, converti e "
-"sostituisci b.txt, converti d.txt e scrivi in ​​f.txt:"
+"Converti c.txt e scrivi in e.txt, converti e sostituisci a.txt, converti e "
+"sostituisci b.txt, converti d.txt e scrivi in f.txt:"
 
 #. type: verbatim
 #: dos2unix.pod:815
@@ -2505,7 +2506,7 @@ msgstr ""
 "Durante la compilazione può essere annullato il set LOCALEDIR tramite la "
 "variabile ambiente DOS2UNIX_LOCALEDIR. \n"
 "LOCALEDIR viene usato per trovare i file lingua. \n"
-"Il valore predefinito GNU è C </usr/local/share/locale>. \n"
+"Il valore predefinito GNU è C</usr/local/share/locale>. \n"
 "L'opzione B <--version> visualizzerà il LOCALEDIR che verrà usato."
 
 #. type: textblock
