@@ -4,10 +4,6 @@
 2025-03-18 Erwin Waterlander <waterlan@xs4all.nl>
 	* po-man/nl.po: Updated Dutch translation of the manual.
 
-2025-02-16 bovirus <bovirus@gmail.com>
-	* po/it.po: New Italian translation of the UI messages.
-	* po-man/it.po: New Italian translation of the manual.
-
 2024-12-16 Мирослав Николић <miroslavnikolic@rocketmail.com>
 	* po-man/sr.po: Updated Serbian translation of the manual.
 
