@@ -1,3 +1,7 @@
+2025-05-16 Erwin Waterlander <waterlan@xs4all.nl>
+	* common.c: Updated a few messages.
+	* man/man1/dos2unix.pod: dos2unix all lowercase.
+
 2025-03-29 Benno Schulenberg <vertaling@coevern.nl>
 	* po-man/nl.po: Updated Dutch translation of the manual.
 

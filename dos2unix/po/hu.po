@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.3.6-beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 19:49+0100\n"
+"POT-Creation-Date: 2025-05-16 22:57+0200\n"
 "PO-Revision-Date: 2018-01-20 12:57+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <translation-team-hu@lists.sourceforge.net>\n"
@@ -348,15 +348,18 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         verziószám megjelenítése\n"
 
 #: common.c:727
-msgid "DOS 16 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "16-bites DOS verzió (WATCOMC).\n"
 
 #: common.c:729
-msgid "DOS 16 bit version (TURBOC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "16-bites DOS verzió (TURBOC).\n"
 
 #: common.c:731
-msgid "DOS 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "32-bites DOS verzió (WATCOMC).\n"
 
 #: common.c:733
@@ -376,7 +379,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "64-bites Windows verzió (MinGW-w64).\n"
 
 #: common.c:741
-msgid "Windows 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "32-bites Windows verzió (WATCOMC).\n"
 
 #: common.c:743
@@ -398,7 +402,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "32-bites Windows verzió (MSVC %d).\n"
 
 #: common.c:751
-msgid "OS/2 version (WATCOMC).\n"
+#, fuzzy
+msgid "OS/2 version (Watcom C).\n"
 msgstr "OS/2 verzió (WATCOMC).\n"
 
 #: common.c:753

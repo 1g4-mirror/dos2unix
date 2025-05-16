@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.3.6-beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 19:49+0100\n"
+"POT-Creation-Date: 2025-05-16 22:57+0200\n"
 "PO-Revision-Date: 2019-08-24 15:04+0900\n"
 "Last-Translator: Takeshi Hamasaki <hmatrjp@users.sourceforge.jp>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -339,15 +339,18 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         バージョン番号を表示する\n"
 
 #: common.c:727
-msgid "DOS 16 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "DOS 16 ビットバージョン (WATCOMC)。\n"
 
 #: common.c:729
-msgid "DOS 16 bit version (TURBOC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "DOS 16 ビットバージョン (TURBOC)。\n"
 
 #: common.c:731
-msgid "DOS 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "DOS 32 ビットバージョン (WATCOMC)。\n"
 
 #: common.c:733
@@ -367,7 +370,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Windows 64 ビットバージョン (MinGW-w64)。\n"
 
 #: common.c:741
-msgid "Windows 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Windows 32 ビットバージョン (WATCOMC)。\n"
 
 #: common.c:743
@@ -389,7 +393,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Windows 32 ビットバージョン (MSVC %d)。\n"
 
 #: common.c:751
-msgid "OS/2 version (WATCOMC).\n"
+#, fuzzy
+msgid "OS/2 version (Watcom C).\n"
 msgstr "OS/2 バージョン (WATCOMC)。\n"
 
 #: common.c:753

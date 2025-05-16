@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 19:49+0100\n"
+"POT-Creation-Date: 2025-05-16 22:57+0200\n"
 "PO-Revision-Date: 2023-11-10 15:21+0100\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -363,15 +363,18 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         afișează numărul versiunii\n"
 
 #: common.c:727
-msgid "DOS 16 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "Versiunea DOS pe 16 biți (WATCOMC).\n"
 
 #: common.c:729
-msgid "DOS 16 bit version (TURBOC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "Versiunea DOS pe 16 biți (TURBOC).\n"
 
 #: common.c:731
-msgid "DOS 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "Versiunea DOS pe 32 biți (WATCOMC).\n"
 
 #: common.c:733
@@ -391,7 +394,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Versiunea Windows pe 64 de biți (MinGW-w64).\n"
 
 #: common.c:741
-msgid "Windows 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Versiunea Windows pe 32 de biți (WATCOMC).\n"
 
 #: common.c:743
@@ -413,7 +417,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Versiunea Windows pe 32 de biți (MSVC %d).\n"
 
 #: common.c:751
-msgid "OS/2 version (WATCOMC).\n"
+#, fuzzy
+msgid "OS/2 version (Watcom C).\n"
 msgstr "Versiunea OS/2 (WATCOMC).\n"
 
 #: common.c:753

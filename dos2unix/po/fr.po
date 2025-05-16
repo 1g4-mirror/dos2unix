@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 19:49+0100\n"
+"POT-Creation-Date: 2025-05-16 22:57+0200\n"
 "PO-Revision-Date: 2023-11-10 15:33+0100\n"
 "Last-Translator: Frédéric Marchal <fmarchal@perso.be>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -329,15 +329,18 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         affiche le numéro de version\n"
 
 #: common.c:727
-msgid "DOS 16 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Watcom C).\n"
 msgstr "Version DOS 16 bits (WATCOMC).\n"
 
 #: common.c:729
-msgid "DOS 16 bit version (TURBOC).\n"
+#, fuzzy
+msgid "DOS 16 bit version (Turbo C).\n"
 msgstr "Version DOS 16 bits (TURBOC).\n"
 
 #: common.c:731
-msgid "DOS 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "DOS 32 bit version (Watcom C).\n"
 msgstr "Version DOS 32 bits (WATCOMC).\n"
 
 #: common.c:733
@@ -357,7 +360,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Version Windows 64 bit (MinGW-w64).\n"
 
 #: common.c:741
-msgid "Windows 32 bit version (WATCOMC).\n"
+#, fuzzy
+msgid "Windows 32 bit version (Watcom C).\n"
 msgstr "Version Windows 32 bits (WATCOMC).\n"
 
 #: common.c:743
@@ -379,7 +383,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Version Windows 32 bits (MSVC %d).\n"
 
 #: common.c:751
-msgid "OS/2 version (WATCOMC).\n"
+#, fuzzy
+msgid "OS/2 version (Watcom C).\n"
 msgstr "Version OS/2 (WATCOMC).\n"
 
 #: common.c:753

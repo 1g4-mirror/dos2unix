@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2009-2024 Erwin Waterlander
+ *   Copyright (C) 2009-2025 Erwin Waterlander
  *   All rights reserved.
  *
  *   Redistribution and use in source and binary forms, with or without
@@ -162,11 +162,11 @@ int d2u_MultiByteToWideChar(UINT CodePage, DWORD dwFlags, LPCSTR lpMultiByteStr,
  * have names that can't be encoded in the default system Windows ANSI code
  * page.
  *
- * Dos2unix for Windows with Unicode file name support translates all directory
+ * dos2unix for Windows with Unicode file name support translates all directory
  * names to UTF-8, to be able to  work with char type strings.  This is also
  * done to keep the code portable.
  *
- * Dos2unix's messages are encoded in the default Windows ANSI code page, which
+ * dos2unix's messages are encoded in the default Windows ANSI code page, which
  * can be translated with gettext. Gettext/libintl recodes messages (format) to
  * the system default ANSI code page.
  *
@@ -724,11 +724,11 @@ void PrintVersion(const char *progname, const char *localedir)
   D2U_ANSI_FPRINTF(stdout,"VER_AUTHOR: %s\n", VER_AUTHOR);
 #endif
 #if defined(__WATCOMC__) && defined(__I86__)
-  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 16 bit version (WATCOMC).\n"));
+  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 16 bit version (Watcom C).\n"));
 #elif defined(__TURBOC__) && defined(__MSDOS__)
-  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 16 bit version (TURBOC).\n"));
+  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 16 bit version (Turbo C).\n"));
 #elif defined(__WATCOMC__) && defined(__DOS__)
-  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 32 bit version (WATCOMC).\n"));
+  D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 32 bit version (Watcom C).\n"));
 #elif defined(__DJGPP__)
   D2U_ANSI_FPRINTF(stdout,"%s", _("DOS 32 bit version (DJGPP).\n"));
 #elif defined(__MSYS__)
@@ -738,7 +738,7 @@ void PrintVersion(const char *progname, const char *localedir)
 #elif defined(__WIN64__) && defined(__MINGW64__)
   D2U_ANSI_FPRINTF(stdout,"%s", _("Windows 64 bit version (MinGW-w64).\n"));
 #elif defined(__WATCOMC__) && defined(__NT__)
-  D2U_ANSI_FPRINTF(stdout,"%s", _("Windows 32 bit version (WATCOMC).\n"));
+  D2U_ANSI_FPRINTF(stdout,"%s", _("Windows 32 bit version (Watcom C).\n"));
 #elif defined(_WIN32) && defined(__MINGW32__) && (D2U_COMPILER == MINGW32_W64)
   D2U_ANSI_FPRINTF(stdout,"%s", _("Windows 32 bit version (MinGW-w64).\n"));
 #elif defined(_WIN32) && defined(__MINGW32__)
@@ -748,7 +748,7 @@ void PrintVersion(const char *progname, const char *localedir)
 #elif defined(_WIN32) && defined(_MSC_VER)
   D2U_ANSI_FPRINTF(stdout,_("Windows 32 bit version (MSVC %d).\n"),_MSC_VER);
 #elif defined (__OS2__) && defined(__WATCOMC__) /* OS/2 Warp */
-  D2U_ANSI_FPRINTF(stdout,"%s", _("OS/2 version (WATCOMC).\n"));
+  D2U_ANSI_FPRINTF(stdout,"%s", _("OS/2 version (Watcom C).\n"));
 #elif defined (__OS2__) && defined(__EMX__) /* OS/2 Warp */
   D2U_ANSI_FPRINTF(stdout,"%s", _("OS/2 version (EMX).\n"));
 #elif defined(__OS)

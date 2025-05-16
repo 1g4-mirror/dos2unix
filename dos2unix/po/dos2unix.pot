@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-16 19:49+0100\n"
+"POT-Creation-Date: 2025-05-16 22:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -288,15 +288,15 @@ msgid " -V, --version         display version number\n"
 msgstr ""
 
 #: common.c:727
-msgid "DOS 16 bit version (WATCOMC).\n"
+msgid "DOS 16 bit version (Watcom C).\n"
 msgstr ""
 
 #: common.c:729
-msgid "DOS 16 bit version (TURBOC).\n"
+msgid "DOS 16 bit version (Turbo C).\n"
 msgstr ""
 
 #: common.c:731
-msgid "DOS 32 bit version (WATCOMC).\n"
+msgid "DOS 32 bit version (Watcom C).\n"
 msgstr ""
 
 #: common.c:733
@@ -316,7 +316,7 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr ""
 
 #: common.c:741
-msgid "Windows 32 bit version (WATCOMC).\n"
+msgid "Windows 32 bit version (Watcom C).\n"
 msgstr ""
 
 #: common.c:743
@@ -338,7 +338,7 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr ""
 
 #: common.c:751
-msgid "OS/2 version (WATCOMC).\n"
+msgid "OS/2 version (Watcom C).\n"
 msgstr ""
 
 #: common.c:753
