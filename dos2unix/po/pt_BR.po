@@ -1,16 +1,16 @@
 # Brazilian Portuguese Translation for dos2unix.
-# Copyright (C) 2024 Erwin Waterlander (msgids)
-# Copyright (C) 2024 Free Software Foundation, Inc.
+# Copyright (C) 2025 Erwin Waterlander (msgids)
+# Copyright (C) 2025 Free Software Foundation, Inc.
 # This file is distributed under the same license as the dos2unix package.
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2014-2024.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2014-2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.2-beta2\n"
+"Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2024-09-23 01:40-0300\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-19 15:51-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
 "Language: pt_BR\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 46.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #: dos2unix.c:79
 #, c-format
@@ -186,7 +186,7 @@ msgstr "   -865                usa a página de código 865 do DOS (Nórdico)\n"
 
 #: common.c:660
 msgid " -7                    convert 8 bit characters to 7 bit space\n"
-msgstr " -7                    converte-se caracteres de 8 bit para espaço de 7 bit\n"
+msgstr " -7                    converte caracteres de 8 bits para espaço de 7 bits\n"
 
 #: common.c:662
 msgid " -b, --keep-bom        keep Byte Order Mark\n"
@@ -202,7 +202,7 @@ msgid ""
 "   convmode            ascii, 7bit, iso, mac, default to ascii\n"
 msgstr ""
 " -c, --convmode        modo de conversão\n"
-"   convmode            ascii, 7bit, iso, mac, padrão para ascii\n"
+"   convmode            ascii, 7bit, iso, mac, sendo padrão o ascii\n"
 
 #: common.c:668
 msgid ""
@@ -292,7 +292,7 @@ msgstr " -q, --quiet           modo silencioso, esconde todos os avisos\n"
 
 #: common.c:697
 msgid " -r, --remove-bom      remove Byte Order Mark (default)\n"
-msgstr " -r, --remove-bom      remove marca de ordem de byte (B.O.M.) (default)\n"
+msgstr " -r, --remove-bom      remove marca de ordem de byte (B.O.M.) (padrão)\n"
 
 #: common.c:699
 msgid " -r, --remove-bom      remove Byte Order Mark\n"
@@ -339,23 +339,20 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         exibe o número da versão\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "DOS versão de 16 bit (WATCOMC).\n"
+msgstr "DOS versão de 16 bits (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "DOS versão de 16 bit (TURBOC).\n"
+msgstr "DOS versão de 16 bits (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "DOS versão de 32 bit (WATCOMC).\n"
+msgstr "DOS versão de 32 bits (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
-msgstr "DOS versão de 32 bit (DJGPP).\n"
+msgstr "DOS versão de 32 bits (DJGPP).\n"
 
 #: common.c:735
 msgid "MSYS version.\n"
@@ -367,35 +364,33 @@ msgstr "Versão do Cygwin.\n"
 
 #: common.c:739
 msgid "Windows 64 bit version (MinGW-w64).\n"
-msgstr "Windows versão de 64 bit (MinGW-w64).\n"
+msgstr "Windows versão de 64 bits (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "Windows versão de 32 bit (WATCOMC).\n"
+msgstr "Windows versão de 32 bits (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
-msgstr "Windows versão de 32 bit (MinGW-w64).\n"
+msgstr "Windows versão de 32 bits (MinGW-w64).\n"
 
 #: common.c:745
 msgid "Windows 32 bit version (MinGW).\n"
-msgstr "Windows versão de 32 bit (MinGW).\n"
+msgstr "Windows versão de 32 bits (MinGW).\n"
 
 #: common.c:747
 #, c-format
 msgid "Windows 64 bit version (MSVC %d).\n"
-msgstr "Windows versão de 64 bit (MSVC %d).\n"
+msgstr "Windows versão de 64 bits (MSVC %d).\n"
 
 #: common.c:749
 #, c-format
 msgid "Windows 32 bit version (MSVC %d).\n"
-msgstr "Windows versão de 32 bit (MSVC %d).\n"
+msgstr "Windows versão de 32 bits (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "Versão OS/2 (WATCOMC).\n"
+msgstr "Versão OS/2 (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"
@@ -463,7 +458,7 @@ msgstr "UTF-8"
 #: common.c:1286
 #, c-format
 msgid "Input file %s has %s BOM.\n"
-msgstr "Arquivo de entrada %s possui %s BOM.\n"
+msgstr "Arquivo de entrada %s possui %s B.O.M.\n"
 
 #: common.c:1327 common.c:1369
 msgid "Assuming UTF-16LE encoding.\n"

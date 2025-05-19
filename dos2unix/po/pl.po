@@ -1,13 +1,13 @@
 # Polish translation for dos2unix.
 # This file is distributed under the same license as the dos2unix package.
-# Jakub Bogusz <qboosh@pld-linux.org>, 2014-2023.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2014-2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.2-beta2\n"
+"Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2023-11-10 20:01+0100\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-17 21:15+0200\n"
 "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 "Language: pl\n"
@@ -330,19 +330,16 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         wyświetlenie numeru wersji\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "Wersja 16-bitowa DOS (WATCOMC).\n"
+msgstr "Wersja 16-bitowa DOS (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "Wersja 16-bitowa DOS (TURBOC).\n"
+msgstr "Wersja 16-bitowa DOS (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "Wersja 32-bitowa DOS (WATCOMC).\n"
+msgstr "Wersja 32-bitowa DOS (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
@@ -361,9 +358,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Wersja 64-bitowa Windows (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "Wersja 32-bitowa Windows (WATCOMC).\n"
+msgstr "Wersja 32-bitowa Windows (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
@@ -384,9 +380,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Wersja 32-bitowa Windows (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "Wersja OS/2 (WATCOMC).\n"
+msgstr "Wersja OS/2 (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"

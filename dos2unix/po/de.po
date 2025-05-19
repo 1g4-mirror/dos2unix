@@ -3,14 +3,14 @@
 # Philipp Thomas <pth@suse.de>, 2009-2012, 2014-2016.
 # Lars Wendler <polynomial-c@gentoo.org>, 2013.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2014-2015, 2019.
-# Roland Illig <roland.illig@gmx.de>, 2020, 2023.
+# Roland Illig <roland.illig@gmx.de>, 2020-2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.2-beta2\n"
+"Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2023-11-10 16:28+0100\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-17 11:37+0200\n"
 "Last-Translator: Roland Illig <roland.illig@gmx.de>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: dos2unix.c:79
 #, c-format
@@ -342,23 +342,20 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         gibt die Versionsnummer aus\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "DOS 16-bit-Version (WATCOMC).\n"
+msgstr "DOS 16-Bit-Version (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "DOS 16-bit-Version (TURBOC).\n"
+msgstr "DOS 16-Bit-Version (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "DOS 32-bit-Version (WATCOMC).\n"
+msgstr "DOS 32-Bit-Version (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
-msgstr "DOS 32-bit-Version (DJGPP).\n"
+msgstr "DOS 32-Bit-Version (DJGPP).\n"
 
 #: common.c:735
 msgid "MSYS version.\n"
@@ -373,32 +370,30 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Windows 64-bit-Version (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "Windows 32-bit-Version (WATCOMC).\n"
+msgstr "Windows 32-Bit-Version (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
-msgstr "Windows 32-bit-Version (MinGW-w64).\n"
+msgstr "Windows 32-Bit-Version (MinGW-w64).\n"
 
 #: common.c:745
 msgid "Windows 32 bit version (MinGW).\n"
-msgstr "Windows 32-bit-Version (MinGW).\n"
+msgstr "Windows 32-Bit-Version (MinGW).\n"
 
 #: common.c:747
 #, c-format
 msgid "Windows 64 bit version (MSVC %d).\n"
-msgstr "Windows 64-bit-Version (MSVC %d).\n"
+msgstr "Windows 64-Bit-Version (MSVC %d).\n"
 
 #: common.c:749
 #, c-format
 msgid "Windows 32 bit version (MSVC %d).\n"
-msgstr "Windows 32-bit-Version (MSVC %d).\n"
+msgstr "Windows 32-Bit-Version (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "OS/2-Version (WATCOMC).\n"
+msgstr "OS/2-Version (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"

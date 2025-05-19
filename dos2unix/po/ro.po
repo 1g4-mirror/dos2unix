@@ -1,5 +1,6 @@
+# Translation of the dos2unix to Romanian.
 # Mesajele în limba română pentru pachetul dos2unix.
-# Copyright © 2022, 2023 Erwin Waterlander (msgids)
+# Copyright © 2022, 2023, 2025 Erwin Waterlander (msgids)
 # This file is distributed under the same license as the dos2unix package.
 #
 # Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2022 - 2023.
@@ -9,14 +10,15 @@
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.4.4-beta4, dec-2022.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.0-beta5, apr-2023.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.2-beta2, noi-2023.
+# Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.3-beta8, mai-2025.
 # Actualizare a traducerii pentru versiunea Y, făcută de X,Y(luna-anul).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.2-beta2\n"
+"Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2023-11-10 15:21+0100\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-17 13:31+0200\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
 "Language: ro\n"
@@ -25,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || ((n%100) > 0 && (n%100) < 20)) ? 1 : 2);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: dos2unix.c:79
 #, c-format
@@ -363,19 +365,16 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         afișează numărul versiunii\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "Versiunea DOS pe 16 biți (WATCOMC).\n"
+msgstr "Versiunea DOS pe 16 biți (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "Versiunea DOS pe 16 biți (TURBOC).\n"
+msgstr "Versiunea DOS pe 16 biți (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "Versiunea DOS pe 32 biți (WATCOMC).\n"
+msgstr "Versiunea DOS pe 32 biți (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
@@ -394,9 +393,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Versiunea Windows pe 64 de biți (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "Versiunea Windows pe 32 de biți (WATCOMC).\n"
+msgstr "Versiunea Windows pe 32 de biți (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
@@ -417,9 +415,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Versiunea Windows pe 32 de biți (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "Versiunea OS/2 (WATCOMC).\n"
+msgstr "Versiunea OS/2 (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"
@@ -460,7 +457,7 @@ msgstr "Fără suport pentru păstrarea dreptului de proprietate asupra fișiere
 
 #: common.c:915
 msgid "Path for temporary output file is too long:"
-msgstr "Calea pentru fișierul de ieșire temporar este prea lungă:"
+msgstr "Ruta pentru fișierul de ieșire temporar este prea lungă:"
 
 #: common.c:1201 common.c:1208 common.c:1215 common.c:1222 common.c:1234
 #: common.c:1241

@@ -1,5 +1,6 @@
+# Translation of the dos2unix-man to Romanian.
 # Mesajele în limba română pentru pachetul dos2unix-man
-# Copyright © 2022, 2023 Erwin Waterlander (msgids)
+# Copyright © 2022, 2023, 2025 Erwin Waterlander (msgids)
 # This file is distributed under the same license as the dos2unix package.
 #
 # Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2022 - 2023.
@@ -10,14 +11,15 @@
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.0-beta5, apr-2023.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.2-beta2, noi-2023.
 # Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.2-beta3, noi-2023.
+# Traducerea inițială, făcută de R-GC, pentru versiunea dos2unix 7.5.3-beta8, mai-2025.
 # Actualizare a traducerii pentru versiunea Y, făcută de X,Y(luna-anul).
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.2-beta3\n"
+"Project-Id-Version: dos2unix-man 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:04+0200\n"
-"PO-Revision-Date: 2023-11-29 16:19+0100\n"
+"POT-Creation-Date: 2025-05-16 23:04+0200\n"
+"PO-Revision-Date: 2025-05-17 13:39+0200\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
 "Language: ro\n"
@@ -26,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || ((n%100) > 0 && (n%100) < 20)) ? 1 : 2);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #. type: =head1
 #: dos2unix.pod:52
@@ -62,8 +64,6 @@ msgstr "DESCRIERE"
 
 #. type: textblock
 #: dos2unix.pod:63
-#, fuzzy
-#| msgid "The Dos2unix package includes utilities C<dos2unix> and C<unix2dos> to convert plain text files in DOS or Mac format to Unix format and vice versa."
 msgid "The dos2unix package includes utilities C<dos2unix> and C<unix2dos> to convert plain text files in DOS or Mac format to Unix format and vice versa."
 msgstr "Pachetul «dos2unix» include utilitarele C<dos2unix> și C<unix2dos> pentru a converti fișierele text simplu din formatul DOS sau Mac în formatul Unix și invers."
 
@@ -74,8 +74,6 @@ msgstr "În fișierele text DOS/Windows, o întrerupere de linie, cunoscută și
 
 #. type: textblock
 #: dos2unix.pod:72
-#, fuzzy
-#| msgid "Besides line breaks Dos2unix can also convert the encoding of files. A few DOS code pages can be converted to Unix Latin-1. And Windows Unicode (UTF-16)  files can be converted to Unix Unicode (UTF-8) files."
 msgid "Besides line breaks dos2unix can also convert the encoding of files. A few DOS code pages can be converted to Unix Latin-1. And Windows Unicode (UTF-16)  files can be converted to Unix Unicode (UTF-8) files."
 msgstr "Pe lângă întreruperile de linie, «dos2unix» poate converti și codificarea fișierelor. Câteva pagini de cod DOS pot fi convertite în Latin-1 Unix. Și fișierele Unicode Windows (UTF-16) pot fi convertite în fișiere Unicode Unix (UTF-8)."
 
@@ -100,12 +98,10 @@ msgstr "Fișierele care nu sunt obișnuite, cum ar fi directoarele și liniile d
 #. type: textblock
 #: dos2unix.pod:80
 msgid "Symbolic links and their targets are by default kept untouched.  Symbolic links can optionally be replaced, or the output can be written to the symbolic link target.  Writing to a symbolic link target is not supported on Windows."
-msgstr "Legăturile simbolice și țintele lor sunt în mod implicit păstrate neatinse.  Legăturile simbolice pot fi înlocuite opțional sau rezultatul poate fi scris în ținta legăturii simbolice,  Scrierea la o țintă de legătură simbolică nu este acceptată în Windows."
+msgstr "Legăturile simbolice și țintele lor sunt în mod implicit păstrate neatinse. Legăturile simbolice pot fi înlocuite opțional sau rezultatul poate fi scris în ținta legăturii simbolice, Scrierea la o țintă de legătură simbolică nu este acceptată în Windows."
 
 #. type: textblock
 #: dos2unix.pod:84
-#, fuzzy
-#| msgid "Dos2unix was modelled after dos2unix under SunOS/Solaris.  There is one important difference with the original SunOS/Solaris version. This version does by default in-place conversion (old file mode), while the original SunOS/Solaris version only supports paired conversion (new file mode). See also options C<-o> and C<-n>. Another difference is that the SunOS/Solaris version uses by default I<iso> mode conversion while this version uses by default I<ascii> mode conversion."
 msgid "dos2unix was modelled after dos2unix under SunOS/Solaris.  There is one important difference with the original SunOS/Solaris version. This version does by default in-place conversion (old file mode), while the original SunOS/Solaris version only supports paired conversion (new file mode). See also options C<-o> and C<-n>. Another difference is that the SunOS/Solaris version uses by default I<iso> mode conversion while this version uses by default I<ascii> mode conversion."
 msgstr "«dos2unix» a fost modelat după «dos2unix» din SunOS/Solaris. Există o diferență importantă față de versiunea originală a SunOS/Solaris. Această versiune efectuează în mod implicit conversia „în același loc”, în cazul de față, în același fișier (mod-fișier_vechi), în timp ce versiunea originală SunOS/Solaris acceptă doar conversia împerecheată (mod-fișier_nou). A se vedea, de asemenea, opțiunile C<-o> și C<-n>. O altă diferență este că versiunea SunOS/Solaris utilizează implicit conversia în modul I<iso>, în timp ce această versiune utilizează implicit conversia în modul I<ascii>."
 
@@ -301,8 +297,6 @@ msgstr "B<ansi>"
 
 #. type: textblock
 #: dos2unix.pod:186
-#, fuzzy
-#| msgid "Dos2unix's default method is to use ANSI encoded text. The advantage is that it is backwards compatible. It works with raster and TrueType fonts. In some regions you may need to change the active DOS OEM code page to the Windows system ANSI code page using the C<chcp> command, because dos2unix uses the Windows system code page."
 msgid "dos2unix's default method is to use ANSI encoded text. The advantage is that it is backwards compatible. It works with raster and TrueType fonts. In some regions you may need to change the active DOS OEM code page to the Windows system ANSI code page using the C<chcp> command, because dos2unix uses the Windows system code page."
 msgstr "Metoda implicită a «dos2unix» este utilizarea textului codificat ANSI. Avantajul este acela că este compatibilă cu versiunea anterioară. Această opțiune funcționează cu fonturi bitmap și TrueType. În unele regiuni, poate fi necesar să schimbați pagina de coduri OEM DOS activă în pagina de coduri ANSI a sistemului Windows folosind comanda C<chcp>, deoarece «dos2unix» utilizează pagina de coduri a sistemului Windows."
 
@@ -319,7 +313,7 @@ msgstr "B<unicode, unicodebom>"
 #. type: textblock
 #: dos2unix.pod:199
 msgid "The advantage of unicode (the Windows name for UTF-16) encoding is that text is usually properly displayed. There is no need to change the active code page.  You may need to set the console's font to a TrueType font to have international characters displayed properly. When a character is not included in the TrueType font you usually see a small square, sometimes with a question mark in it."
-msgstr "Avantajul codificării Unicode (numele Windows pentru UTF-16) este că textul este de obicei afișat corect. Nu este nevoie să schimbați pagina de cod activă.  Poate fi necesar să definiți fontul consolei la un font TrueType pentru ca toate caracterele internaționale să fie afișate corect. Când un caracter nu este inclus în fontul TrueType, de obicei vedeți un pătrat mic, uneori cu un semn de întrebare în el."
+msgstr "Avantajul codificării Unicode (numele Windows pentru UTF-16) este că textul este de obicei afișat corect. Nu este nevoie să schimbați pagina de cod activă. Poate fi necesar să definiți fontul consolei la un font TrueType pentru ca toate caracterele internaționale să fie afișate corect. Când un caracter nu este inclus în fontul TrueType, de obicei vedeți un pătrat mic, uneori cu un semn de întrebare în el."
 
 #. type: textblock
 #: dos2unix.pod:205
@@ -862,7 +856,7 @@ msgstr "Modul fișier vechi. Convertește fișierul FIȘIER și suprascrie rezul
 #. type: textblock
 #: dos2unix.pod:458
 msgid "In old file (in-place) mode the converted file gets the same owner, group, and read/write permissions as the original file. Also when the file is converted by another user who has write permissions on the file (e.g. user root).  The conversion will be aborted when it is not possible to preserve the original values.  Change of owner could mean that the original owner is not able to read the file any more. Change of group could be a security risk, the file could be made readable for persons for whom it is not intended.  Preservation of owner, group, and read/write permissions is only supported on Unix."
-msgstr "În modul-fișier_vechi (în același loc / în același fișier), fișierul convertit primește același proprietar, grup și permisiuni de citire/scriere ca fișierul original. De asemenea, atunci când fișierul este convertit de un alt utilizator care are permisiuni de scriere în fișier (de exemplu, utilizatorul root).  Conversia va fi anulată atunci când nu este posibil să se păstreze valorile originale. Schimbarea proprietarului ar putea însemna că proprietarul inițial nu mai poate citi fișierul. Schimbarea grupului ar putea reprezenta un risc de securitate, fișierul ar putea fi făcut vizibil pentru persoanele cărora nu este destinat. Păstrarea permisiunilor de proprietar, de grup și de citire/scriere este acceptată numai în Unix."
+msgstr "În modul-fișier_vechi (în același loc / în același fișier), fișierul convertit primește același proprietar, grup și permisiuni de citire/scriere ca fișierul original. De asemenea, atunci când fișierul este convertit de un alt utilizator care are permisiuni de scriere în fișier (de exemplu, utilizatorul root). Conversia va fi anulată atunci când nu este posibil să se păstreze valorile originale. Schimbarea proprietarului ar putea însemna că proprietarul inițial nu mai poate citi fișierul. Schimbarea grupului ar putea reprezenta un risc de securitate, fișierul ar putea fi făcut vizibil pentru persoanele cărora nu este destinat. Păstrarea permisiunilor de proprietar, de grup și de citire/scriere este acceptată numai în Unix."
 
 #. type: textblock
 #: dos2unix.pod:467
@@ -967,7 +961,7 @@ msgstr "Când există un marcaj de ordine a octeților în fișierul de intrare,
 #. type: textblock
 #: dos2unix.pod:523
 msgid "When you made a wrong assumption (the input file was not in UTF-16LE format) and the conversion succeeded, you will get an UTF-8 output file with wrong text.  You can undo the wrong conversion with iconv(1) by converting the UTF-8 output file back to UTF-16LE. This will bring back the original file."
-msgstr "Când ați făcut o presupunere greșită (fișierul de intrare nu era în format UTF-16LE) și conversia a reușit, veți obține un fișier de ieșire UTF-8 cu text greșit.  Puteți anula conversia greșită cu iconv(1) prin conversia fișierului de ieșire UTF-8 înapoi în UTF-16LE. Acest lucru va reface fișierul original."
+msgstr "Când ați făcut o presupunere greșită (fișierul de intrare nu era în format UTF-16LE) și conversia a reușit, veți obține un fișier de ieșire UTF-8 cu text greșit. Puteți anula conversia greșită cu iconv(1) prin conversia fișierului de ieșire UTF-8 înapoi în UTF-16LE. Acest lucru va reface fișierul original."
 
 #. type: textblock
 #: dos2unix.pod:528
@@ -1077,7 +1071,7 @@ msgstr "Acesta este modul de conversie implicit. Acest mod este destinat convers
 #. type: textblock
 #: dos2unix.pod:582
 msgid "If dos2unix has UTF-16 support, UTF-16 encoded files are converted to the current locale character encoding on POSIX systems and to UTF-8 on Windows.  Enabling B<ascii> mode disables the option to keep UTF-16 encoding (C<-u>) and the options to assume UTF-16 input (C<-ul> and C<-ub>).  To see if dos2unix has UTF-16 support type C<dos2unix -V>. See also section UNICODE."
-msgstr "Dacă «dos2unix» are suport UTF-16, fișierele codificate UTF-16 sunt convertite la codificarea caracterelor locale curente pe sistemele POSIX și la UTF-8 pe Windows. Activarea modului B<ascii> dezactivează opțiunea de păstrare a codificării UTF-16 (C<-u>) și opțiunile de asumare a intrării UTF-16 (C<-ul> și C<-ub>).  Pentru a vedea dacă «dos2unix» are suport UTF-16, tastați C<dos2unix -V>. A se vedea și secțiunea UNICODE."
+msgstr "Dacă «dos2unix» are suport UTF-16, fișierele codificate UTF-16 sunt convertite la codificarea caracterelor locale curente pe sistemele POSIX și la UTF-8 pe Windows. Activarea modului B<ascii> dezactivează opțiunea de păstrare a codificării UTF-16 (C<-u>) și opțiunile de asumare a intrării UTF-16 (C<-ul> și C<-ub>). Pentru a vedea dacă «dos2unix» are suport UTF-16, tastați C<dos2unix -V>. A se vedea și secțiunea UNICODE."
 
 #. type: =item
 #: dos2unix.pod:588
@@ -1102,7 +1096,7 @@ msgstr "Caracterele sunt convertite între un set de caractere DOS (pagina de co
 #. type: textblock
 #: dos2unix.pod:600
 msgid "When only option C<-iso> is used dos2unix will try to determine the active code page. When this is not possible dos2unix will use default code page CP437, which is mainly used in the USA.  To force a specific code page use options C<-437> (US), C<-850> (Western European), C<-860> (Portuguese), C<-863> (French Canadian), or C<-865> (Nordic).  Windows code page CP1252 (Western European) is also supported with option C<-1252>. For other code pages use dos2unix in combination with iconv(1).  Iconv can convert between a long list of character encodings."
-msgstr "Când este folosită numai opțiunea C<-iso>, «dos2unix» va încerca să determine pagina de cod activă. Când acest lucru nu este posibil, «dos2unix» va folosi pagina de cod implicită CP437, care este folosită în principal în SUA. Pentru a forța o anumită pagină de coduri, utilizați opțiunile C<-437> (SUA), C<-850> (Europa de Vest), C<-860> (Portugheză), C<-863> (Franceză Canadiană) sau C<- 865> (Scandinavă).  Pagina de coduri CP1252 (Europa de Vest) Windows este, de asemenea, acceptată cu opțiunea C<-1252>. Pentru alte pagini de cod, utilizați «dos2unix» în combinație cu iconv(1). «iconv» poate converti o listă lungă de codificări de caractere. Puteți vizualiza această listă rulând comanda: «iconv -l»."
+msgstr "Când este folosită numai opțiunea C<-iso>, «dos2unix» va încerca să determine pagina de cod activă. Când acest lucru nu este posibil, «dos2unix» va folosi pagina de cod implicită CP437, care este folosită în principal în SUA. Pentru a forța o anumită pagină de coduri, utilizați opțiunile C<-437> (SUA), C<-850> (Europa de Vest), C<-860> (Portugheză), C<-863> (Franceză Canadiană) sau C<- 865> (Scandinavă). Pagina de coduri CP1252 (Europa de Vest) Windows este, de asemenea, acceptată cu opțiunea C<-1252>. Pentru alte pagini de cod, utilizați «dos2unix» în combinație cu iconv(1). «iconv» poate converti o listă lungă de codificări de caractere. Puteți vizualiza această listă rulând comanda: «iconv -l»."
 
 #. type: textblock
 #: dos2unix.pod:609
@@ -1271,8 +1265,6 @@ msgstr "Toate versiunile de «dos2unix» și «unix2dos» pot converti fișiere 
 
 #. type: textblock
 #: dos2unix.pod:667
-#, fuzzy
-#| msgid "Dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "«dos2unix» și «unix2dos» cu suport Unicode UTF-16, pot citi fișiere text codificate UTF-16 little și big endian. Pentru a vedea dacă «dos2unix» a fost construit cu suport UTF-16, tastați: C<dos2unix -V>."
 
@@ -1298,8 +1290,6 @@ msgstr "Când se utilizează opțiunea C<-u>, fișierul de ieșire va fi scris �
 
 #. type: textblock
 #: dos2unix.pod:686
-#, fuzzy
-#| msgid "Dos2unix and unix2dos have no option to convert UTF-8 files to UTF-16."
 msgid "dos2unix and unix2dos have no option to convert UTF-8 files to UTF-16."
 msgstr "«dos2unix» și «unix2dos» nu au nicio opțiune de a converti fișierele UTF-8 în UTF-16."
 
@@ -1325,8 +1315,6 @@ msgstr "În Unix, fișierele Unicode nu au de obicei un marcaj de ordine a octe�
 
 #. type: textblock
 #: dos2unix.pod:699
-#, fuzzy
-#| msgid "Dos2unix can only detect if a file is in UTF-16 format if the file has a BOM.  When an UTF-16 file doesn't have a BOM, dos2unix will see the file as a binary file."
 msgid "dos2unix can only detect if a file is in UTF-16 format if the file has a BOM.  When an UTF-16 file doesn't have a BOM, dos2unix will see the file as a binary file."
 msgstr "«dos2unix» poate detecta dacă un fișier este în formatul UTF-16 numai dacă fișierul are un marcaj de ordine a octeților (BOM). Când un fișier UTF-16 nu are un marcaj de ordine a octeților, «dos2unix» va vedea fișierul ca un fișier binar."
 
@@ -1337,22 +1325,16 @@ msgstr "Utilizați opțiunea C<-ul> sau C<-ub> pentru a converti un fișier UTF-
 
 #. type: textblock
 #: dos2unix.pod:705
-#, fuzzy
-#| msgid "Dos2unix writes by default no BOM in the output file. With option C<-b> Dos2unix writes a BOM when the input file has a BOM."
 msgid "dos2unix writes by default no BOM in the output file. With option C<-b> dos2unix writes a BOM when the input file has a BOM."
 msgstr "«dos2unix» nu scrie în mod implicit niciun marcaj de ordine a octeților (BOM) în fișierul de ieșire. Cu opțiunea C<-b> «dos2unix» scrie un marcaj de ordine a octeților atunci când fișierul de intrare are un marcaj de ordine a octeților."
 
 #. type: textblock
 #: dos2unix.pod:708
-#, fuzzy
-#| msgid "Unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option C<-r> to remove the BOM."
 msgid "unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option C<-r> to remove the BOM."
 msgstr "«unix2dos» scrie implicit un marcaj de ordine a octeților în fișierul de ieșire când fișierul de intrare are un marcaj de ordine a octeților. Utilizați opțiunea C<-r> pentru a elimina un marcaj de ordine a octeților."
 
 #. type: textblock
 #: dos2unix.pod:711
-#, fuzzy
-#| msgid "Dos2unix and unix2dos write always a BOM when option C<-m> is used."
 msgid "dos2unix and unix2dos write always a BOM when option C<-m> is used."
 msgstr "«dos2unix» și «unix2dos» scriu întotdeauna un marcaj de ordine a octeților atunci când se utilizează opțiunea C<-m>."
 
@@ -1363,8 +1345,6 @@ msgstr "Nume de fișiere Unicode în Windows"
 
 #. type: textblock
 #: dos2unix.pod:715
-#, fuzzy
-#| msgid "Dos2unix has optional support for reading and writing Unicode file names in the Windows Command Prompt. That means that dos2unix can open files that have characters in the name that are not part of the default system ANSI code page.  To see if dos2unix for Windows was built with Unicode file name support type C<dos2unix -V>."
 msgid "dos2unix has optional support for reading and writing Unicode file names in the Windows Command Prompt. That means that dos2unix can open files that have characters in the name that are not part of the default system ANSI code page.  To see if dos2unix for Windows was built with Unicode file name support type C<dos2unix -V>."
 msgstr "«dos2unix» are suport opțional pentru citirea și scrierea numelor de fișiere Unicode în linia de comandă Windows. Asta înseamnă că «dos2unix» poate deschide fișiere care au caractere în nume care nu fac parte din pagina de cod ANSI implicită a sistemului. Pentru a vedea dacă «dos2unix» pentru Windows a fost construit cu suport pentru nume de fișier Unicode, tastați: C<dos2unix -V>."
 
@@ -1773,8 +1753,6 @@ msgstr "B<LANGUAGE>"
 
 #. type: textblock
 #: dos2unix.pod:869
-#, fuzzy
-#| msgid "With the LANGUAGE environment variable you can specify a priority list of languages, separated by colons. Dos2unix gives preference to LANGUAGE over LANG.  For instance, first Dutch and then German: C<LANGUAGE=nl:de>. You have to first enable localization, by setting LANG (or LC_ALL) to a value other than \"C\", before you can use a language priority list through the LANGUAGE variable. See also the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
 msgid "With the LANGUAGE environment variable you can specify a priority list of languages, separated by colons. dos2unix gives preference to LANGUAGE over LANG.  For instance, first Dutch and then German: C<LANGUAGE=nl:de>. You have to first enable localization, by setting LANG (or LC_ALL) to a value other than \"C\", before you can use a language priority list through the LANGUAGE variable. See also the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
 msgstr "Cu variabila de mediu LANGUAGE puteți specifica o listă cu prioritate de limbi, separate prin două puncte. «dos2unix» dă preferință variabilei LANGUAGE în detrimentul variabilei LANG. De exemplu, mai întâi olandeză și apoi germană: C<LANGUAGE=nl:de>. Mai întâi trebuie să activați localizarea, definind LANG (sau LC_ALL) la o altă valoare decât „C”, înainte de a putea utiliza o listă cu prioritate de limbă prin variabila LANGUAGE. Consultați și manualul «gettext»: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
 

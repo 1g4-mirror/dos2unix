@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix 7.5.2-beta2\n"
+"Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2023-11-13 03:50+0900\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-18 14:24+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: dos2unix.c:79
 #, c-format
@@ -335,19 +335,16 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         버전 번호를 나타냅니다\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "DOS 16 비트 버전 (WATCOMC).\n"
+msgstr "DOS 16 비트 버전 (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "DOS 16 비트 버전 (TURBOC).\n"
+msgstr "DOS 16 비트 버전 (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "DOS 32 비트 버전 (WATCOMC).\n"
+msgstr "DOS 32 비트 버전 (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
@@ -366,9 +363,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "윈도우 64비트 버전 (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "윈도우 32비트 버전 (WATCOMC).\n"
+msgstr "윈도우 32비트 버전 (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
@@ -389,9 +385,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "윈도우 32비트 버전 (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "OS/2 버전 (WATCOMC).\n"
+msgstr "OS/2 버전 (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"
