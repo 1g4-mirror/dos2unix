@@ -1,14 +1,14 @@
 # Serbian translation for dos2unix.
 # Copyright © 2020 Erwin Waterlander (msgids)
 # This file is distributed under the same license as the dos2unix package.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014-2024.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2014-2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-7.5.2-beta2\n"
+"Project-Id-Version: dos2unix-7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-16 22:57+0200\n"
-"PO-Revision-Date: 2024-01-10 08:23+0100\n"
+"POT-Creation-Date: 2025-05-16 23:05+0200\n"
+"PO-Revision-Date: 2025-05-20 06:04+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 41.0\n"
+"X-Generator: Poedit 3.5\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
 
 #: dos2unix.c:79
@@ -328,19 +328,16 @@ msgid " -V, --version         display version number\n"
 msgstr " -V, --version         приказује број издања\n"
 
 #: common.c:727
-#, fuzzy
 msgid "DOS 16 bit version (Watcom C).\n"
-msgstr "ДОС 16-битно издање (WATCOMC).\n"
+msgstr "ДОС 16-битно издање (Watcom C).\n"
 
 #: common.c:729
-#, fuzzy
 msgid "DOS 16 bit version (Turbo C).\n"
-msgstr "ДОС 16-битно издање (TURBOC).\n"
+msgstr "ДОС 16-битно издање (Turbo C).\n"
 
 #: common.c:731
-#, fuzzy
 msgid "DOS 32 bit version (Watcom C).\n"
-msgstr "ДОС 32-битно издање (WATCOMC).\n"
+msgstr "ДОС 32-битно издање (Watcom C).\n"
 
 #: common.c:733
 msgid "DOS 32 bit version (DJGPP).\n"
@@ -359,9 +356,8 @@ msgid "Windows 64 bit version (MinGW-w64).\n"
 msgstr "Виндоуз 64-битно издање (MinGW-w64).\n"
 
 #: common.c:741
-#, fuzzy
 msgid "Windows 32 bit version (Watcom C).\n"
-msgstr "Виндоуз 32-битно издање (WATCOMC).\n"
+msgstr "Виндоуз 32-битно издање (Watcom C).\n"
 
 #: common.c:743
 msgid "Windows 32 bit version (MinGW-w64).\n"
@@ -382,9 +378,8 @@ msgid "Windows 32 bit version (MSVC %d).\n"
 msgstr "Виндоуз 32-битно издање (MSVC %d).\n"
 
 #: common.c:751
-#, fuzzy
 msgid "OS/2 version (Watcom C).\n"
-msgstr "ОС/2 издање (WATCOMC).\n"
+msgstr "ОС/2 издање (Watcom C).\n"
 
 #: common.c:753
 msgid "OS/2 version (EMX).\n"

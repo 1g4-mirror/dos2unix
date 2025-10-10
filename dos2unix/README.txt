@@ -109,7 +109,7 @@ TRANSLATORS
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.3
         Russian               Андрей Углик (Andrei Uhlik)  Version 6.0.4
         Russian               Yuri Kozlov                  Version 6.0.6 - 7.5.2
-        Serbian               Мирослав Николић             Version 6.0.5 - 7.5.2
+        Serbian               Мирослав Николић             Version 6.0.5 - 7.5.3
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.3.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
@@ -136,7 +136,7 @@ TRANSLATORS
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.3
         Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.3
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.3
-        Serbian               Мирослав Николић             Version 7.4.3 - 7.5.2
+        Serbian               Мирослав Николић             Version 7.4.3 - 7.5.3
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.2.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
