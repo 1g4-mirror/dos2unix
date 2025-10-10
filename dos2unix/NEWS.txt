@@ -1,6 +1,6 @@
 7.5.3
 
-  * New Italian translations of the UI messages and manual.
+  * Exit with non-zero code if a binary file is detected.
   * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Dutch,
     Friulian, and Serbian translations.
 

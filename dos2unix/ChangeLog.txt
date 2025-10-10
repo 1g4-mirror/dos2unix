@@ -1,3 +1,7 @@
+2025-10-10 Erwin Waterlander <waterlan@xs4all.nl>
+	* Exit with non-zero code if a binary file is detected.
+	  Fixes https://sourceforge.net/p/dos2unix/bugs/21/
+
 2025-05-16 Erwin Waterlander <waterlan@xs4all.nl>
 	* common.c: Updated a few messages.
 	* man/man1/dos2unix.pod: dos2unix all lowercase.
