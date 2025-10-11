@@ -2,6 +2,8 @@
 	* Makefile, man/man1/Makefile: Update make dependencies
 	  for man pages generation.
 	* Makefile: Update location of CRT_glob.o for mingw.
+	* common.c: Fix: Exit with zero code when an unicode
+	  conversion error occurs in quiet mode.
 
 2025-10-10 Erwin Waterlander <waterlan@xs4all.nl>
 	* Exit with non-zero code if a binary file is detected.

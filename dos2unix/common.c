@@ -1562,7 +1562,9 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
     if ((!RetVal) && (ConvertW(InF, TempF, ipFlag, progname)))
       RetVal = -1;
     if (ipFlag->status & UNICODE_CONVERSION_ERROR) {
-      if (!ipFlag->error) ipFlag->error = 1;
+      if (ipFlag->verbose) {
+        if (!ipFlag->error) ipFlag->error = 1;
+      }
       RetVal = -1;
     }
   } else {
@@ -2844,8 +2846,10 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
 
    /* check for lead without a trail */
    if ((lead >= 0xd800) && (lead < 0xdc00) && ((wc < 0xdc00) || (wc >= 0xe000))) {
-      D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-      D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing low surrogate.\n"));
+      if (ipFlag->verbose) {
+         D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+         D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing low surrogate.\n"));
+      }
       ipFlag->status |= UNICODE_CONVERSION_ERROR ;
       return(WEOF);
    }
@@ -2860,8 +2864,10 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
 
       /* check for trail without a lead */
       if ((lead < 0xd800) || (lead >= 0xdc00)) {
-         D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-         D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing high surrogate.\n"));
+         if (ipFlag->verbose) {
+            D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+            D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing high surrogate.\n"));
+         }
          ipFlag->status |= UNICODE_CONVERSION_ERROR ;
          return(WEOF);
       }
