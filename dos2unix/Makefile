@@ -227,7 +227,7 @@ ifeq ($(findstring w64-mingw32,$(shell gcc -dumpmachine)),w64-mingw32)
 ifdef ENABLE_NLS
         ZIPOBJ_EXTRA += bin/libgcc_s_dw2-1.dll bin/libwinpthread-1.dll
 endif
-        CRT_GLOB_OBJ = /mingw32/i686-w64-mingw32/lib/CRT_glob.o
+        CRT_GLOB_OBJ = /mingw32/lib/CRT_glob.o
         LIBS_EXTRA += $(CRT_GLOB_OBJ)
         CFLAGS_OS=-I/mingw32/include
 else
@@ -247,7 +247,7 @@ ifdef ENABLE_NLS
         LIBS_EXTRA = -lintl -liconv
         ZIPOBJ_EXTRA = bin/libintl-8.dll bin/libiconv-2.dll
 endif
-        CRT_GLOB_OBJ = /mingw64/x86_64-w64-mingw32/lib/CRT_glob.o
+        CRT_GLOB_OBJ = /mingw64/lib/CRT_glob.o
         LIBS_EXTRA += $(CRT_GLOB_OBJ)
         CFLAGS_OS=-I/mingw64/include
 endif
@@ -416,7 +416,7 @@ else
 endif
 
 $(MANPOTFILE) : man/man1/dos2unix.pod
-	$(MAKE) -C man/man1 pods
+	$(MAKE) -C man/man1
 
 #  WARNING: Backward-incompatibility since GNU make 3.82.
 #  The pattern-specific variables and pattern rules are now applied in the
@@ -431,11 +431,11 @@ po/%.po : $(POT)
 	# change timestamp in case .po file was not updated.
 	touch $@
 
-%.po : man/man1/dos2unix.pod
-	$(MAKE) -C man/man1 pods
+$(MANPOFILES) &: man/man1/dos2unix.pod
+	$(MAKE) -C man/man1
 
 man/%/man1/dos2unix.pod : po-man/%.po
-	$(MAKE) -C man/man1 pods
+	$(MAKE) -C man/man1
 
 # empty recipe to break circular dependency
 man/man1/dos2unix.pod : ;
