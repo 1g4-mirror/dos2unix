@@ -4,7 +4,7 @@
   * Fix: Exit with zero code when an unicode conversion error
     occurs in quiet mode.
   * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Dutch,
-    Friulian, and Serbian translations.
+    Friulian, Georgian, and Serbian translations.
 
 2024-01-22: Version 7.5.2
 

@@ -1,3 +1,6 @@
+2025-10-14 Temuri Doghonadze <temuri.doghonadze@gmail.com>
+	* Updated Georgian translation of UI messages.
+
 2025-10-11 Erwin Waterlander <waterlan@xs4all.nl>
 	* Makefile, man/man1/Makefile: Update make dependencies
 	  for man pages generation.

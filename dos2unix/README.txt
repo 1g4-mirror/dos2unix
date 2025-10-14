@@ -91,7 +91,7 @@ TRANSLATORS
         Esperanto             Felipe Castro                Version 7.4.3
         French                Frédéric Marchal             Version 6.0.5 - 7.5.3
         Friulian              Fabio Tomat                  Version 7.4.2 - 7.5.2
-        Georgian              Temuri Doghonadze            Version 7.4.4
+        Georgian              Temuri Doghonadze            Version 7.4.4 - 7.5.3
         German                Philipp Thomas               Version 5.0   - 6.0.3, 7.0,
                                                            7.2.2 - 7.4.1
         German                Lars Wendler                 Version 6.0.4
