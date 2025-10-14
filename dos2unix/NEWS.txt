@@ -1,6 +1,7 @@
-7.5.3
+2025-10-14: Version 7.5.3
 
-  * Fix: Exit with non-zero code if a binary file is detected.
+  * Fix: Exit with non-zero code if the conversion is aborted
+    due to a binary file.
   * Fix: Exit with zero code when an unicode conversion error
     occurs in quiet mode.
   * Updated Brazilian Portuguese, Catalan, Chinese (traditional), Dutch,

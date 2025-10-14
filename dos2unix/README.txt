@@ -59,7 +59,7 @@ HISTORY
 
 AUTHORS
 
-        Erwin Waterlander       version 3.2 - 7.5.2  2009-2025
+        Erwin Waterlander       version 3.2 - 7.5.3  2009-2025
         Christian Wurll         version 3.1          1998
         Bernd Johannes Wuebben  version 3.0          1998
         Benjamin Lin            version 1.1 - 2.3    1994-1995
@@ -201,6 +201,8 @@ ACKNOWLEDGEMENTS
         fdamien12             Reported problem of converting  a symbolic link target
                               that is on another file system.
         Dimitry Andric        Aligned Dutch help text.
+        Joao ERIBERTO Mota Filho  Reported dos2unix exits with zero code when it
+                              aborts conversion due to a binary file.
 
 
 FINDUTILS

@@ -1,3 +1,6 @@
+2025-10-14 Erwin Waterlander <waterlan@xs4all.nl>
+	* Version 7.5.3
+
 2025-10-14 Temuri Doghonadze <temuri.doghonadze@gmail.com>
 	* Updated Georgian translation of UI messages.
 
@@ -9,7 +12,8 @@
 	  conversion error occurs in quiet mode.
 
 2025-10-10 Erwin Waterlander <waterlan@xs4all.nl>
-	* Exit with non-zero code if a binary file is detected.
+	* Fix: Exit with non-zero code if the conversion is aborted
+	  due to a binary file.
 	  Fixes https://sourceforge.net/p/dos2unix/bugs/21/
 
 2025-05-16 Erwin Waterlander <waterlan@xs4all.nl>
