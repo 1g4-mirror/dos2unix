@@ -1,3 +1,6 @@
+2025-10-15 Erwin Waterlander <waterlan@xs4all.nl>
+	* Makefile: Fix make dependencies for man pages generation.
+
 2025-10-14 Erwin Waterlander <waterlan@xs4all.nl>
 	* Version 7.5.3
 
