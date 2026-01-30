@@ -100,7 +100,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
     if ((ipFlag->Force == 0) && binaryCharW(PreviousChar)) {
         ipFlag->status |= BINARY_FILE;
         if (ipFlag->verbose) {
-            ipFlag->error = 1;
+            if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
             D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
             D2U_UTF8_FPRINTF(stderr,
                     _("Binary symbol 0x00%02X found at line %u\n"), PreviousChar,
@@ -116,7 +116,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
         if ((ipFlag->Force == 0) && binaryCharW(NextChar)) {
             ipFlag->status |= BINARY_FILE;
             if (ipFlag->verbose) {
-                ipFlag->error = 1;
+                if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
                 D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
                 D2U_UTF8_FPRINTF(stderr,
                         _("Binary symbol 0x00%02X found at line %u\n"), NextChar,
@@ -190,7 +190,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          ipFlag->error = 1;
+          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
           D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
           D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x00%02X found at line %u\n"), TempChar, line_nr);
         }
@@ -317,7 +317,7 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
     if ((ipFlag->Force == 0) && binaryChar(PreviousChar)) {
         ipFlag->status |= BINARY_FILE;
         if (ipFlag->verbose) {
-            ipFlag->error = 1;
+            if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
             D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
             D2U_UTF8_FPRINTF(stderr,
                     _("Binary symbol 0x%02X found at line %u\n"), PreviousChar,
@@ -333,7 +333,7 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
         if ((ipFlag->Force == 0) && binaryChar(NextChar)) {
             ipFlag->status |= BINARY_FILE;
             if (ipFlag->verbose) {
-                ipFlag->error = 1;
+                if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
                 D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
                 D2U_UTF8_FPRINTF(stderr,
                         _("Binary symbol 0x%02X found at line %u\n"), NextChar,
@@ -405,7 +405,7 @@ int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
-          ipFlag->error = 1;
+          if ((ipFlag->stdio_mode) && (!ipFlag->error)) ipFlag->error = 1;
           D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
           D2U_UTF8_FPRINTF(stderr, _("Binary symbol 0x%02X found at line %u\n"),TempChar, line_nr);
         }
