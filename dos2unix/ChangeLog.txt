@@ -1,3 +1,9 @@
+2026-01-30 Erwin Waterlander <waterlan@xs4all.nl>
+	* Refactored code. Simpler dos2unix algorithm.
+
+2025-12-19 Erwin Waterlander <waterlan@xs4all.nl>
+	* Refactored code. Split conversion functions.
+
 2025-10-15 Erwin Waterlander <waterlan@xs4all.nl>
 	* Makefile: Fix make dependencies for man pages generation.
 

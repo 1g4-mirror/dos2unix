@@ -1,3 +1,6 @@
+2026-01-??: Version 7.5.4
+  * Refactored code.
+
 2025-10-14: Version 7.5.3
 
   * Fix: Exit with non-zero code if the conversion is aborted
