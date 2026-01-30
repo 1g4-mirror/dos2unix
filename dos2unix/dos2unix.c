@@ -132,26 +132,35 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
                 if (ipFlag->NewLine) { /* add additional LF? */
                     if (d2u_putwc(0x0a, ipOutF, ipFlag, progname) == WEOF) {
                         d2u_putwc_error(ipFlag, progname);
+                        ipFlag->line_nr = line_nr;
                         return -1;
                     }
                 }
             } else { /* Single LF */
                 if (d2u_putwc(PreviousChar, ipOutF, ipFlag, progname) == WEOF) {
                     d2u_putwc_error(ipFlag, progname);
+                    ipFlag->line_nr = line_nr;
                     return -1;
                 }
             }
         } else { /* No DOS or Unix line break */
             if (d2u_putwc(PreviousChar, ipOutF, ipFlag, progname) == WEOF) {
                 d2u_putwc_error(ipFlag, progname);
+                ipFlag->line_nr = line_nr;
                 return -1;
             }
         }
         PreviousChar = NextChar;
     }
 
+    if ((NextChar == WEOF) && ferror(ipInF)) {
+        d2u_getc_error(ipFlag, progname);
+        return -1;
+    }
+
     if (d2u_putwc(PreviousChar, ipOutF, ipFlag, progname) == WEOF) {
         d2u_putwc_error(ipFlag, progname);
+        ipFlag->line_nr = line_nr;
         return -1;
     }
 
@@ -164,15 +173,10 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
         }
         if (d2u_putwc(0x0a, ipOutF, ipFlag, progname) == WEOF) {
             d2u_putwc_error(ipFlag, progname);
+            ipFlag->line_nr = line_nr;
             return -1;
         }
     }
-    if ((NextChar == WEOF) && ferror(ipInF)) {
-        d2u_getc_error(ipFlag, progname);
-        return -1;
-    }
-    if (ipFlag->status & UNICODE_CONVERSION_ERROR)
-        ipFlag->line_nr = line_nr;
     logConverted(0, ipFlag->verbose, progname, converted, line_nr);
     return 0;
 }
@@ -367,6 +371,11 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
         PreviousChar = NextChar;
     }
 
+    if ((NextChar == EOF) && ferror(ipInF)) {
+        d2u_getc_error(ipFlag, progname);
+        return -1;
+    }
+
     if (fputc(ConvTable[PreviousChar], ipOutF) == EOF) {
         d2u_putc_error(ipFlag, progname);
         return -1;
@@ -383,10 +392,6 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
             d2u_putc_error(ipFlag, progname);
             return -1;
         }
-    }
-    if ((NextChar == EOF) && ferror(ipInF)) {
-        d2u_getc_error(ipFlag, progname);
-        return -1;
     }
     logConverted(0, ipFlag->verbose, progname, converted, line_nr);
     return 0;
