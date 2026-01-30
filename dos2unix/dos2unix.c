@@ -192,12 +192,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
     unsigned int converted = 0;
 
     while ((TempChar = d2u_getwc(ipInF, ipFlag->bomtype)) != WEOF) {
-      if ((ipFlag->Force == 0) &&
-          (TempChar < 32) &&
-          (TempChar != 0x0a) &&  /* Not an LF */
-          (TempChar != 0x0d) &&  /* Not a CR */
-          (TempChar != 0x09) &&  /* Not a TAB */
-          (TempChar != 0x0c)) {  /* Not a form feed */
+      if ((ipFlag->Force == 0) && binaryCharW(TempChar)) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
         if (ipFlag->verbose) {
