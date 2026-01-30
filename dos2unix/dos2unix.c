@@ -97,10 +97,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
         d2u_getc_error(ipFlag, progname);
         return -1;
     }
-    if ((ipFlag->Force == 0) && (PreviousChar < 32) && (PreviousChar != 0x0a) && /* Not an LF */
-    (PreviousChar != 0x0d) && /* Not a CR */
-    (PreviousChar != 0x09) && /* Not a TAB */
-    (PreviousChar != 0x0c)) { /* Not a form feed */
+    if ((ipFlag->Force == 0) && binaryCharW(PreviousChar)) {
         ipFlag->status |= BINARY_FILE;
         if (ipFlag->verbose) {
             ipFlag->error = 1;
@@ -116,10 +113,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
      * a CR-LF combination, and push the previous char.
      */
     while ((NextChar = d2u_getwc(ipInF, ipFlag->bomtype)) != WEOF) { /* get character */
-        if ((ipFlag->Force == 0) && (NextChar < 32) && (NextChar != 0x0a) && /* Not an LF */
-        (NextChar != 0x0d) && /* Not a CR */
-        (NextChar != 0x09) && /* Not a TAB */
-        (NextChar != 0x0c)) { /* Not a form feed */
+        if ((ipFlag->Force == 0) && binaryCharW(NextChar)) {
             ipFlag->status |= BINARY_FILE;
             if (ipFlag->verbose) {
                 ipFlag->error = 1;
