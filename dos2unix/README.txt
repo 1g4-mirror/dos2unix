@@ -18,7 +18,7 @@ FILE LIST
 
 PROJECT HOME PAGE
 
-        https://waterlan.home.xs4all.nl/dos2unix.html
+        https://waterlander.net/dos2unix/
         https://dos2unix.sourceforge.io/
 
 
@@ -219,12 +219,12 @@ FINDUTILS
 
 CONTACT INFORMATION
 
-        Project home page        : https://waterlan.home.xs4all.nl/dos2unix.html
+        Project home page        : https://waterlander.net/dos2unix/
         SourceForge project page : https://sourceforge.net/projects/dos2unix/
 
         Erwin Waterlander
         waterlan@xs4all.nl
-        https://waterlan.home.xs4all.nl/
+        https://waterlander.net/
 
         If you need support you can email me directly or make a ticket on the
         SourceForge project page. Help in any form is appreciated. A problem

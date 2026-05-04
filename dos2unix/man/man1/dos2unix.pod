@@ -928,7 +928,7 @@ Bernd Johannes Wuebben (mac2unix mode) - <wuebben@kde.org>,
 Christian Wurll (add extra newline) - <wurll@ira.uka.de>,
 Erwin Waterlander - <waterlan@xs4all.nl> (maintainer)
 
-Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>
+Project page: L<https://waterlander.net/dos2unix/>
 
 SourceForge page: L<https://sourceforge.net/projects/dos2unix/>
 
