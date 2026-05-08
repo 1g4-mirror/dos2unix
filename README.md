@@ -54,8 +54,9 @@ Project information
 
 Maintainer: Erwin Waterlander <waterlan@xs4all.nl>
 Git: git clone git://git.code.sf.net/p/dos2unix/dos2unix
-[Home page](http://waterlan.home.xs4all.nl/dos2unix.html)
-[SourceForge](http://sourceforge.net/projects/dos2unix/)
+[Home page](https://waterlander.net/dos2unix/)
+[SourceForge project](https://sourceforge.net/projects/dos2unix/)
+[SourceForge website](https://dos2unix.sourceforge.io/)
 [ChangeLog](dos2unix/ChangeLog.txt)
 [NEWS](dos2unix/NEWS.txt)
 
