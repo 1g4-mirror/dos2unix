@@ -358,13 +358,13 @@ DOS PORT, 32 BIT
 
 DOS PORT, 16 BIT
 
-    To compile a version for DOS, use the Borland C compiler 3.1 or 4.0,
-    and use makefile bcc.mak:
+    Borland C version 4.0 or higher:
+    (You can run the Borland C 4.0 command line tools in DOSBox-X.)
 
         make -f bcc.mak clean
         make -f bcc.mak
 
-    Or use Open Watcom
+    Open Watcom:
 
         wmake -f wccdos16.mak clean
         wmake -f wccdos16.mak

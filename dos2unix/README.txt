@@ -130,18 +130,18 @@ TRANSLATORS
         Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4,
                                                            7.5.2
         Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0,
-                                                           7.5.2 - 7.5.3
-        French                Frédéric Marchal             Version 6.0.5 - 7.5.5
-        German                Mario Blättermann            Version 6.0.5 - 7.5.5
+                                                           7.5.2 - 7.5.6
+        French                Frédéric Marchal             Version 6.0.5 - 7.5.6
+        German                Mario Blättermann            Version 6.0.5 - 7.5.6
         German                Roland Illig                 Version 7.4.2
-        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.5
-        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.5
-        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.5
+        Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.6
+        Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.6
+        Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.6
         Serbian               Мирослав Николић             Version 7.4.3 - 7.5.5
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.2.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
-        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.5
+        Ukrainian             Yuri Chornoivan              Version 6.0.5 - 7.5.6
 
 
 ACKNOWLEDGEMENTS
