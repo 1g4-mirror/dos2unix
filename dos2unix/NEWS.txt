@@ -1,6 +1,7 @@
-2026-0?-??: Version 7.5.6
+2026-05-28: Version 7.5.6
 
  * New homepage https://waterlander.net/dos2unix/
+ * Updated translations of the manual.
 
 2026-04-06: Version 7.5.5
 

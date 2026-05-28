@@ -1,3 +1,7 @@
+2026-05-28 Erwin Waterlander <waterlan@xs4all.nl>
+	* Version 7.5.6
+	* Updated translations of the manual.
+
 2026-05-04 Erwin Waterlander <waterlan@xs4all.nl>
 	* New homepage https://waterlander.net/dos2unix/
 
