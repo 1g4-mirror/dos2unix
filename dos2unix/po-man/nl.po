@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-man-7.5.6-beta2\n"
-"POT-Creation-Date: 2026-05-21 22:32+0200\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
 "PO-Revision-Date: 2026-05-20 14:51+0200\n"
 "Last-Translator: Benno Schulenberg <vertaling@coevern.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -944,8 +944,6 @@ msgstr "B<-u>, B<--keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-#, fuzzy
-#| msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "De originele UTF-16-codering van het invoerbestand behouden.  Het uitvoerbestand wordt in dezelfde UTF-16-codering (little-endian of big-endian) geschreven als het invoerbestand.  Dit voorkomt conversie naar UTF-8.  Er wordt ook een corresponderende UTF-16-BOM geschreven.  Deze optie kan uitgeschakeld worden met de optie C<-ascii>."
 
@@ -1236,8 +1234,6 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-#, fuzzy
-#| msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
 msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
 msgstr "Zie ook L<https://czyborra.com/charsets/codepages.html> en L<https://czyborra.com/charsets/iso8859.html>."
 
@@ -1253,8 +1249,6 @@ msgstr "Coderingen"
 
 #. type: textblock
 #: dos2unix.pod:665
-#, fuzzy
-#| msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Er bestaan verschillende Unicode-coderingen.  Op Unix en Linux zijn Unicode-bestanden typisch gecodeerd in UTF-8.  Op Windows kunnen Unicode-tekstbestanden gecodeerd zijn in UTF-8, UTF-16, of UTF-16 big-endian, maar ze zijn meestal gecodeerd in UTF-16."
 
@@ -1275,8 +1269,6 @@ msgstr "Alle versies van dos2unix en unix2dos kunnen UTF-8-gecodeerde bestanden 
 
 #. type: textblock
 #: dos2unix.pod:678
-#, fuzzy
-#| msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "dos2unix en unix2dos met Unicode UTF-16-ondersteuning kunnen little- en big-endian UTF-16-gecodeerde tekstbestanden lezen.  Om er achter te komen of dos2unix gebouwd is met UTF-16-ondersteuning, typt u C<dos2unix -V>."
 
@@ -1850,8 +1842,6 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix-
 
 #. type: textblock
 #: dos2unix.pod:931
-#, fuzzy
-#| msgid "Project page: L<https://waterlander.net/dos2unix/>"
 msgid "Project page: L<https://waterlander.net/dos2unix/>"
 msgstr "Projectpagina: L<https://waterlander.net/dos2unix/>"
 
