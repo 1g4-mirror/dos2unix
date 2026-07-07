@@ -2822,11 +2822,27 @@ wint_t d2u_ungetwc(wint_t wc, FILE *f, int bomtype)
    return(wc);
 }
 
+/* File-scope surrogate lead state, resettable between files. */
+static wchar_t d2u_putwc_lead = 0x01;
+
+/* check for lead without a trail at the end of the file. */
+void d2u_check_surrogate_state(CFlag *ipFlag, const char *progname) {
+    if ((d2u_putwc_lead >= 0xd800) && (d2u_putwc_lead < 0xdc00)) {
+        if (ipFlag->verbose) {
+            D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
+            D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing low surrogate.\n"));
+        }
+        ipFlag->status |= UNICODE_CONVERSION_ERROR ;
+    }
+    /* Reset lead for next file. */
+    d2u_putwc_lead = 0x01;
+}
+
 /* Put wide character */
 wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
 {
    static char mbs[8];
-   static wchar_t lead=0x01;  /* lead get's invalid value */
+
    static wchar_t wstr[3];
    size_t len;
 #if (defined(_WIN32) && !defined(__CYGWIN__))
@@ -2852,7 +2868,7 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
    /* Note: In the new Unicode standard lead is named "high", and trail is name "low". */
 
    /* check for lead without a trail */
-   if ((lead >= 0xd800) && (lead < 0xdc00) && ((wc < 0xdc00) || (wc >= 0xe000))) {
+   if ((d2u_putwc_lead >= 0xd800) && (d2u_putwc_lead < 0xdc00) && ((wc < 0xdc00) || (wc >= 0xe000))) {
       if (ipFlag->verbose) {
          D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
          D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing low surrogate.\n"));
@@ -2863,14 +2879,14 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
 
    if ((wc >= 0xd800) && (wc < 0xdc00)) {   /* Surrogate lead */
       /* fprintf(stderr, "UTF-16 lead %x\n",wc); */
-      lead = (wchar_t)wc; /* lead (high) surrogate */
+      d2u_putwc_lead = (wchar_t)wc; /* lead (high) surrogate */
       return(wc);
    }
    if ((wc >= 0xdc00) && (wc < 0xe000)) {   /* Surrogate trail */
       static wchar_t trail;
 
       /* check for trail without a lead */
-      if ((lead < 0xd800) || (lead >= 0xdc00)) {
+      if ((d2u_putwc_lead < 0xd800) || (d2u_putwc_lead >= 0xdc00)) {
          if (ipFlag->verbose) {
             D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
             D2U_UTF8_FPRINTF(stderr, _("error: Invalid surrogate pair. Missing high surrogate.\n"));
@@ -2884,10 +2900,10 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
       /* On Windows (including Cygwin) wchar_t is 16 bit */
       /* We cannot decode an UTF-16 surrogate pair, because it will
          not fit in a 16 bit wchar_t. */
-      wstr[0] = lead;
+      wstr[0] = d2u_putwc_lead;
       wstr[1] = trail;
       wstr[2] = L'\0';
-      lead = 0x01; /* make lead invalid */
+      d2u_putwc_lead = 0x01; /* make lead invalid */
 #else
       /* On Unix wchar_t is 32 bit */
       /* When we don't decode the UTF-16 surrogate pair, wcstombs() does not
@@ -2911,10 +2927,10 @@ wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname)
        */
       /* Decode UTF-16 surrogate pair */
       wstr[0] = 0x10000;
-      wstr[0] += (lead & 0x03FF) << 10;
+      wstr[0] += (d2u_putwc_lead & 0x03FF) << 10;
       wstr[0] += (trail & 0x03FF);
       wstr[1] = L'\0';
-      lead = 0x01; /* make lead invalid */
+      d2u_putwc_lead = 0x01; /* make lead invalid */
       /* fprintf(stderr, "UTF-32  %x\n",wstr[0]); */
 #endif
    } else {

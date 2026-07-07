@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-15 21:19+0100\n"
+"POT-Creation-Date: 2026-07-07 18:41+0200\n"
 "PO-Revision-Date: 2023-11-19 09:23+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <translation-team-vi@lists.sourceforge.net>\n"
@@ -36,22 +36,22 @@ msgstr ""
 "Giữ toàn bộ bản quyền.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
-#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
+#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
 msgid "Added line break to last line.\n"
 msgstr "Đã thêm ngắt dòng vào dòng cuối cùng.\n"
 
-#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "lỗi chương trình, chế độ chuyển đổi %d không hợp lệ\n"
 
-#: dos2unix.c:520 unix2dos.c:523
+#: dos2unix.c:524 unix2dos.c:525
 #, c-format
 msgid "using code page %d.\n"
 msgstr "dùng trang mã %d.\n"
 
-#: dos2unix.c:579 unix2dos.c:580
+#: dos2unix.c:583 unix2dos.c:582
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "lỗi: Giá trị của biến môi trường DOS2UNIX_LOCALEDIR quá dài.\n"
 
@@ -669,25 +669,25 @@ msgstr "không thể đọc từ tập tin đầu vào: %s\n"
 msgid "can not write to output file: %s\n"
 msgstr "không thể ghi vào tập tin đầu ra: %s\n"
 
-#: common.c:2858
+#: common.c:2833 common.c:2874
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "lỗi: Cặp thay thế không hợp lệ. Thiếu cái thay thế dưới.\n"
 
-#: common.c:2876
+#: common.c:2892
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "lỗi: Cặp thay thế không hợp lệ. Thiếu cái thay thế trên.\n"
 
-#: common.c:2979
+#: common.c:2995
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Đã chuyển đổi %u trong tổng số %u chỗ ngắt dòng.\n"
 
-#: common.c:2993
+#: common.c:3009
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "Ký hiệu nhị phân 0x00%02X được tìm thấy tại dòng %u\n"
 
-#: common.c:3017
+#: common.c:3033
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "Ký hiệu nhị phân 0x%02X được tìm thấy tại dòng %u\n"

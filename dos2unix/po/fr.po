@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.5-beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-23 22:45+0100\n"
+"POT-Creation-Date: 2026-07-07 18:41+0200\n"
 "PO-Revision-Date: 2026-03-26 15:53+0100\n"
 "Last-Translator: Frédéric Marchal <fmarchal@perso.be>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -34,22 +34,22 @@ msgstr ""
 "Tous droits réservés.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
-#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
+#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
 msgid "Added line break to last line.\n"
 msgstr "Saut de ligne ajouté à la dernière ligne.\n"
 
-#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "erreur du programme, mode de conversion %d invalide\n"
 
-#: dos2unix.c:520 unix2dos.c:523
+#: dos2unix.c:524 unix2dos.c:525
 #, c-format
 msgid "using code page %d.\n"
 msgstr "utilise le code page %d.\n"
 
-#: dos2unix.c:579 unix2dos.c:580
+#: dos2unix.c:583 unix2dos.c:582
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "erreur: La valeur de la variable d'environnement DOS2UNIX_LOCALEDIR est trop longue.\n"
 
@@ -672,25 +672,25 @@ msgstr "impossible de lire depuis le fichier d'entrée : %s\n"
 msgid "can not write to output file: %s\n"
 msgstr "impossible d'écrire dans le fichier de sortie : %s\n"
 
-#: common.c:2858
+#: common.c:2833 common.c:2874
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "erreur: Demi-codet invalide. Le demi-codet bas est manquant.\n"
 
-#: common.c:2876
+#: common.c:2892
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "erreur: Demi-codet invalide. Le demi-codet haut est manquant.\n"
 
-#: common.c:2979
+#: common.c:2995
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "A converti %u sauts de lignes sur %u.\n"
 
-#: common.c:2993
+#: common.c:3009
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "Symbole binaire 0x00%02X rencontré à la ligne %u\n"
 
-#: common.c:3017
+#: common.c:3033
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "Symbole binaire 0x%02X rencontré à la ligne %u\n"

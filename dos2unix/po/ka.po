@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-15 21:19+0100\n"
+"POT-Creation-Date: 2026-07-07 18:41+0200\n"
 "PO-Revision-Date: 2025-10-12 17:52+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <(nothing)>\n"
@@ -30,22 +30,22 @@ msgid ""
 "\n"
 msgstr ""
 
-#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
-#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
+#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
 msgid "Added line break to last line.\n"
 msgstr "ბოლო ხაზს დაემატა ხაზის გადატანა.\n"
 
-#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "პროგრამის შეცდომა. გადაყვანის არასწორი რეჟიმი %d\n"
 
-#: dos2unix.c:520 unix2dos.c:523
+#: dos2unix.c:524 unix2dos.c:525
 #, c-format
 msgid "using code page %d.\n"
 msgstr "გამოიყენება კოდის გვერდი %d.\n"
 
-#: dos2unix.c:579 unix2dos.c:580
+#: dos2unix.c:583 unix2dos.c:582
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "შეცდომა: გარემოს ცვლადის DOS2UNIX_LOCALEDIR ძალიან გრძელია.\n"
 
@@ -652,25 +652,25 @@ msgstr "შეტანის ფაილის წაკითხვის შ
 msgid "can not write to output file: %s\n"
 msgstr "გამოტანის ფაილში ჩაწერის შეცდომა: %s\n"
 
-#: common.c:2858
+#: common.c:2833 common.c:2874
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "შეცდომა: სუროგატების არასწორი წყვილი. დაბალი სუროგატი მითითებული არაა.\n"
 
-#: common.c:2876
+#: common.c:2892
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "შეცდომა: სუროგატების არასწორი წყვილი. მაღალი სუროგატი მითითებული არაა.\n"
 
-#: common.c:2979
+#: common.c:2995
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr ""
 
-#: common.c:2993
+#: common.c:3009
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr ""
 
-#: common.c:3017
+#: common.c:3033
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr ""

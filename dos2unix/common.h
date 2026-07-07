@@ -303,6 +303,7 @@ void d2u_putc_error(CFlag *ipFlag, const char *progname);
 #ifdef D2U_UNICODE
 void d2u_putwc_error(CFlag *ipFlag, const char *progname);
 wint_t d2u_getwc(FILE *f, int bomtype);
+void d2u_check_surrogate_state(CFlag *ipFlag, const char *progname);
 wint_t d2u_ungetwc(wint_t wc, FILE *f, int bomtype);
 wint_t d2u_putwc(wint_t wc, FILE *f, CFlag *ipFlag, const char *progname);
 #endif

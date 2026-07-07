@@ -81,7 +81,7 @@ Copyright (C) 2009-%d Erwin Waterlander\n\
 Copyright (C) 1998      Christian Wurll (Version 3.1)\n\
 Copyright (C) 1998      Bernd Johannes Wuebben (Version 3.0)\n\
 Copyright (C) 1994-1995 Benjamin Lin\n\
-All rights reserved.\n\n"),2025);
+All rights reserved.\n\n"),2026);
   PrintBSDLicense();
 }
 
@@ -173,6 +173,9 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
             return -1;
         }
     }
+    d2u_check_surrogate_state(ipFlag, progname);
+    if (ipFlag->status & UNICODE_CONVERSION_ERROR)
+        ipFlag->line_nr = line_nr;
     logConverted(0, ipFlag->verbose, progname, converted, line_nr);
     return 0;
 }
@@ -256,6 +259,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
       d2u_getc_error(ipFlag,progname);
     }
 
+    d2u_check_surrogate_state(ipFlag, progname);
     if (ipFlag->status & UNICODE_CONVERSION_ERROR)
         ipFlag->line_nr = line_nr;
     logConverted(RetVal, ipFlag->verbose, progname, converted, line_nr);

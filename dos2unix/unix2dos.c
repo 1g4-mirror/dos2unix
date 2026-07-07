@@ -69,7 +69,7 @@ void PrintLicense(void)
   D2U_ANSI_FPRINTF(stdout,_("\
 Copyright (C) 2009-%d Erwin Waterlander\n\
 Copyright (C) 1994-1995 Benjamin Lin\n\
-All rights reserved.\n\n"),2025);
+All rights reserved.\n\n"),2026);
   PrintBSDLicense();
 }
 
@@ -198,6 +198,7 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
       d2u_getc_error(ipFlag,progname);
     }
 
+    d2u_check_surrogate_state(ipFlag, progname);
     if (ipFlag->status & UNICODE_CONVERSION_ERROR)
         ipFlag->line_nr = line_nr;
     logConverted(RetVal, ipFlag->verbose, progname, converted, line_nr);
@@ -277,6 +278,7 @@ int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
       d2u_getc_error(ipFlag,progname);
     }
 
+    d2u_check_surrogate_state(ipFlag, progname);
     if (ipFlag->status & UNICODE_CONVERSION_ERROR)
         ipFlag->line_nr = line_nr;
     logConverted(RetVal, ipFlag->verbose, progname, converted, line_nr);

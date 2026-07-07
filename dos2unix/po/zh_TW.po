@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-15 21:19+0100\n"
+"POT-Creation-Date: 2026-07-07 18:41+0200\n"
 "PO-Revision-Date: 2024-11-30 14:15+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
@@ -36,22 +36,22 @@ msgstr ""
 "保留所有權利。\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:247 dos2unix.c:379 dos2unix.c:457 unix2dos.c:190
-#: unix2dos.c:268 unix2dos.c:382 unix2dos.c:458
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
+#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
 msgid "Added line break to last line.\n"
 msgstr "已在最後一列加上斷行字元。\n"
 
-#: dos2unix.c:294 dos2unix.c:541 unix2dos.c:313 unix2dos.c:542
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "程式錯誤，不合法的轉換模式 %d\n"
 
-#: dos2unix.c:520 unix2dos.c:523
+#: dos2unix.c:524 unix2dos.c:525
 #, c-format
 msgid "using code page %d.\n"
 msgstr "使用 %d 編碼頁。\n"
 
-#: dos2unix.c:579 unix2dos.c:580
+#: dos2unix.c:583 unix2dos.c:582
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "錯誤：環境變數 DOS2UNIX_LOCALEDIR 的值太長。\n"
 
@@ -677,25 +677,25 @@ msgstr "無法讀取下述輸入檔案：%s\n"
 msgid "can not write to output file: %s\n"
 msgstr "無法寫入輸出檔：%s\n"
 
-#: common.c:2858
+#: common.c:2833 common.c:2874
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "錯誤：代理 (surrogate) 配對無效。缺少低代理。\n"
 
-#: common.c:2876
+#: common.c:2892
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "錯誤：代理 (surrogate) 配對無效。缺少高代理。\n"
 
-#: common.c:2979
+#: common.c:2995
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "已轉換 %u 個，共 %u 個換行符號。\n"
 
-#: common.c:2993
+#: common.c:3009
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x00%1$02X\n"
 
-#: common.c:3017
+#: common.c:3033
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x%1$02X\n"
