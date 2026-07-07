@@ -1,5 +1,5 @@
 2026-07-07 <acts1631kjv@proton.me>
-	* Fixed the detection of a missing UTF-16 low surrogate
+	* Detect a missing UTF-16 low surrogate
 	  at the end of a file.
 
 2026-05-28 Erwin Waterlander <waterlan@xs4all.nl>

@@ -1,7 +1,6 @@
 2026-??-??: Version 7.5.7
 
- * Fixed the detection of a missing UTF-16 low surrogate at the
-   end of a file.
+ * Detect a missing UTF-16 low surrogate at the end of a file.
 
 2026-05-28: Version 7.5.6
 
