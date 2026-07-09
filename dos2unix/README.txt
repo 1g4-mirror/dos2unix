@@ -205,8 +205,8 @@ ACKNOWLEDGEMENTS
         Joao ERIBERTO Mota Filho  Reported dos2unix exits with zero code when it
                               aborts conversion due to a binary file.
         quyse                 Reported problem with empty input.
-        acts1631kjv           Detect a missing UTF-16 low surrogate at the
-                              end of a file.
+        acts1631kjv           Detect a missing UTF-16 low surrogate at the end of a file.
+        acts1631kjv           Fixed the processing of files containing only half a BOM.
 
 
 FINDUTILS

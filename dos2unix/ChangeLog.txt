@@ -1,3 +1,7 @@
+2026-07-09 <acts1631kjv@proton.me>
+	* Fixed the processing of files containing only
+	  half a BOM.
+
 2026-07-07 <acts1631kjv@proton.me>
 	* Detect a missing UTF-16 low surrogate
 	  at the end of a file.

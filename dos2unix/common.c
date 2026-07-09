@@ -1139,7 +1139,6 @@ FILE *read_bom (FILE *f, int *bomtype)
          if (ferror(f)) {
            return NULL;
          }
-         if (ungetc(bom[1], f) == EOF) return NULL;
          if (ungetc(bom[0], f) == EOF) return NULL;
          *bomtype = FILE_MBS;
          return(f);
@@ -1156,7 +1155,6 @@ FILE *read_bom (FILE *f, int *bomtype)
          if (ferror(f)) {
            return NULL;
          }
-         if (ungetc(bom[2], f) == EOF) return NULL;
          if (ungetc(bom[1], f) == EOF) return NULL;
          if (ungetc(bom[0], f) == EOF) return NULL;
          *bomtype = FILE_MBS;
@@ -1175,7 +1173,9 @@ FILE *read_bom (FILE *f, int *bomtype)
            *bomtype = FILE_GB18030;
            return(f);
          }
-         if (ungetc(bom[3], f) == EOF) return NULL;
+         if (bom[3] != EOF) {
+           if (ungetc(bom[3], f) == EOF) return NULL;
+         }
       }
       if (ungetc(bom[2], f) == EOF) return NULL;
       if (ungetc(bom[1], f) == EOF) return NULL;
