@@ -2185,7 +2185,7 @@ void FileInfoW(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, co
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
       D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-      D2U_UTF8_FPRINTF(stderr, _("can not read from input file %s:"), filename);
+      D2U_UTF8_FPRINTF(stderr, _("cannot read from input file %s:"), filename);
       D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
     }
     return;
@@ -2242,7 +2242,7 @@ void FileInfo(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, con
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
       D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-      D2U_UTF8_FPRINTF(stderr, _("can not read from input file %s:"), filename);
+      D2U_UTF8_FPRINTF(stderr, _("cannot read from input file %s:"), filename);
       D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
     }
     return;
@@ -2757,7 +2757,7 @@ void d2u_getc_error(CFlag *ipFlag, const char *progname)
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
       D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-      D2U_ANSI_FPRINTF(stderr, _("can not read from input file: %s\n"), errstr);
+      D2U_ANSI_FPRINTF(stderr, _("cannot read from input file: %s\n"), errstr);
     }
 }
 
@@ -2767,7 +2767,7 @@ void d2u_putc_error(CFlag *ipFlag, const char *progname)
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
       D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-      D2U_ANSI_FPRINTF(stderr, _("can not write to output file: %s\n"), errstr);
+      D2U_ANSI_FPRINTF(stderr, _("cannot write to output file: %s\n"), errstr);
     }
 }
 
@@ -2779,7 +2779,7 @@ void d2u_putwc_error(CFlag *ipFlag, const char *progname)
       if (ipFlag->verbose) {
         const char *errstr = strerror(errno);
         D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
-        D2U_ANSI_FPRINTF(stderr, _("can not write to output file: %s\n"), errstr);
+        D2U_ANSI_FPRINTF(stderr, _("cannot write to output file: %s\n"), errstr);
       }
     }
 }

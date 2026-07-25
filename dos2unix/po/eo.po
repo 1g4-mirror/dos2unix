@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.3.6-beta4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 13:58+0200\n"
+"POT-Creation-Date: 2026-07-25 17:08+0200\n"
 "PO-Revision-Date: 2021-03-17 14:19-0300\n"
 "Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
@@ -641,8 +641,8 @@ msgid "problems converting file %s\n"
 msgstr "problemoj dum konverto de dosiero %s\n"
 
 #: common.c:2188 common.c:2245
-#, c-format
-msgid "can not read from input file %s:"
+#, fuzzy, c-format
+msgid "cannot read from input file %s:"
 msgstr "ne eblas legi el eniga dosiero %s:"
 
 #: common.c:2405
@@ -676,13 +676,13 @@ msgid "target of file %s not specified in new-file mode\n"
 msgstr "celo de dosiero %s ne indikatas (en novdosiera moduso)\n"
 
 #: common.c:2760
-#, c-format
-msgid "can not read from input file: %s\n"
+#, fuzzy, c-format
+msgid "cannot read from input file: %s\n"
 msgstr "ne eblas legi el eniga dosiero: %s\n"
 
 #: common.c:2770 common.c:2782
-#, c-format
-msgid "can not write to output file: %s\n"
+#, fuzzy, c-format
+msgid "cannot write to output file: %s\n"
 msgstr "ne eblas skribi al eliga dosiero: %s\n"
 
 #: common.c:2833 common.c:2874

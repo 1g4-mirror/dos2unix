@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 13:58+0200\n"
+"POT-Creation-Date: 2026-07-25 17:08+0200\n"
 "PO-Revision-Date: 2024-10-03 13:59+0000\n"
 "Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
@@ -639,8 +639,8 @@ msgid "problems converting file %s\n"
 msgstr "problemis tal convertî il file %s\n"
 
 #: common.c:2188 common.c:2245
-#, c-format
-msgid "can not read from input file %s:"
+#, fuzzy, c-format
+msgid "cannot read from input file %s:"
 msgstr "impussibil lei dal file di jentrade %s:"
 
 #: common.c:2405
@@ -674,13 +674,13 @@ msgid "target of file %s not specified in new-file mode\n"
 msgstr "destinazion dal file %s no specificade te modalitât gnûf-file\n"
 
 #: common.c:2760
-#, c-format
-msgid "can not read from input file: %s\n"
+#, fuzzy, c-format
+msgid "cannot read from input file: %s\n"
 msgstr "impussibil lei dal file di jentrade: %s\n"
 
 #: common.c:2770 common.c:2782
-#, c-format
-msgid "can not write to output file: %s\n"
+#, fuzzy, c-format
+msgid "cannot write to output file: %s\n"
 msgstr "impussibil scrivi sul file di jessude: %s\n"
 
 #: common.c:2833 common.c:2874

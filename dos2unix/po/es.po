@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.3.1-beta5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 13:58+0200\n"
+"POT-Creation-Date: 2026-07-25 17:08+0200\n"
 "PO-Revision-Date: 2015-09-20 14:17+0200\n"
 "Last-Translator: Enrique Lazcorreta Puigmartí <enrique.lazcorreta@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
@@ -643,8 +643,8 @@ msgid "problems converting file %s\n"
 msgstr "problemas convirtiendo el archivo %s\n"
 
 #: common.c:2188 common.c:2245
-#, c-format
-msgid "can not read from input file %s:"
+#, fuzzy, c-format
+msgid "cannot read from input file %s:"
 msgstr "no puedo escribir al archivo de salida: %s"
 
 #: common.c:2405
@@ -678,13 +678,13 @@ msgid "target of file %s not specified in new-file mode\n"
 msgstr "el destino del archivo %s no se especificó en el modo de archivo nuevo\n"
 
 #: common.c:2760
-#, c-format
-msgid "can not read from input file: %s\n"
+#, fuzzy, c-format
+msgid "cannot read from input file: %s\n"
 msgstr "no puedo escribir al archivo de salida: %s\n"
 
 #: common.c:2770 common.c:2782
-#, c-format
-msgid "can not write to output file: %s\n"
+#, fuzzy, c-format
+msgid "cannot write to output file: %s\n"
 msgstr "no puedo escribir al archivo de salida: %s\n"
 
 #: common.c:2833 common.c:2874

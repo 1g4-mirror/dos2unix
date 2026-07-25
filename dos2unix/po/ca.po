@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 13:58+0200\n"
+"POT-Creation-Date: 2026-07-25 17:08+0200\n"
 "PO-Revision-Date: 2024-08-18 22:02+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -703,8 +703,8 @@ msgid "problems converting file %s\n"
 msgstr "problemes en convertir el fitxer %s\n"
 
 #: common.c:2188 common.c:2245
-#, c-format
-msgid "can not read from input file %s:"
+#, fuzzy, c-format
+msgid "cannot read from input file %s:"
 msgstr "no es pot llegir del fitxer d'entrada %s:"
 
 #: common.c:2405
@@ -738,13 +738,13 @@ msgid "target of file %s not specified in new-file mode\n"
 msgstr "no s'ha especificat l'objectiu del fitxer %s en el mode de fitxer nou\n"
 
 #: common.c:2760
-#, c-format
-msgid "can not read from input file: %s\n"
+#, fuzzy, c-format
+msgid "cannot read from input file: %s\n"
 msgstr "no es pot llegir del fitxer d'entrada: %s\n"
 
 #: common.c:2770 common.c:2782
-#, c-format
-msgid "can not write to output file: %s\n"
+#, fuzzy, c-format
+msgid "cannot write to output file: %s\n"
 msgstr "no es pot escriure al fitxer de sortida: %s\n"
 
 #

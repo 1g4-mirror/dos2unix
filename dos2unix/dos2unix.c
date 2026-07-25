@@ -45,7 +45,7 @@
  *     Conversion to SunOS charset implemented.
  *  == 2.2 == 1995.03.30 == Benjamin Lin (blin@socs.uts.edu.au)
  *     Fixed a bug in 2.1 where in new-file mode, if outfile already exists
- *     conversion can not be completed properly.
+ *     conversion cannot be completed properly.
  *
  * Added Mac text file translation, i.e. \r to \n conversion
  * Bernd Johannes Wuebben, wuebben@kde.org
