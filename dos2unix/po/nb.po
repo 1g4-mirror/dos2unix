@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.5-beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 17:08+0200\n"
+"POT-Creation-Date: 2026-07-25 18:19+0200\n"
 "PO-Revision-Date: 2026-03-26 12:40+0100\n"
 "Last-Translator: Johnny A. Solbu <johnny@solbu.net>\n"
 "Language-Team: Norwegian Bokmaal <l10n-no@lister.huftis.org>\n"
@@ -38,21 +38,21 @@ msgstr ""
 "\n"
 
 #: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
-#: unix2dos.c:271 unix2dos.c:388 unix2dos.c:464
+#: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "Lagt til linjeskift på siste linje.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:317 unix2dos.c:548
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "programfeil: %d er en ugyldig konverteringsmodus\n"
 
-#: dos2unix.c:524 unix2dos.c:529
+#: dos2unix.c:524 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "bruker kodeside %d.\n"
 
-#: dos2unix.c:583 unix2dos.c:586
+#: dos2unix.c:583 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "feil: Verdien av miljøvariabelen DOS2UNIX_LOCALEDIR er for lang.\n"
 

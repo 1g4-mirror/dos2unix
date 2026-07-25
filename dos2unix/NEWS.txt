@@ -2,8 +2,10 @@
 
  * Detect a missing UTF-16 low surrogate at the end of a file.
  * Fixed the processing of files containing only half a BOM.
- * unix2dos: Fixed conversion of a DOS line break
-   immediately after a Mac line break.
+ * unix2dos: Fixed conversion of a DOS line break immediately
+   after a Mac line break.
+ * mac2unix/unix2mac: Fixed counting line breaks in verbose
+   mode of files with mixed line break types.
 
 2026-05-28: Version 7.5.6
 

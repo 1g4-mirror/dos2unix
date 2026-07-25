@@ -230,12 +230,14 @@ int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
           break;
         }
         PreviousChar = TempChar;
-        if (TempChar == 0x0d) /* CR */
+        if (TempChar == 0x0d) /* Count CR */
           ++line_nr;
       } else{
         /* TempChar is an LF */
-        if (PreviousChar != 0x0d) /* CR already counted */
+        if (PreviousChar != 0x0d) /* Count Unix line break, not DOS line break */
           ++line_nr;
+        else
+          --line_nr;  /* CR already counted. Correction, don't count DOS line breaks */
         /* Don't touch this delimiter if it's a CR,LF pair. */
         if ( PreviousChar == 0x0d ) {
           if (d2u_putwc(0x0a, ipOutF, ipFlag, progname) == WEOF) { /* CR,LF pair. Put LF */
@@ -423,12 +425,14 @@ int unix2mac(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
           break;
         }
         PreviousChar = TempChar;
-        if (TempChar == '\x0d') /* CR */
+        if (TempChar == '\x0d') /* Count CR */
           ++line_nr;
       } else {
         /* TempChar is an LF */
-        if (PreviousChar != '\x0d') /* CR already counted */
+        if (PreviousChar != '\x0d') /* Count Unix line break, not DOS line break */
           ++line_nr;
+        else
+          --line_nr;  /* CR already counted. Correction, don't count DOS line breaks */
         /* Don't touch this delimiter if it's a CR,LF pair. */
         if ( PreviousChar == '\x0d' ) {
           if (fputc('\x0a', ipOutF) == EOF) { /* CR,LF pair. Put LF */

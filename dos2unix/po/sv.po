@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 17:08+0200\n"
+"POT-Creation-Date: 2026-07-25 18:19+0200\n"
 "PO-Revision-Date: 2026-02-22 13:23+0800\n"
 "Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -37,21 +37,21 @@ msgstr ""
 "\n"
 
 #: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
-#: unix2dos.c:271 unix2dos.c:388 unix2dos.c:464
+#: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "Lägg till en radbrytning på sista raden.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:317 unix2dos.c:548
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "programfel, ogiltigt konverteringsläge %d\n"
 
-#: dos2unix.c:524 unix2dos.c:529
+#: dos2unix.c:524 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "använder teckentabell %d.\n"
 
-#: dos2unix.c:583 unix2dos.c:586
+#: dos2unix.c:583 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "fel: Värdet på miljövariabeln DOS2UNIX_LOCALEDIR är för långt.\n"
 

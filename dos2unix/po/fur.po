@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-25 17:08+0200\n"
+"POT-Creation-Date: 2026-07-25 18:19+0200\n"
 "PO-Revision-Date: 2024-10-03 13:59+0000\n"
 "Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
@@ -38,21 +38,21 @@ msgstr ""
 "\n"
 
 #: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
-#: unix2dos.c:271 unix2dos.c:388 unix2dos.c:464
+#: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "Rie di interuzion zontade ae ultime rie.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:317 unix2dos.c:548
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "erôr dal program, modalitât di conversion %d no valide\n"
 
-#: dos2unix.c:524 unix2dos.c:529
+#: dos2unix.c:524 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "si dopre la pagjine dai codiçs %d.\n"
 
-#: dos2unix.c:583 unix2dos.c:586
+#: dos2unix.c:583 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "erôr: il valôr de variabile di ambient DOS2UNIX_LOCALEDIR al è masse lunc.\n"
 

@@ -198,7 +198,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         break;
       }
       if ((TempChar != 0x0d)) {
-        if (TempChar == 0x0a) /* Count all DOS and Unix line breaks */
+        if (TempChar == 0x0a && PrevChar != 0x0d) /* Count also Unix line breaks, not DOS line breaks. */
           ++line_nr;
         if(d2u_putwc(TempChar, ipOutF, ipFlag, progname) == WEOF) {
           RetVal = -1;
@@ -409,7 +409,7 @@ int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         break;
       }
       if ((TempChar != '\x0d')) {
-        if (TempChar == '\x0a') /* Count all DOS and Unix line breaks */
+        if (TempChar == '\x0a' && PrevChar != '\x0d') /* Count also Unix line breaks, not DOS line breaks. */
           ++line_nr;
         if(fputc(ConvTable[TempChar], ipOutF) == EOF) {
           RetVal = -1;
