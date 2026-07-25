@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 18:41+0200\n"
+"POT-Creation-Date: 2026-07-25 13:58+0200\n"
 "PO-Revision-Date: 2025-05-17 14:23-0400\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -36,22 +36,22 @@ msgstr ""
 "保留所有权利。\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
-#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: unix2dos.c:271 unix2dos.c:388 unix2dos.c:464
 msgid "Added line break to last line.\n"
 msgstr "已添加换行符至文件末尾。\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:317 unix2dos.c:548
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "程序错误，不合法的转换模式 %d\n"
 
-#: dos2unix.c:524 unix2dos.c:525
+#: dos2unix.c:524 unix2dos.c:529
 #, c-format
 msgid "using code page %d.\n"
 msgstr "使用编码页 %d 。\n"
 
-#: dos2unix.c:583 unix2dos.c:582
+#: dos2unix.c:583 unix2dos.c:586
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "错误：环境变量 DOS2UNIX_LOCALEDIR 的值太长。\n"
 

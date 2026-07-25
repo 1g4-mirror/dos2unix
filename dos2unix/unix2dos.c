@@ -143,12 +143,14 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         break;
       }
       if (TempChar == 0x0a) {
-        if (d2u_putwc(0x0d, ipOutF, ipFlag, progname) == WEOF) { /* got LF, put extra CR */
-          RetVal = -1;
-          d2u_putwc_error(ipFlag,progname);
-          break;
+        if (PreviousChar != 0x0d) {
+          if (d2u_putwc(0x0d, ipOutF, ipFlag, progname) == WEOF) { /* got LF, put extra CR */
+            RetVal = -1;
+            d2u_putwc_error(ipFlag,progname);
+            break;
+          }
+          converted++;
         }
-        converted++;
       } else {
          if (TempChar == 0x0d) { /* got CR */
            if ((TempChar = d2u_getwc(ipInF, ipFlag->bomtype)) == WEOF) { /* get next char (possibly LF) */
@@ -338,12 +340,14 @@ int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
       }
       if (TempChar == '\x0a')
       {
-        if (fputc('\x0d', ipOutF) == EOF) { /* got LF, put extra CR */
-          RetVal = -1;
-          d2u_putc_error(ipFlag,progname);
-          break;
+        if (PreviousChar != '\x0d') {
+          if (fputc('\x0d', ipOutF) == EOF) { /* got LF, put extra CR */
+            RetVal = -1;
+            d2u_putc_error(ipFlag,progname);
+            break;
+          }
+          converted++;
         }
-        converted++;
       } else {
          if (TempChar == '\x0d') { /* got CR */
            if ((TempChar = fgetc(ipInF)) == EOF) { /* get next char (possibly LF) */

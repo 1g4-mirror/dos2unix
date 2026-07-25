@@ -1,10 +1,12 @@
 2026-07-09 <acts1631kjv@proton.me>
 	* Fixed the processing of files containing only
-	  half a BOM.
+	  half a BOM (Found by AI).
+	* unix2dos: Fixed conversion of a DOS line break
+	  immediately after a Mac line break (Found by AI).
 
 2026-07-07 <acts1631kjv@proton.me>
 	* Detect a missing UTF-16 low surrogate
-	  at the end of a file.
+	  at the end of a file (Found by AI).
 
 2026-05-28 Erwin Waterlander <waterlan@xs4all.nl>
 	* Version 7.5.6

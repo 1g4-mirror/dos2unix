@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.3-beta8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-07 18:41+0200\n"
+"POT-Creation-Date: 2026-07-25 13:58+0200\n"
 "PO-Revision-Date: 2025-05-18 08:56+0200\n"
 "Last-Translator: Benno Schulenberg <vertaling@coevern.nl>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -40,22 +40,22 @@ msgstr ""
 "Alle rechten voorbehouden.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:190
-#: unix2dos.c:269 unix2dos.c:384 unix2dos.c:460
+#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: unix2dos.c:271 unix2dos.c:388 unix2dos.c:464
 msgid "Added line break to last line.\n"
 msgstr "Regeleindeteken toegevoegd aan laatste regel.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:315 unix2dos.c:544
+#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:317 unix2dos.c:548
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "**programmafout**: ongeldige conversiemodus %d\n"
 
-#: dos2unix.c:524 unix2dos.c:525
+#: dos2unix.c:524 unix2dos.c:529
 #, c-format
 msgid "using code page %d.\n"
 msgstr "codetabel %d wordt gebruikt.\n"
 
-#: dos2unix.c:583 unix2dos.c:582
+#: dos2unix.c:583 unix2dos.c:586
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "fout: Waarde van omgevingsvariabele DOS2UNIX_LOCALEDIR is te lang.\n"
 
