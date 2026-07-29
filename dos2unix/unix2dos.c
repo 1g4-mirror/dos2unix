@@ -576,7 +576,7 @@ int main (int argc, char *argv[])
 #endif
 
   progname[8] = '\0';
-  strcpy(progname,"unix2dos");
+  d2u_strncpy(progname, "unix2dos", sizeof(progname));
 
 #ifdef ENABLE_NLS
    ptr = getenv("DOS2UNIX_LOCALEDIR");
@@ -629,7 +629,7 @@ int main (int argc, char *argv[])
 
   if ((strcmpi("unix2mac", ptr) == 0) || (strcmpi("unix2mac.exe", ptr) == 0)) {
     pFlag->FromToMode = FROMTO_UNIX2MAC;
-    strcpy(progname,"unix2mac");
+    d2u_strncpy(progname, "unix2mac", sizeof(progname));
   }
 
 #ifdef D2U_UNIFILE
