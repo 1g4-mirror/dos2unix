@@ -536,6 +536,8 @@ int glob_warg(int argc, wchar_t *wargv[], char ***argv, CFlag *ipFlag, const cha
     add_path = 0;
     /* FindFileData.cFileName has the path stripped off. We need to add it again. */
     path = _wcsdup(warg);
+    if (path == NULL)
+      goto glob_failed;
     /* replace all back slashes with slashes */
     while ( (ptr = wcschr(path,L'\\')) != NULL) {
       *ptr = L'/';
@@ -552,7 +554,10 @@ int glob_warg(int argc, wchar_t *wargv[], char ***argv, CFlag *ipFlag, const cha
       char **new_argv_new;
       len = wcslen(path) + wcslen(FindFileData.cFileName) + 2;
       path_and_filename = (wchar_t *)malloc(len*sizeof(wchar_t));
-      if (path_and_filename == NULL) goto glob_failed;
+      if (path_and_filename == NULL) {
+        free(path);
+        goto glob_failed;
+      }
       if (add_path) {
         wcsncpy(path_and_filename, path, wcslen(path)+1);
         wcsncat(path_and_filename, FindFileData.cFileName, wcslen(FindFileData.cFileName)+1);
@@ -564,11 +569,18 @@ int glob_warg(int argc, wchar_t *wargv[], char ***argv, CFlag *ipFlag, const cha
       ++argc_glob;
       len =(size_t) d2u_WideCharToMultiByte(CP_UTF8, 0, path_and_filename, -1, NULL, 0, NULL, NULL);
       arg = (char *)malloc((size_t)len);
-      if (arg == NULL) goto glob_failed;
+      if (arg == NULL) {
+        free(path);
+        goto glob_failed;
+      }
       d2u_WideCharToMultiByte(CP_UTF8, 0, path_and_filename, -1, arg, (int)len, NULL, NULL);
       free(path_and_filename);
       new_argv_new = (char **)realloc(argv_new, (size_t)(argc_glob+1)*sizeof(char**));
-      if (new_argv_new == NULL) goto glob_failed;
+      if (new_argv_new == NULL) {
+          free(path);
+          free(arg);
+          goto glob_failed;
+      }
       else
         argv_new = new_argv_new;
       argv_new[argc_glob] = arg;
@@ -604,6 +616,11 @@ int glob_warg(int argc, wchar_t *wargv[], char ***argv, CFlag *ipFlag, const cha
     D2U_UTF8_FPRINTF(stderr, "%s:", progname);
     D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
   }
+  // Cleanup of allocated memory in glob_failed:
+  for (int j = 0; j < argc_glob; ++j) {
+    if (argv_new[j]) free(argv_new[j]);
+  }
+  free(argv_new);
   return -1;
 }
 #endif

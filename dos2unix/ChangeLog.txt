@@ -1,3 +1,10 @@
+2026-08-02 Erwin Waterlander <waterlan@xs4all.nl>
+	* Fixed possible memory leak in handling Unicode
+	  arguments on Windows.
+
+2026-07-29 Erwin Waterlander <waterlan@xs4all.nl>
+	* Removed the use of strcpy()
+
 2026-07-25 Erwin Waterlander <waterlan@xs4all.nl>
 	* mac2unix/unix2mac: Fixed counting line breaks
 	  in verbose mode of files with mixed line break

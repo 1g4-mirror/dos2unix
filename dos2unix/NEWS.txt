@@ -6,6 +6,7 @@
    after a Mac line break.
  * mac2unix/unix2mac: Fixed counting line breaks in verbose
    mode of files with mixed line break types.
+ * Code cleanup.
 
 2026-05-28: Version 7.5.6
 
