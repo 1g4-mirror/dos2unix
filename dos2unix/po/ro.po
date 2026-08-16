@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.5-beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 20:07+0200\n"
+"POT-Creation-Date: 2026-08-16 22:29+0200\n"
 "PO-Revision-Date: 2026-03-26 14:20+0100\n"
 "Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -47,12 +47,12 @@ msgstr ""
 "Toate drepturile rezervate.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
 #: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "S-a adăugat o întrerupere de linie la ultima linie.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "eroare de program, mod de conversie nevalid %d\n"
@@ -63,12 +63,12 @@ msgstr "eroare de program, mod de conversie nevalid %d\n"
 # → aici sunt 2 spații după „utilizează””
 # ***
 # Ok, corecție aplicată!
-#: dos2unix.c:524 unix2dos.c:533
+#: dos2unix.c:596 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "se utilizează pagina de cod %d.\n"
 
-#: dos2unix.c:583 unix2dos.c:590
+#: dos2unix.c:655 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "eroare: Valoarea variabilei de mediu DOS2UNIX_LOCALEDIR este prea lungă.\n"
 
@@ -724,25 +724,25 @@ msgstr "nu se poate citi din fișierul de intrare: %s\n"
 msgid "cannot write to output file: %s\n"
 msgstr "nu se poate scrie în fișierul de ieșire: %s\n"
 
-#: common.c:2850 common.c:2891
+#: common.c:2830 common.c:2871
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "eroare: pereche surogat nevalidă -- partea inferioară lipsește\n"
 
-#: common.c:2909
+#: common.c:2889
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "eroare: pereche surogat nevalidă -- partea superioară lipsește\n"
 
-#: common.c:3012
+#: common.c:2992
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Au fost convertite %u întreruperi de linie dintr-un total de %u.\n"
 
-#: common.c:3026
+#: common.c:3006
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "Simbol binar 0x00%02X găsit la linia %u\n"
 
-#: common.c:3050
+#: common.c:3030
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "Simbol binar 0x%02X găsit la linia %u\n"

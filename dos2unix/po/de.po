@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.5-beta3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 20:07+0200\n"
+"POT-Creation-Date: 2026-08-16 22:29+0200\n"
 "PO-Revision-Date: 2026-03-26 17:30+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -38,22 +38,22 @@ msgstr ""
 "Alle Rechte vorbehalten.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
 #: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "Der letzten Zeile wurde ein Zeilenumbruch hinzugefügt.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "Programmfehler, der Umwandlungsmodus %d ist unzulässig\n"
 
-#: dos2unix.c:524 unix2dos.c:533
+#: dos2unix.c:596 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "Codepage %d wird verwendet.\n"
 
-#: dos2unix.c:583 unix2dos.c:590
+#: dos2unix.c:655 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "Fehler: Der Inhalt der Umgebungsvariablen DOS2UNIX_LOCALEDIR ist zu lang.\n"
 
@@ -689,25 +689,25 @@ msgstr "Aus der Eingabedatei kann nicht gelesen werden: %s\n"
 msgid "cannot write to output file: %s\n"
 msgstr "In die Ausgabedatei kann nicht geschrieben werden: %s\n"
 
-#: common.c:2850 common.c:2891
+#: common.c:2830 common.c:2871
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "Fehler: Ungültiges Surrogate-Paar. Das Low-Surrogate fehlt.\n"
 
-#: common.c:2909
+#: common.c:2889
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "Fehler: Ungültiges Surrogate-Paar. Das High-Surrogate fehlt.\n"
 
-#: common.c:3012
+#: common.c:2992
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Es wurden %u von %u Zeilenumbrüchen umgewandelt.\n"
 
-#: common.c:3026
+#: common.c:3006
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "Das binäre Symbol 0x00%02X wurde in Zeile %u gefunden\n"
 
-#: common.c:3050
+#: common.c:3030
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "Das binäres Symbol 0x%02X wurde in Zeile %u gefunden\n"

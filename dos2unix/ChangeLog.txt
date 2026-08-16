@@ -1,3 +1,7 @@
+2026-08-16 Erwin Waterlander <waterlan@xs4all.nl>
+	* Refactored code. Simpler mac2unix algorithm.
+	  ungetc() is no longer used.
+
 2026-08-02 Erwin Waterlander <waterlan@xs4all.nl>
 	* Fixed possible memory leak in handling Unicode
 	  arguments on Windows.
@@ -53,6 +57,7 @@
 	  https://sourceforge.net/p/dos2unix/bugs/21/
 	  Aborting conversion to skip a binary file is not an error.
 	* Refactored code. Simpler dos2unix algorithm.
+	  ungetc() is no longer used.
 
 2025-12-19 Erwin Waterlander <waterlan@xs4all.nl>
 	* Refactored code. Split conversion functions.

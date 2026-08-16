@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix 7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 20:07+0200\n"
+"POT-Creation-Date: 2026-08-16 22:29+0200\n"
 "PO-Revision-Date: 2024-11-30 14:15+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
@@ -36,22 +36,22 @@ msgstr ""
 "保留所有權利。\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
 #: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "已在最後一列加上斷行字元。\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "程式錯誤，不合法的轉換模式 %d\n"
 
-#: dos2unix.c:524 unix2dos.c:533
+#: dos2unix.c:596 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "使用 %d 編碼頁。\n"
 
-#: dos2unix.c:583 unix2dos.c:590
+#: dos2unix.c:655 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "錯誤：環境變數 DOS2UNIX_LOCALEDIR 的值太長。\n"
 
@@ -677,25 +677,25 @@ msgstr "無法讀取下述輸入檔案：%s\n"
 msgid "cannot write to output file: %s\n"
 msgstr "無法寫入輸出檔：%s\n"
 
-#: common.c:2850 common.c:2891
+#: common.c:2830 common.c:2871
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "錯誤：代理 (surrogate) 配對無效。缺少低代理。\n"
 
-#: common.c:2909
+#: common.c:2889
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "錯誤：代理 (surrogate) 配對無效。缺少高代理。\n"
 
-#: common.c:3012
+#: common.c:2992
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "已轉換 %u 個，共 %u 個換行符號。\n"
 
-#: common.c:3026
+#: common.c:3006
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x00%1$02X\n"
 
-#: common.c:3050
+#: common.c:3030
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "在第 %2$u 找到二進位符號 0x%1$02X\n"

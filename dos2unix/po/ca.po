@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 20:07+0200\n"
+"POT-Creation-Date: 2026-08-16 22:29+0200\n"
 "PO-Revision-Date: 2024-08-18 22:02+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: Catalan <ca@dodds.net>\n"
@@ -34,23 +34,23 @@ msgstr ""
 "Tots els drets reservats.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
 #: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "S'ha afegit un salt de línia a l'última línia.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "error del programa, mode de conversió %d no vàlid\n"
 
-#: dos2unix.c:524 unix2dos.c:533
+#: dos2unix.c:596 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "s'està utilitzant la pàgina de codis %d.\n"
 
 #
-#: dos2unix.c:583 unix2dos.c:590
+#: dos2unix.c:655 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "error: el valor de la variable d'entorn DOS2UNIX_LOCALEDIR és massa llarg.\n"
 
@@ -748,26 +748,26 @@ msgid "cannot write to output file: %s\n"
 msgstr "no es pot escriure al fitxer de sortida: %s\n"
 
 #
-#: common.c:2850 common.c:2891
+#: common.c:2830 common.c:2871
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "error: parella suplent invàlida. Manca un substitut baix.\n"
 
 #
-#: common.c:2909
+#: common.c:2889
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "error: parella suplent invàlida. Manca un gran substitut.\n"
 
-#: common.c:3012
+#: common.c:2992
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "S'ha convertit %u de %u salts de línia.\n"
 
-#: common.c:3026
+#: common.c:3006
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "S'ha trobat un símbol binari 0x00%02X a la línia %u\n"
 
-#: common.c:3050
+#: common.c:3030
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "S'ha trobat un símbol binari 0x%02X a la línia %u\n"

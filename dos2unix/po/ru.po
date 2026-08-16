@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dos2unix-7.5.2-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-04 20:07+0200\n"
+"POT-Creation-Date: 2026-08-16 22:29+0200\n"
 "PO-Revision-Date: 2023-11-10 18:10+0300\n"
 "Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
 "Language-Team: Russian <gnu@d07.ru>\n"
@@ -37,22 +37,22 @@ msgstr ""
 "Все права защищены.\n"
 "\n"
 
-#: dos2unix.c:168 dos2unix.c:250 dos2unix.c:383 dos2unix.c:461 unix2dos.c:192
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
 #: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
 msgid "Added line break to last line.\n"
 msgstr "Добавлен разрыв строки в последнюю строку.\n"
 
-#: dos2unix.c:298 dos2unix.c:545 unix2dos.c:319 unix2dos.c:552
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
 #, c-format
 msgid "program error, invalid conversion mode %d\n"
 msgstr "ошибка в программе, неверный режим преобразования %d\n"
 
-#: dos2unix.c:524 unix2dos.c:533
+#: dos2unix.c:596 unix2dos.c:533
 #, c-format
 msgid "using code page %d.\n"
 msgstr "используется кодировка %d.\n"
 
-#: dos2unix.c:583 unix2dos.c:590
+#: dos2unix.c:655 unix2dos.c:590
 msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
 msgstr "ошибка: Значение переменной окружения DOS2UNIX_LOCALEDIR слишком длинное.\n"
 
@@ -684,25 +684,25 @@ msgstr "не удалось прочитать из входного файла:
 msgid "cannot write to output file: %s\n"
 msgstr "не удалось записать в выходной файл: %s\n"
 
-#: common.c:2850 common.c:2891
+#: common.c:2830 common.c:2871
 msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
 msgstr "ошибка: некорректная суррогатная пара. Отсутствует младший суррогат.\n"
 
-#: common.c:2909
+#: common.c:2889
 msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
 msgstr "ошибка: некорректная суррогатная пара. Отсутствует старший суррогат.\n"
 
-#: common.c:3012
+#: common.c:2992
 #, c-format
 msgid "Converted %u out of %u line breaks.\n"
 msgstr "Преобразовано %u из %u разрывов строки.\n"
 
-#: common.c:3026
+#: common.c:3006
 #, c-format
 msgid "Binary symbol 0x00%02X found at line %u\n"
 msgstr "В строке %2$u обнаружен двоичный символ 0x00%1$02X\n"
 
-#: common.c:3050
+#: common.c:3030
 #, c-format
 msgid "Binary symbol 0x%02X found at line %u\n"
 msgstr "В строке %2$u обнаружен двоичный символ 0x%1$02X\n"

@@ -2819,26 +2819,6 @@ wint_t d2u_getwc(FILE *f, int bomtype)
    return(wc);
 }
 
-wint_t d2u_ungetwc(wint_t wc, FILE *f, int bomtype)
-{
-   int c_trail, c_lead;
-
-   if (bomtype == FILE_UTF16LE) { /* UTF16 little endian */
-      c_trail = (int)(wc & 0xff00);
-      c_trail >>=8;
-      c_lead  = (int)(wc & 0xff);
-   } else {                      /* UTF16 big endian */
-      c_lead = (int)(wc & 0xff00);
-      c_lead >>=8;
-      c_trail  = (int)(wc & 0xff);
-   }
-
-   /* push back in reverse order */
-   if ((ungetc(c_trail,f) == EOF)  || (ungetc(c_lead,f) == EOF))
-      return(WEOF);
-   return(wc);
-}
-
 /* File-scope surrogate lead state, resettable between files. */
 static wchar_t d2u_putwc_lead = 0x01;
 
