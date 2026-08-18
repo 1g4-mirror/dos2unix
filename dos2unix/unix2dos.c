@@ -126,7 +126,7 @@ int AddExtraDOSNewLine(FILE* ipOutF, CFlag *ipFlag, int CurChar, int PrevChar, c
 }
 
 #ifdef D2U_UNICODE
-int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
+int unix2dosW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
     int RetVal = 0;
     wint_t PreviousChar = WEOF;
     wint_t TempChar;
@@ -154,7 +154,7 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
       } else {
          if (TempChar == 0x0d) { /* got CR */
            if ((TempChar = d2u_getwc(ipInF, ipFlag->bomtype)) == WEOF) { /* get next char (possibly LF) */
-             if (ferror(ipInF))  /* Read error */
+             if (ferror(ipInF->file))  /* Read error */
                break;
              TempChar = 0x0d;  /* end of file. */
            } else {
@@ -195,7 +195,7 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
           RetVal = -1;
         }
     }
-    if ((TempChar == WEOF) && ferror(ipInF)) {
+    if ((TempChar == WEOF) && ferror(ipInF->file)) {
       RetVal = -1;
       d2u_getc_error(ipFlag,progname);
     }
@@ -207,7 +207,7 @@ int unix2dosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
     return RetVal;
 }
 
-int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
+int unix2macW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
     int RetVal = 0;
     wint_t PreviousChar = WEOF;
     wint_t TempChar;
@@ -277,7 +277,7 @@ int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
           d2u_putwc_error(ipFlag,progname);
         }
     }
-    if ((TempChar == WEOF) && ferror(ipInF)) {
+    if ((TempChar == WEOF) && ferror(ipInF->file)) {
       RetVal = -1;
       d2u_getc_error(ipFlag,progname);
     }
@@ -293,7 +293,7 @@ int unix2macW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
  * RetVal: 0  if success
  *         -1  otherwise
  */
-int ConvertUnixToDosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
+int ConvertUnixToDosW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
 {
     int RetVal = 0;
 
@@ -324,14 +324,14 @@ int ConvertUnixToDosW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *prog
 }
 #endif
 
-int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
+int unix2dos(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
     int RetVal = 0;
     int PreviousChar = EOF;
     int TempChar;
     unsigned int line_nr = 1;
     unsigned int converted = 0;
 
-    while ((TempChar = fgetc(ipInF)) != EOF) {  /* get character */
+    while ((TempChar = d2u_getc(ipInF)) != EOF) {  /* get character */
       if ((ipFlag->Force == 0) && binaryChar(TempChar)) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
@@ -352,8 +352,8 @@ int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         }
       } else {
          if (TempChar == '\x0d') { /* got CR */
-           if ((TempChar = fgetc(ipInF)) == EOF) { /* get next char (possibly LF) */
-             if (ferror(ipInF))  /* Read error */
+           if ((TempChar = d2u_getc(ipInF)) == EOF) { /* get next char (possibly LF) */
+             if (ferror(ipInF->file))  /* Read error */
                break;
              TempChar = '\x0d';  /* end of file. */
            } else {
@@ -393,7 +393,7 @@ int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
           RetVal = -1;
         }
     }
-    if ((TempChar == EOF) && ferror(ipInF)) {
+    if ((TempChar == EOF) && ferror(ipInF->file)) {
       RetVal = -1;
       d2u_getc_error(ipFlag,progname);
     }
@@ -402,14 +402,14 @@ int unix2dos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
     return RetVal;
 }
 
-int unix2mac(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
+int unix2mac(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
     int RetVal = 0;
     int PreviousChar = EOF;
     int TempChar;
     unsigned int line_nr = 1;
     unsigned int converted = 0;
 
-    while ((TempChar = fgetc(ipInF)) != EOF) {
+    while ((TempChar = d2u_getc(ipInF)) != EOF) {
       if ((ipFlag->Force == 0) && binaryChar(TempChar)) {
         RetVal = -1;
         ipFlag->status |= BINARY_FILE ;
@@ -472,7 +472,7 @@ int unix2mac(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
           d2u_putc_error(ipFlag,progname);
         }
     }
-    if ((TempChar == EOF) && ferror(ipInF)) {
+    if ((TempChar == EOF) && ferror(ipInF->file)) {
       RetVal = -1;
       d2u_getc_error(ipFlag,progname);
     }
@@ -486,7 +486,7 @@ int unix2mac(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
  * RetVal: 0  if success
  *         -1  otherwise
  */
-int ConvertUnixToDos(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
+int ConvertUnixToDos(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
 {
     int RetVal = 0;
     int *ConvTable;

@@ -57,6 +57,21 @@
 int d2u_display_encoding = D2U_DISPLAY_ANSI ;
 #endif
 
+int d2u_getc(BufferedStream *stream) {
+    if (stream->count > 0) {
+        return stream->buffer[--stream->count];
+    }
+    return fgetc(stream->file);
+}
+
+int d2u_ungetc(int c, BufferedStream *stream) {
+    if (stream->count >= MAX_LOOKAHEAD || c == EOF) {
+        return EOF;
+    }
+    stream->buffer[stream->count++] = c;
+    return c;
+}
+
 /* Copy string src to dest, and null terminate dest.
    dest_size must be the buffer size of dest. */
 char *d2u_strncpy(char *dest, const char *src, size_t dest_size)
@@ -821,6 +836,35 @@ FILE* OpenInFile(char *ipFN)
 #endif
 }
 
+BufferedStream* buffered_open(FILE *f) {
+    BufferedStream *stream;
+
+    if (!f) {
+        return NULL;
+    }
+
+    stream = malloc(sizeof(BufferedStream));
+    if (!stream) {
+        fclose(f);
+        return NULL;
+    }
+
+    stream->file = f;
+    stream->count = 0;
+
+    return stream;
+}
+
+int d2u_bsclose(BufferedStream *stream, const char *filename, CFlag *ipFlag, const char *m, const char *progname) {
+    int r = EOF;
+    if (stream) {
+        if (stream->file) {
+            r = d2u_fclose(stream->file, filename, ipFlag, m, progname);
+        }
+        free(stream);
+    }
+    return r;
+}
 
 /* opens file of name opFN in write only mode
  * returns: NULL if failure
@@ -1126,7 +1170,7 @@ int ResolveSymbolicLink(char *lFN, char **rFN, CFlag *ipFlag, const char *progna
 /* Read the Byte Order Mark.
    Returns file pointer or NULL in case of a read error */
 
-FILE *read_bom (FILE *f, int *bomtype)
+BufferedStream *read_bom (BufferedStream *f, int *bomtype)
 {
   /* BOMs
    * UTF16-LE  ff fe
@@ -1140,23 +1184,23 @@ FILE *read_bom (FILE *f, int *bomtype)
    /* Check for BOM */
    if  (f != NULL) {
       int bom[4];
-      if ((bom[0] = fgetc(f)) == EOF) {
-         if (ferror(f)) {
+      if ((bom[0] = d2u_getc(f)) == EOF) {
+         if (ferror(f->file)) {
            return NULL;
          }
          *bomtype = FILE_MBS;
          return(f);
       }
       if ((bom[0] != 0xff) && (bom[0] != 0xfe) && (bom[0] != 0xef) && (bom[0] != 0x84)) {
-         if (ungetc(bom[0], f) == EOF) return NULL;
+         if (d2u_ungetc(bom[0], f) == EOF) return NULL;
          *bomtype = FILE_MBS;
          return(f);
       }
-      if ((bom[1] = fgetc(f)) == EOF) {
-         if (ferror(f)) {
+      if ((bom[1] = d2u_getc(f)) == EOF) {
+         if (ferror(f->file)) {
            return NULL;
          }
-         if (ungetc(bom[0], f) == EOF) return NULL;
+         if (d2u_ungetc(bom[0], f) == EOF) return NULL;
          *bomtype = FILE_MBS;
          return(f);
       }
@@ -1168,12 +1212,12 @@ FILE *read_bom (FILE *f, int *bomtype)
          *bomtype = FILE_UTF16BE;
          return(f);
       }
-      if ((bom[2] = fgetc(f)) == EOF) {
-         if (ferror(f)) {
+      if ((bom[2] = d2u_getc(f)) == EOF) {
+         if (ferror(f->file)) {
            return NULL;
          }
-         if (ungetc(bom[1], f) == EOF) return NULL;
-         if (ungetc(bom[0], f) == EOF) return NULL;
+         if (d2u_ungetc(bom[1], f) == EOF) return NULL;
+         if (d2u_ungetc(bom[0], f) == EOF) return NULL;
          *bomtype = FILE_MBS;
          return(f);
       }
@@ -1182,8 +1226,8 @@ FILE *read_bom (FILE *f, int *bomtype)
          return(f);
       }
       if ((bom[0] == 0x84) && (bom[1] == 0x31) && (bom[2]== 0x95)) {
-         bom[3] = fgetc(f);
-           if (ferror(f)) {
+         bom[3] = d2u_getc(f);
+           if (ferror(f->file)) {
              return NULL;
           }
          if (bom[3]== 0x33) { /* GB18030 */
@@ -1191,12 +1235,12 @@ FILE *read_bom (FILE *f, int *bomtype)
            return(f);
          }
          if (bom[3] != EOF) {
-           if (ungetc(bom[3], f) == EOF) return NULL;
+           if (d2u_ungetc(bom[3], f) == EOF) return NULL;
          }
       }
-      if (ungetc(bom[2], f) == EOF) return NULL;
-      if (ungetc(bom[1], f) == EOF) return NULL;
-      if (ungetc(bom[0], f) == EOF) return NULL;
+      if (d2u_ungetc(bom[2], f) == EOF) return NULL;
+      if (d2u_ungetc(bom[1], f) == EOF) return NULL;
+      if (d2u_ungetc(bom[0], f) == EOF) return NULL;
       *bomtype = FILE_MBS;
       return(f);
    }
@@ -1337,7 +1381,7 @@ void print_bom_info (const int bomtype)
  * Return 0 when everything is OK.
  */
 
-int check_unicode_info(FILE *InF, CFlag *ipFlag, const char *progname, int *bomtype_orig)
+int check_unicode_info(BufferedStream *InF, CFlag *ipFlag, const char *progname, int *bomtype_orig)
 {
 #ifdef D2U_UNICODE
   if (ipFlag->verbose > 1) {
@@ -1378,7 +1422,7 @@ int check_unicode_info(FILE *InF, CFlag *ipFlag, const char *progname, int *bomt
   return 0;
 }
 
-int check_unicode(FILE *InF, FILE *TempF,  CFlag *ipFlag, const char *ipInFN, const char *progname)
+int check_unicode(BufferedStream *InF, FILE *TempF,  CFlag *ipFlag, const char *ipInFN, const char *progname)
 {
 
 #ifdef D2U_UNICODE
@@ -1444,14 +1488,15 @@ int check_unicode(FILE *InF, FILE *TempF,  CFlag *ipFlag, const char *ipInFN, co
  *         -1 otherwise
  */
 int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progname,
-                   int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                   int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                 , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                 , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   )
 {
   int RetVal = 0;
   FILE *InF = NULL;
+  BufferedStream *InB = NULL;
   FILE *TempF = NULL;
   char *TempPath;
   const char *errstr;
@@ -1527,6 +1572,17 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
     return -1;
   }
 
+  InB=buffered_open(InF);
+  if (InB == NULL) {
+    if (ipFlag->verbose) {
+      ipFlag->error = errno;
+      errstr = strerror(errno);
+      D2U_UTF8_FPRINTF(stderr, "%s: %s:", progname, ipInFN);
+      D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+    }
+    return -1;
+  }
+
   /* If output file is a symbolic link, optional resolve the link and modify  */
   /* the target, instead of removing the link and creating a new regular file */
   TargetFN = ipOutFN;
@@ -1572,13 +1628,13 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
 #endif
 
   if (!RetVal)
-    if (check_unicode(InF, TempF, ipFlag, ipInFN, progname))
+    if (check_unicode(InB, TempF, ipFlag, ipInFN, progname))
       RetVal = -1;
 
   /* conversion successful? */
 #ifdef D2U_UNICODE
   if ((ipFlag->bomtype == FILE_UTF16LE) || (ipFlag->bomtype == FILE_UTF16BE)) {
-    if ((!RetVal) && (ConvertW(InF, TempF, ipFlag, progname)))
+    if ((!RetVal) && (ConvertW(InB, TempF, ipFlag, progname)))
       RetVal = -1;
     if (ipFlag->status & UNICODE_CONVERSION_ERROR) {
       if (ipFlag->verbose) {
@@ -1587,16 +1643,16 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
       RetVal = -1;
     }
   } else {
-    if ((!RetVal) && (Convert(InF, TempF, ipFlag, progname)))
+    if ((!RetVal) && (Convert(InB, TempF, ipFlag, progname)))
       RetVal = -1;
   }
 #else
-  if ((!RetVal) && (Convert(InF, TempF, ipFlag, progname)))
+  if ((!RetVal) && (Convert(InB, TempF, ipFlag, progname)))
     RetVal = -1;
 #endif
 
    /* can close in file? */
-  if (d2u_fclose(InF, ipInFN, ipFlag, "r", progname) == EOF)
+  if (d2u_bsclose(InB, ipInFN, ipFlag, "r", progname) == EOF)
     RetVal = -1;
 
   /* can close output file? */
@@ -1739,14 +1795,15 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
  *         -1 otherwise
  */
 int ConvertToStdout(char *ipInFN, CFlag *ipFlag, const char *progname,
-                   int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                   int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                 , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                 , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   )
 {
   int RetVal = 0;
   FILE *InF = NULL;
+  BufferedStream *InB = NULL;
   const char *errstr;
 
   ipFlag->status = 0 ;
@@ -1776,6 +1833,16 @@ int ConvertToStdout(char *ipInFN, CFlag *ipFlag, const char *progname,
     }
     return -1;
   }
+  InB=buffered_open(InF);
+  if (InB == NULL) {
+    if (ipFlag->verbose) {
+      ipFlag->error = errno;
+      errstr = strerror(errno);
+      D2U_UTF8_FPRINTF(stderr, "%s: %s:", progname, ipInFN);
+      D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+    }
+    return -1;
+  }
 
 #if defined(_WIN32) && !defined(__CYGWIN__)
 
@@ -1793,29 +1860,29 @@ int ConvertToStdout(char *ipInFN, CFlag *ipFlag, const char *progname,
 #endif
 
   if (!RetVal)
-    if (check_unicode(InF, stdout, ipFlag, ipInFN, progname))
+    if (check_unicode(InB, stdout, ipFlag, ipInFN, progname))
       RetVal = -1;
 
   /* conversion successful? */
 #ifdef D2U_UNICODE
   if ((ipFlag->bomtype == FILE_UTF16LE) || (ipFlag->bomtype == FILE_UTF16BE)) {
-    if ((!RetVal) && (ConvertW(InF, stdout, ipFlag, progname)))
+    if ((!RetVal) && (ConvertW(InB, stdout, ipFlag, progname)))
       RetVal = -1;
     if (ipFlag->status & UNICODE_CONVERSION_ERROR) {
       if (!ipFlag->error) ipFlag->error = 1;
       RetVal = -1;
     }
   } else {
-    if ((!RetVal) && (Convert(InF, stdout, ipFlag, progname)))
+    if ((!RetVal) && (Convert(InB, stdout, ipFlag, progname)))
       RetVal = -1;
   }
 #else
-  if ((!RetVal) && (Convert(InF, stdout, ipFlag, progname)))
+  if ((!RetVal) && (Convert(InB, stdout, ipFlag, progname)))
     RetVal = -1;
 #endif
 
    /* can close in file? */
-  if (d2u_fclose(InF, ipInFN, ipFlag, "r", progname) == EOF)
+  if (d2u_bsclose(InB, ipInFN, ipFlag, "r", progname) == EOF)
     RetVal = -1;
 
   return RetVal;
@@ -1826,12 +1893,15 @@ int ConvertToStdout(char *ipInFN, CFlag *ipFlag, const char *progname,
  *         -1 otherwise
  */
 int ConvertStdio(CFlag *ipFlag, const char *progname,
-                   int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                   int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                 , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                 , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   )
 {
+    BufferedStream *InB = NULL;
+    const char *errstr;
+    int RetVal;
     ipFlag->NewFile = 1;
     ipFlag->KeepDate = 0;
 
@@ -1852,18 +1922,33 @@ int ConvertStdio(CFlag *ipFlag, const char *progname,
     setmode(fileno(stdin), O_BINARY);
 #endif
 
-    if (check_unicode(stdin, stdout, ipFlag, "stdin", progname))
+    InB=buffered_open(stdin);
+    if (InB == NULL) {
+      if (ipFlag->verbose) {
+        ipFlag->error = errno;
+        errstr = strerror(errno);
+        D2U_UTF8_FPRINTF(stderr, "%s: stdin:", progname);
+        D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+      }
+      return -1;
+    }
+
+    if (check_unicode(InB, stdout, ipFlag, "stdin", progname)) {
+        free(InB);
         return -1;
+    }
 
 #ifdef D2U_UNICODE
     if ((ipFlag->bomtype == FILE_UTF16LE) || (ipFlag->bomtype == FILE_UTF16BE)) {
-        return ConvertW(stdin, stdout, ipFlag, progname);
+        RetVal = ConvertW(InB, stdout, ipFlag, progname);
     } else {
-        return Convert(stdin, stdout, ipFlag, progname);
+        RetVal = Convert(InB, stdout, ipFlag, progname);
     }
 #else
-    return Convert(stdin, stdout, ipFlag, progname);
+    RetVal = Convert(InB, stdout, ipFlag, progname);
 #endif
+    free(InB);
+    return RetVal;
 }
 
 void print_messages_stdio(const CFlag *pFlag, const char *progname)
@@ -2156,7 +2241,7 @@ void printInfo(CFlag *ipFlag, const char *filename, int bomtype, unsigned int lb
 }
 
 #ifdef D2U_UNICODE
-void FileInfoW(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, const char *progname)
+void FileInfoW(BufferedStream* ipInF, CFlag *ipFlag, const char *filename, int bomtype, const char *progname)
 {
   wint_t TempChar;
   wint_t PreviousChar = 0;
@@ -2197,7 +2282,7 @@ void FileInfoW(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, co
       last_eol = INFO_UNIX;
     }
   }
-  if ((TempChar == WEOF) && ferror(ipInF)) {
+  if ((TempChar == WEOF) && ferror(ipInF->file)) {
     ipFlag->error = errno;
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
@@ -2213,7 +2298,7 @@ void FileInfoW(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, co
 }
 #endif
 
-void FileInfo(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, const char *progname)
+void FileInfo(BufferedStream* ipInF, CFlag *ipFlag, const char *filename, int bomtype, const char *progname)
 {
   int TempChar;
   int PreviousChar = 0;
@@ -2224,7 +2309,7 @@ void FileInfo(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, con
 
   ipFlag->status = 0;
 
-  while ((TempChar = fgetc(ipInF)) != EOF) {
+  while ((TempChar = d2u_getc(ipInF)) != EOF) {
     if ( (TempChar < 32) &&
         (TempChar != '\x0a') &&  /* Not an LF */
         (TempChar != '\x0d') &&  /* Not a CR */
@@ -2254,7 +2339,7 @@ void FileInfo(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, con
       last_eol = INFO_UNIX;
     }
   }
-  if ((TempChar == EOF) && ferror(ipInF)) {
+  if ((TempChar == EOF) && ferror(ipInF->file)) {
     ipFlag->error = errno;
     if (ipFlag->verbose) {
       const char *errstr = strerror(errno);
@@ -2271,7 +2356,9 @@ void FileInfo(FILE* ipInF, CFlag *ipFlag, const char *filename, int bomtype, con
 int GetFileInfo(char *ipInFN, CFlag *ipFlag, const char *progname)
 {
   FILE *InF = NULL;
+  BufferedStream *InB = NULL;
   int bomtype_orig = FILE_MBS; /* messages must print the real bomtype, not the assumed bomtype */
+  const char *errstr;
 
   ipFlag->status = 0 ;
 
@@ -2289,38 +2376,46 @@ int GetFileInfo(char *ipInFN, CFlag *ipFlag, const char *progname)
     return -1;
   }
 
-
   /* can open in file? */
   InF=OpenInFile(ipInFN);
   if (InF == NULL) {
     if (ipFlag->verbose) {
-      const char *errstr = strerror(errno);
+      errstr = strerror(errno);
       ipFlag->error = errno;
       D2U_UTF8_FPRINTF(stderr, "%s: %s: ", progname, ipInFN);
       D2U_ANSI_FPRINTF(stderr, "%s\n", errstr);
     }
     return -1;
   }
+  InB=buffered_open(InF);
+  if (InB == NULL) {
+    if (ipFlag->verbose) {
+      ipFlag->error = errno;
+      errstr = strerror(errno);
+      D2U_UTF8_FPRINTF(stderr, "%s: %s:", progname, ipInFN);
+      D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+    }
+    return -1;
+  }
 
-
-  if (check_unicode_info(InF, ipFlag, progname, &bomtype_orig)) {
-    d2u_fclose(InF, ipInFN, ipFlag, "r", progname);
+  if (check_unicode_info(InB, ipFlag, progname, &bomtype_orig)) {
+    d2u_bsclose(InB, ipInFN, ipFlag, "r", progname);
     return -1;
   }
 
   /* info successful? */
 #ifdef D2U_UNICODE
   if ((ipFlag->bomtype == FILE_UTF16LE) || (ipFlag->bomtype == FILE_UTF16BE)) {
-    FileInfoW(InF, ipFlag, ipInFN, bomtype_orig, progname);
+    FileInfoW(InB, ipFlag, ipInFN, bomtype_orig, progname);
   } else {
-    FileInfo(InF, ipFlag, ipInFN, bomtype_orig, progname);
+    FileInfo(InB, ipFlag, ipInFN, bomtype_orig, progname);
   }
 #else
-  FileInfo(InF, ipFlag, ipInFN, bomtype_orig, progname);
+  FileInfo(InB, ipFlag, ipInFN, bomtype_orig, progname);
 #endif
 
   /* can close in file? */
-  if (d2u_fclose(InF, ipInFN, ipFlag, "r", progname) == EOF)
+  if (d2u_bsclose(InB, ipInFN, ipFlag, "r", progname) == EOF)
     return -1;
 
   return 0;
@@ -2328,7 +2423,9 @@ int GetFileInfo(char *ipInFN, CFlag *ipFlag, const char *progname)
 
 int GetFileInfoStdio(CFlag *ipFlag, const char *progname)
 {
+  BufferedStream *InB = NULL;
   int bomtype_orig = FILE_MBS; /* messages must print the real bomtype, not the assumed bomtype */
+  const char *errstr;
 
   ipFlag->status = 0 ;
 
@@ -2347,20 +2444,32 @@ int GetFileInfoStdio(CFlag *ipFlag, const char *progname)
     setmode(fileno(stdin), O_BINARY);
 #endif
 
-  if (check_unicode_info(stdin, ipFlag, progname, &bomtype_orig))
+  InB=buffered_open(stdin);
+  if (InB == NULL) {
+    if (ipFlag->verbose) {
+      ipFlag->error = errno;
+      errstr = strerror(errno);
+      D2U_UTF8_FPRINTF(stderr, "%s: stdin:", progname);
+      D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+    }
+    return -1;
+  }
+
+  if (check_unicode_info(InB, ipFlag, progname, &bomtype_orig))
     return -1;
 
   /* info successful? */
 #ifdef D2U_UNICODE
   if ((ipFlag->bomtype == FILE_UTF16LE) || (ipFlag->bomtype == FILE_UTF16BE)) {
-    FileInfoW(stdin, ipFlag, "", bomtype_orig, progname);
+    FileInfoW(InB, ipFlag, "", bomtype_orig, progname);
   } else {
-    FileInfo(stdin, ipFlag, "", bomtype_orig, progname);
+    FileInfo(InB, ipFlag, "", bomtype_orig, progname);
   }
 #else
-  FileInfo(stdin, ipFlag, "", bomtype_orig, progname);
+  FileInfo(InB, ipFlag, "", bomtype_orig, progname);
 #endif
 
+  free(InB);
   return 0;
 }
 
@@ -2432,9 +2541,9 @@ void get_info_options(char *option, CFlag *pFlag, const char *progname)
 int parse_options(int argc, char *argv[],
                   CFlag *pFlag, const char *localedir, const char *progname,
                   void (*PrintLicense)(void),
-                  int (*Convert)(FILE*, FILE*, CFlag *, const char *)
+                  int (*Convert)(BufferedStream*, FILE*, CFlag *, const char *)
 #ifdef D2U_UNICODE
-                , int (*ConvertW)(FILE*, FILE*, CFlag *, const char *)
+                , int (*ConvertW)(BufferedStream*, FILE*, CFlag *, const char *)
 #endif
                   )
 {
@@ -2801,12 +2910,12 @@ void d2u_putwc_error(CFlag *ipFlag, const char *progname)
     }
 }
 
-wint_t d2u_getwc(FILE *f, int bomtype)
+wint_t d2u_getwc(BufferedStream *f, int bomtype)
 {
    int c_trail, c_lead;
    wint_t wc;
 
-   if (((c_lead=fgetc(f)) == EOF)  || ((c_trail=fgetc(f)) == EOF))
+   if (((c_lead=d2u_getc(f)) == EOF)  || ((c_trail=d2u_getc(f)) == EOF))
       return(WEOF);
 
    if (bomtype == FILE_UTF16LE) { /* UTF16 little endian */

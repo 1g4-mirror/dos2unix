@@ -1,3 +1,8 @@
+2026-08-18 Erwin Waterlander <waterlan@xs4all.nl>
+	* Safer way to read BOM using a lookahead buffer.
+	  No more use of consecutive ungetc() calls.
+	  dos2unix is now ungetc() free.
+
 2026-08-16 Erwin Waterlander <waterlan@xs4all.nl>
 	* Refactored code. Simpler mac2unix algorithm.
 	  ungetc() is no longer used.

@@ -86,7 +86,7 @@ All rights reserved.\n\n"),2026);
 }
 
 #ifdef D2U_UNICODE
-int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
+int dos2unixW(BufferedStream *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
     wint_t PreviousChar = WEOF;
     wint_t NextChar;
     unsigned int line_nr = 1;
@@ -94,7 +94,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
 
     PreviousChar = d2u_getwc(ipInF, ipFlag->bomtype);
     if (PreviousChar == WEOF) {
-        if (ferror(ipInF)) {
+        if (ferror(ipInF->file)) {
            d2u_getc_error(ipFlag, progname);
            return -1;
         }
@@ -149,7 +149,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
         PreviousChar = NextChar;
     }
 
-    if ((NextChar == WEOF) && ferror(ipInF)) {
+    if ((NextChar == WEOF) && ferror(ipInF->file)) {
         d2u_getc_error(ipFlag, progname);
         return -1;
     }
@@ -180,7 +180,7 @@ int dos2unixW(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname) {
     return 0;
 }
 
-int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
+int mac2unixW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
     wint_t PreviousChar = WEOF;
     wint_t PPreviousChar = WEOF;
     wint_t NextChar;
@@ -190,7 +190,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
 
     PreviousChar = d2u_getwc(ipInF, ipFlag->bomtype);
     if (PreviousChar == WEOF) {
-        if (ferror(ipInF)) {
+        if (ferror(ipInF->file)) {
            d2u_getc_error(ipFlag, progname);
            return -1;
         }
@@ -255,7 +255,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
         PreviousChar = NextChar;
     }
 
-    if ((NextChar == WEOF) && ferror(ipInF)) {
+    if ((NextChar == WEOF) && ferror(ipInF->file)) {
         d2u_getc_error(ipFlag, progname);
         return -1;
     }
@@ -310,7 +310,7 @@ int mac2unixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname) {
  * RetVal: 0  if success
  *         -1  otherwise
  */
-int ConvertDosToUnixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
+int ConvertDosToUnixW(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
 {
     int RetVal = 0;
 
@@ -344,16 +344,16 @@ int ConvertDosToUnixW(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *prog
 #endif
 
 
-int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
+int dos2unix(BufferedStream *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
         int *ConvTable) {
     int PreviousChar = EOF;
     int NextChar;
     unsigned int line_nr = 1;
     unsigned int converted = 0;
 
-    PreviousChar = fgetc(ipInF);
+    PreviousChar = d2u_getc(ipInF);
     if (PreviousChar == EOF) {
-        if (ferror(ipInF)) {
+        if (ferror(ipInF->file)) {
            d2u_getc_error(ipFlag, progname);
            return -1;
         }
@@ -371,7 +371,7 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
     /* We look one char ahead (NextChar) to see if it's
      * a CR-LF combination, and push the previous char.
      */
-    while ((NextChar = fgetc(ipInF)) != EOF) { /* get character */
+    while ((NextChar = d2u_getc(ipInF)) != EOF) { /* get character */
         if ((ipFlag->Force == 0) && binaryChar(NextChar)) {
             ipFlag->status |= BINARY_FILE;
             if (ipFlag->verbose) {
@@ -405,7 +405,7 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
         PreviousChar = NextChar;
     }
 
-    if ((NextChar == EOF) && ferror(ipInF)) {
+    if ((NextChar == EOF) && ferror(ipInF->file)) {
         d2u_getc_error(ipFlag, progname);
         return -1;
     }
@@ -431,16 +431,16 @@ int dos2unix(FILE *ipInF, FILE *ipOutF, CFlag *ipFlag, const char *progname,
     return 0;
 }
 
-int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
+int mac2unix(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int *ConvTable) {
     int PreviousChar = EOF;
     int PPreviousChar = EOF;
     int NextChar;
     unsigned int line_nr = 1;
     unsigned int converted = 0;
 
-    PreviousChar = fgetc(ipInF);
+    PreviousChar = d2u_getc(ipInF);
     if (PreviousChar == EOF) {
-        if (ferror(ipInF)) {
+        if (ferror(ipInF->file)) {
            d2u_getc_error(ipFlag, progname);
            return -1;
         }
@@ -459,7 +459,7 @@ int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
      * a CR-LF combination, and push the previous char.
      * mac2unix keeps CR-LF.
      */
-    while ((NextChar = fgetc(ipInF)) != EOF) { /* get character */
+    while ((NextChar = d2u_getc(ipInF)) != EOF) { /* get character */
         if ((ipFlag->Force == 0) && binaryChar(NextChar)) {
             ipFlag->status |= BINARY_FILE;
             if (ipFlag->verbose) {
@@ -501,7 +501,7 @@ int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
         PreviousChar = NextChar;
     }
 
-    if ((NextChar == EOF) && ferror(ipInF)) {
+    if ((NextChar == EOF) && ferror(ipInF->file)) {
         d2u_getc_error(ipFlag, progname);
         return -1;
     }
@@ -549,7 +549,7 @@ int mac2unix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname, int
  * RetVal: 0  if success
  *         -1  otherwise
  */
-int ConvertDosToUnix(FILE* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
+int ConvertDosToUnix(BufferedStream* ipInF, FILE* ipOutF, CFlag *ipFlag, const char *progname)
 {
     int RetVal = 0;
     int *ConvTable;
