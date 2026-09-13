@@ -110,7 +110,7 @@ TRANSLATORS
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.7
         Russian               Андрей Углик (Andrei Uhlik)  Version 6.0.4
         Russian               Yuri Kozlov                  Version 6.0.6 - 7.5.2
-        Serbian               Мирослав Николић             Version 6.0.5 - 7.5.5
+        Serbian               Мирослав Николић             Version 6.0.5 - 7.5.7
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.3.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2
@@ -122,11 +122,12 @@ TRANSLATORS
         See https://translationproject.org/domain/dos2unix-man.html
 
         Brazilian Portuguese  Rafael Ferreira              Version 6.0.5 - 7.2
-        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.5
+        Brazilian Portuguese  Rafael Fontenelle            Version 7.3.2 - 7.5.6
         Chinese (simplified)  Tianze Wang                  Version 7.3.1 - 7.4.0,
                                                            7.5.1
         Chinese (simplified)  Boyuan Yang, Tianze Wang     Version 7.4.4
         Chinese (simplified)  Boyuan Yang                  Version 7.5.0 - 7.5.3
+        Chinese (traditional) Alang Hsu                    Version 7.5.6
         Dutch                 Erwin Waterlander            Version 5.1.1 - 6.0.4,
                                                            7.5.2
         Dutch                 Benno Schulenberg            Version 6.0.5 - 7.4.0,
@@ -137,7 +138,7 @@ TRANSLATORS
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.6
         Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.6
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.6
-        Serbian               Мирослав Николић             Version 7.4.3 - 7.5.5
+        Serbian               Мирослав Николић             Version 7.4.3 - 7.5.6
         Spanish               Julio A. Freyre-Gonzalez     Version 5.3.1 - 6.0.4
         Spanish               Enrique Lazcorreta Puigmartí Version 6.0.6 - 7.2.1
         Swedish               Sebastian Rasmussen          Version 7.3.2 - 7.5.2

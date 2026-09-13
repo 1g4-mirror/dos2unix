@@ -1,3 +1,6 @@
+2026-09-13 Alang Hsu <alang.hsu@gmail.com>
+	* New traditional Chinese translation of the manual.
+
 2026-08-27 Erwin Waterlander <waterlan@xs4all.nl>
 	* Version 7.5.7
 

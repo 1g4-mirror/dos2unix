@@ -1,15 +1,15 @@
 # Brazilian Portuguese translation for dos2unix-man
-# Copyright (c) 2026 Erwin Waterlander (msgids)
+# Copyright (C) 2026 Erwin Waterlander (msgids)
 # Copyright (C) 2026 Free Software Foundation, Inc.
 # This file is distributed under the same license as the dos2unix package.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2014-2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dos2unix-man 7.5.5-beta3\n"
+"Project-Id-Version: dos2unix-man 7.5.6-beta2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-21 22:32+0200\n"
-"PO-Revision-Date: 2026-03-29 21:28-0300\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-07-22 22:14-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <ldpbr-translation@lists.sourceforge.net>\n"
 "Language: pt_BR\n"
@@ -865,7 +865,7 @@ msgstr "Para verificar se dos2unix oferece suporte à preservação da proprieda
 #. type: textblock
 #: dos2unix.pod:478
 msgid "Conversion is always done via a temporary file. When an error occurs halfway the conversion, the temporary file is deleted and the original file stays intact. When the conversion is successful, the original file is replaced with the temporary file. You may have write permission on the original file, but no permission to put the same user and/or group ownership properties on the temporary file as the original file has. This means you are not able to preserve the user and/or group ownership of the original file. In this case you can use option C<--allow-chown> to continue with the conversion:"
-msgstr "A conversão sempre é feita através de um arquivo temporário. Quando um erro ocorre no meio da conversão, o arquivo temporário é excluído e o arquivo original permanece intacto. Quando a conversão é bem sucedida, o arquivo original é substituído pelo arquivo temporário. Você pode ter permissão de gravação no arquivo original, mas nenhuma permissão para colocar a mesma propriedade de usuário e/ou de grupo no arquivo temporário como o arquivo original. Isso significa que você não consegue preservar a propriedade de usuário e/ou de grupo do arquivo original. Neste caso, você pode usar a opção C<-allow-chown> para continuar com a conversão:"
+msgstr "A conversão sempre é feita através de um arquivo temporário. Quando um erro ocorre no meio da conversão, o arquivo temporário é excluído e o arquivo original permanece intacto. Quando a conversão é bem sucedida, o arquivo original é substituído pelo arquivo temporário. Você pode ter permissão de gravação no arquivo original, mas nenhuma permissão para colocar a mesma propriedade de usuário e/ou de grupo no arquivo temporário como o arquivo original. Isso significa que você não consegue preservar a propriedade de usuário e/ou de grupo do arquivo original. Neste caso, você pode usar a opção C<--allow-chown> para continuar com a conversão:"
 
 #. type: verbatim
 #: dos2unix.pod:487
@@ -944,8 +944,6 @@ msgstr "B<-u, --keep-utf16>"
 
 #. type: textblock
 #: dos2unix.pod:522
-#, fuzzy
-#| msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little or big endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
 msgstr "Mantém a codificação UTF-16 original do arquivo de entrada. O arquivo de saída será escrito na mesma codificação UTF-16, em little ou big endian, como o arquivo de entrada. Isso evita transformação para UTF-8. Como consequência, um BOM UTF-16 será escrito. Essa opção pode ser desabilitada com a opção C<-ascii>."
 
@@ -1236,10 +1234,8 @@ msgstr ""
 
 #. type: textblock
 #: dos2unix.pod:656
-#, fuzzy
-#| msgid "See also L<http://czyborra.com/charsets/codepages.html> and L<http://czyborra.com/charsets/iso8859.html>."
 msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
-msgstr "Veja também L<http://czyborra.com/charsets/codepages.html> e L<http://czyborra.com/charsets/iso8859.html>."
+msgstr "Veja também L<https://czyborra.com/charsets/codepages.html> e L<https://czyborra.com/charsets/iso8859.html>."
 
 #. type: =head1
 #: dos2unix.pod:661
@@ -1253,8 +1249,6 @@ msgstr "Codificações"
 
 #. type: textblock
 #: dos2unix.pod:665
-#, fuzzy
-#| msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big endian, but are mostly encoded in UTF-16 format."
 msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
 msgstr "Exitem codificações Unicode diferentes. No Unix e no Linux, arquivos Unicode são geralmente codificados em UTF-8. No Windows, arquivos texto Unicode podem ser codificados em UTF-8, UTF-16 ou UTF-16 big endian, mas na maioria das vezes são codificados no formato UTF-16."
 
@@ -1275,8 +1269,6 @@ msgstr "Todas as versões do dos2unix e unix2dos podem converter arquivos codifi
 
 #. type: textblock
 #: dos2unix.pod:678
-#, fuzzy
-#| msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little and big endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
 msgstr "dos2unix e unix2dos com suporte a Unicode UTF-16 podem ler arquivos texto codificados em little e big endian UTF-16. Para ver se dos2unix foi compilado com suporte a UTF-16, digite C<dos2unix -V>."
 
@@ -1343,7 +1335,7 @@ msgstr "dos2unix escreve por padrão nenhum BOM no arquivo de saída. Com a opç
 #. type: textblock
 #: dos2unix.pod:719
 msgid "unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option C<-r> to remove the BOM."
-msgstr "unix2dos escreve por padrão um BOM no arquivo de saída quando o arquivo de entrada tem BOM. Use a opção C<-m> para remover BOM."
+msgstr "unix2dos escreve por padrão um BOM no arquivo de saída quando o arquivo de entrada tem BOM. Use a opção C<-r> para remover BOM."
 
 #. type: textblock
 #: dos2unix.pod:722
@@ -1850,10 +1842,8 @@ msgstr "Benjamin Lin - <blin@socs.uts.edu.au> Bernd Johannes Wuebben (modo mac2u
 
 #. type: textblock
 #: dos2unix.pod:931
-#, fuzzy
-#| msgid "Project page: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
 msgid "Project page: L<https://waterlander.net/dos2unix/>"
-msgstr "Página do projeto: L<https://waterlan.home.xs4all.nl/dos2unix.html>"
+msgstr "Página do projeto: L<https://waterlander.net/dos2unix/>"
 
 #. type: textblock
 #: dos2unix.pod:933

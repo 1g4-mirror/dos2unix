@@ -1,0 +1,1858 @@
+# Traditional Chinese Messages for dos2unix-man
+# Copyright (C) 2026 Erwin Waterlander (msgids)
+# This file is distributed under the same license as the dos2unix package.
+# Alang Hsu <alang.hsu@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dos2unix-man 7.5.6-beta2\n"
+"POT-Creation-Date: 2026-05-08 21:20+0200\n"
+"PO-Revision-Date: 2026-09-05 09:57+0800\n"
+"Last-Translator: Alang Hsu <alang.hsu@gmail.com>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+
+#. type: =head1
+#: dos2unix.pod:52
+msgid "NAME"
+msgstr "名稱"
+
+#. type: textblock
+#: dos2unix.pod:54
+msgid "dos2unix - DOS/Mac to Unix and vice versa text file format converter"
+msgstr "dos2unix - DOS/Mac 與 Unix 文字檔格式轉換器（雙向）"
+
+#. type: =head1
+#: dos2unix.pod:56
+msgid "SYNOPSIS"
+msgstr "語法"
+
+#. type: verbatim
+#: dos2unix.pod:58
+#, no-wrap
+msgid ""
+"    dos2unix [options] [FILE ...] [-n INFILE OUTFILE ...]\n"
+"    unix2dos [options] [FILE ...] [-n INFILE OUTFILE ...]\n"
+"\n"
+msgstr ""
+"    dos2unix [options] [FILE ...] [-n INFILE OUTFILE ...]\n"
+"    unix2dos [options] [FILE ...] [-n INFILE OUTFILE ...]\n"
+"\n"
+
+#. type: =head1
+#: dos2unix.pod:61
+msgid "DESCRIPTION"
+msgstr "說明"
+
+#. type: textblock
+#: dos2unix.pod:63
+msgid "The dos2unix package includes utilities C<dos2unix> and C<unix2dos> to convert plain text files in DOS or Mac format to Unix format and vice versa."
+msgstr "dos2unix 套件包含 C<dos2unix> 與 C<unix2dos> 兩支工具程式，可將 DOS 或 Mac 格式的純文字檔轉換為 Unix 格式，反之亦然。"
+
+#. type: textblock
+#: dos2unix.pod:66
+msgid "In DOS/Windows text files a line break, also known as newline, is a combination of two characters: a Carriage Return (CR) followed by a Line Feed (LF). In Unix text files a line break is a single character: the Line Feed (LF). In Mac text files, prior to Mac OS X, a line break was single Carriage Return (CR)  character. Nowadays Mac OS uses Unix style (LF) line breaks."
+msgstr "在 DOS/Windows 文字檔中，換行（又稱 newline）由兩個字元組成：一個歸位字元 (CR) 後接一個換行字元 (LF)。在 Unix 文字檔中，換行是單一字元：換行字元 (LF)。在 Mac OS X 之前的 Mac 文字檔中，換行是單一的歸位字元 (CR)。現今的 Mac OS 使用 Unix 風格的換行 (LF)。"
+
+#. type: textblock
+#: dos2unix.pod:72
+msgid "Besides line breaks dos2unix can also convert the encoding of files. A few DOS code pages can be converted to Unix Latin-1. And Windows Unicode (UTF-16)  files can be converted to Unix Unicode (UTF-8) files."
+msgstr "除了換行之外，dos2unix 也可以轉換檔案的編碼。少數 DOS 碼頁可以轉換為 Unix Latin-1。Windows 的 Unicode (UTF-16) 檔可以轉換為 Unix 的 Unicode (UTF-8) 檔。"
+
+#. type: textblock
+#: dos2unix.pod:76
+msgid "Binary files are automatically skipped, unless conversion is forced."
+msgstr "二進位檔會自動略過，除非強制轉換。"
+
+#. type: textblock
+#: dos2unix.pod:78
+msgid "Non-regular files, such as directories and FIFOs, are automatically skipped."
+msgstr "非常規檔案（例如目錄與 FIFO）會自動略過。"
+
+#. type: textblock
+#: dos2unix.pod:80
+msgid "Symbolic links and their targets are by default kept untouched.  Symbolic links can optionally be replaced, or the output can be written to the symbolic link target.  Writing to a symbolic link target is not supported on Windows."
+msgstr "依預設，符號連結及其目標會保持不變。也可以選擇以轉換後的檔案取代符號連結，或將輸出寫入符號連結的目標。在 Windows 上不支援寫入符號連結的目標。"
+
+#. type: textblock
+#: dos2unix.pod:84
+msgid "dos2unix was modelled after dos2unix under SunOS/Solaris.  There is one important difference with the original SunOS/Solaris version. This version does by default in-place conversion (old file mode), while the original SunOS/Solaris version only supports paired conversion (new file mode). See also options C<-o> and C<-n>. Another difference is that the SunOS/Solaris version uses by default I<iso> mode conversion while this version uses by default I<ascii> mode conversion."
+msgstr "dos2unix 是以 SunOS/Solaris 下的 dos2unix 為藍本。與原始的 SunOS/Solaris 版本有一個重要差異：此版本預設進行就地轉換（舊檔模式），而原始的 SunOS/Solaris 版本只支援成對轉換（新檔模式）。另請參見 C<-o> 與 C<-n> 選項。另一個差異是 SunOS/Solaris 版本預設使用 I<iso> 模式轉換，而此版本預設使用 I<ascii> 模式轉換。"
+
+#. type: =head1
+#: dos2unix.pod:92
+msgid "OPTIONS"
+msgstr "選項"
+
+#. type: =item
+#: dos2unix.pod:96
+msgid "B<-->"
+msgstr "B<-->"
+
+#. type: textblock
+#: dos2unix.pod:98
+msgid "Treat all following options as file names. Use this option if you want to convert files whose names start with a dash. For instance to convert a file named \"-foo\", you can use this command:"
+msgstr "將之後所有選項視為檔案名稱。若您想轉換名稱以連字號開頭的檔案，請使用這個選項。例如要轉換名為「-foo」的檔案，可以使用這個命令："
+
+#. type: verbatim
+#: dos2unix.pod:102
+#, no-wrap
+msgid ""
+"    dos2unix -- -foo\n"
+"\n"
+msgstr ""
+"    dos2unix -- -foo\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:104
+msgid "Or in new file mode:"
+msgstr "或使用新檔模式："
+
+#. type: verbatim
+#: dos2unix.pod:106
+#, no-wrap
+msgid ""
+"    dos2unix -n -- -foo out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -n -- -foo out.txt\n"
+"\n"
+
+#. type: =item
+#: dos2unix.pod:108
+msgid "B<--allow-chown>"
+msgstr "B<--allow-chown>"
+
+#. type: textblock
+#: dos2unix.pod:110
+msgid "Allow file ownership change in old file mode."
+msgstr "允許在舊檔模式中變更檔案擁有權。"
+
+#. type: textblock
+#: dos2unix.pod:112
+msgid "When this option is used, the conversion will not be aborted when the user and/or group ownership of the original file can't be preserved in old file mode. Conversion will continue and the converted file will get the same new ownership as if it was converted in new file mode. See also options C<-o> and C<-n>. This option is only available if dos2unix has support for preserving the user and group ownership of files."
+msgstr "使用此選項時，若在舊檔模式中無法保留原始檔案的擁有者與/或群組，轉換不會中止。轉換會繼續進行，轉換後的檔案會取得與在新檔模式中轉換相同的擁有權。另請參見 C<-o> 與 C<-n> 選項。只有當 dos2unix 支援保留檔案的使用者與群組擁有權時，這個選項才可用。"
+
+#. type: =item
+#: dos2unix.pod:119
+msgid "B<-ascii>"
+msgstr "B<-ascii>"
+
+#. type: textblock
+#: dos2unix.pod:121
+msgid "Default conversion mode. See also section CONVERSION MODES."
+msgstr "預設轉換模式。另請參見「轉換模式」一節。"
+
+#. type: =item
+#: dos2unix.pod:123
+msgid "B<-iso>"
+msgstr "B<-iso>"
+
+#. type: textblock
+#: dos2unix.pod:125
+msgid "Conversion between DOS and ISO-8859-1 character set. See also section CONVERSION MODES."
+msgstr "在 DOS 與 ISO-8859-1 字元集之間轉換。另請參見「轉換模式」一節。"
+
+#. type: =item
+#: dos2unix.pod:128
+msgid "B<-1252>"
+msgstr "B<-1252>"
+
+#. type: textblock
+#: dos2unix.pod:130
+msgid "Use Windows code page 1252 (Western European)."
+msgstr "使用 Windows 碼頁 1252（西歐）。"
+
+#. type: =item
+#: dos2unix.pod:132
+msgid "B<-437>"
+msgstr "B<-437>"
+
+#. type: textblock
+#: dos2unix.pod:134
+msgid "Use DOS code page 437 (US). This is the default code page used for ISO conversion."
+msgstr "使用 DOS 碼頁 437（美國）。這是 ISO 轉換所使用的預設碼頁。"
+
+#. type: =item
+#: dos2unix.pod:136
+msgid "B<-850>"
+msgstr "B<-850>"
+
+#. type: textblock
+#: dos2unix.pod:138
+msgid "Use DOS code page 850 (Western European)."
+msgstr "使用 DOS 碼頁 850（西歐）。"
+
+#. type: =item
+#: dos2unix.pod:140
+msgid "B<-860>"
+msgstr "B<-860>"
+
+#. type: textblock
+#: dos2unix.pod:142
+msgid "Use DOS code page 860 (Portuguese)."
+msgstr "使用 DOS 碼頁 860（葡萄牙）。"
+
+#. type: =item
+#: dos2unix.pod:144
+msgid "B<-863>"
+msgstr "B<-863>"
+
+#. type: textblock
+#: dos2unix.pod:146
+msgid "Use DOS code page 863 (French Canadian)."
+msgstr "使用 DOS 碼頁 863（法屬加拿大）。"
+
+#. type: =item
+#: dos2unix.pod:148
+msgid "B<-865>"
+msgstr "B<-865>"
+
+#. type: textblock
+#: dos2unix.pod:150
+msgid "Use DOS code page 865 (Nordic)."
+msgstr "使用 DOS 碼頁 865（北歐）。"
+
+#. type: =item
+#: dos2unix.pod:152
+msgid "B<-7>"
+msgstr "B<-7>"
+
+#. type: textblock
+#: dos2unix.pod:154
+msgid "Convert 8 bit characters to 7 bit space."
+msgstr "將 8 位元字元轉換為 7 位元空白。"
+
+#. type: =item
+#: dos2unix.pod:156
+msgid "B<-b, --keep-bom>"
+msgstr "B<-b, --keep-bom>"
+
+#. type: textblock
+#: dos2unix.pod:158
+msgid "Keep Byte Order Mark (BOM). When the input file has a BOM, write a BOM in the output file. This is the default behavior when converting to DOS line breaks. See also option C<-r>."
+msgstr "保留位元組順序標記 (BOM)。當輸入檔有 BOM 時，在輸出檔中寫入 BOM。這是轉換為 DOS 換行時的預設行為。另請參見 C<-r> 選項。"
+
+#. type: =item
+#: dos2unix.pod:162
+msgid "B<-c, --convmode CONVMODE>"
+msgstr "B<-c, --convmode CONVMODE>"
+
+#. type: textblock
+#: dos2unix.pod:164
+msgid "Set conversion mode. Where CONVMODE is one of: I<ascii>, I<7bit>, I<iso>, I<mac> with ascii being the default."
+msgstr "設定轉換模式。CONVMODE 為下列之一：I<ascii>、I<7bit>、I<iso>、I<mac>，預設為 ascii。"
+
+#. type: =item
+#: dos2unix.pod:168
+msgid "B<-D, --display-enc ENCODING>"
+msgstr "B<-D, --display-enc ENCODING>"
+
+#. type: textblock
+#: dos2unix.pod:170
+msgid "Set encoding of displayed text. Where ENCODING is one of: I<ansi>, I<unicode>, I<unicodebom>, I<utf8>, I<utf8bom> with ansi being the default."
+msgstr "設定顯示文字所使用的編碼。ENCODING 為下列之一：I<ansi>、I<unicode>、I<unicodebom>、I<utf8>、I<utf8bom>，預設為 ansi。"
+
+#. type: textblock
+#: dos2unix.pod:174
+msgid "This option is only available in dos2unix for Windows with Unicode file name support. This option has no effect on the actual file names read and written, only on how they are displayed."
+msgstr "這個選項僅在支援 Unicode 檔案名稱的 Windows 版 dos2unix 中可用。此選項不會影響實際讀寫的檔案名稱，只影響它們的顯示方式。"
+
+#. type: textblock
+#: dos2unix.pod:178
+msgid "There are several methods for displaying text in a Windows console based on the encoding of the text. They all have their own advantages and disadvantages."
+msgstr "在 Windows 主控台中，依文字的編碼有數種顯示方法。它們各有優缺點。"
+
+#. type: =item
+#: dos2unix.pod:184
+msgid "B<ansi>"
+msgstr "B<ansi>"
+
+#. type: textblock
+#: dos2unix.pod:186
+msgid "dos2unix's default method is to use ANSI encoded text. The advantage is that it is backwards compatible. It works with raster and TrueType fonts. In some regions you may need to change the active DOS OEM code page to the Windows system ANSI code page using the C<chcp> command, because dos2unix uses the Windows system code page."
+msgstr "dos2unix 的預設方法是使用 ANSI 編碼的文字。優點是向下相容，可搭配點陣與 TrueType 字型。在某些地區，您可能需要使用 C<chcp> 命令將作用中的 DOS OEM 碼頁變更為 Windows 系統 ANSI 碼頁，因為 dos2unix 使用 Windows 系統碼頁。"
+
+#. type: textblock
+#: dos2unix.pod:192
+msgid "The disadvantage of ansi is that international file names with characters not inside the system default code page are not displayed properly. You will see a question mark, or a wrong symbol instead. When you don't work with foreign file names this method is OK."
+msgstr "ansi 的缺點是，內含系統預設碼頁之外字元的國際化檔案名稱無法正確顯示，您會看到問號或不正確的符號。當您沒有處理外國檔案名稱時，這個方法就夠用了。"
+
+#. type: =item
+#: dos2unix.pod:197
+msgid "B<unicode, unicodebom>"
+msgstr "B<unicode, unicodebom>"
+
+#. type: textblock
+#: dos2unix.pod:199
+msgid "The advantage of unicode (the Windows name for UTF-16) encoding is that text is usually properly displayed. There is no need to change the active code page.  You may need to set the console's font to a TrueType font to have international characters displayed properly. When a character is not included in the TrueType font you usually see a small square, sometimes with a question mark in it."
+msgstr "unicode（Windows 對 UTF-16 的稱呼）編碼的優點是文字通常能正確顯示，不需要變更作用中的碼頁。您可能需要將主控台的字型設定為 TrueType 字型，才能正確顯示國際化字元。當字元不在 TrueType 字型中時，通常會看到一個小方塊，有時方塊內含問號。"
+
+#. type: textblock
+#: dos2unix.pod:205
+msgid "When you use the ConEmu console all text is displayed properly, because ConEmu automatically selects a good font."
+msgstr "使用 ConEmu 主控台時，所有文字都能正確顯示，因為 ConEmu 會自動選取合適的字型。"
+
+#. type: textblock
+#: dos2unix.pod:208
+msgid "The disadvantage of unicode is that it is not compatible with ASCII. The output is not easy to handle when you redirect it to another program."
+msgstr "unicode 的缺點是與 ASCII 不相容。當您將輸出重新導向到另一個程式時，不易處理。"
+
+#. type: textblock
+#: dos2unix.pod:211
+msgid "When method C<unicodebom> is used the Unicode text will be preceded with a BOM (Byte Order Mark). A BOM is required for correct redirection or piping in PowerShell."
+msgstr "使用 C<unicodebom> 方法時，Unicode 文字前會加上 BOM（位元組順序標記）。在 PowerShell 中要正確重新導向或進行管道處理時需要 BOM。"
+
+#. type: =item
+#: dos2unix.pod:216
+msgid "B<utf8, utf8bom>"
+msgstr "B<utf8, utf8bom>"
+
+#. type: textblock
+#: dos2unix.pod:218
+msgid "The advantage of utf8 is that it is compatible with ASCII. You need to set the console's font to a TrueType font. With a TrueType font the text is displayed similar as with the C<unicode> encoding."
+msgstr "utf8 的優點是與 ASCII 相容。您需要將主控台的字型設定為 TrueType 字型。使用 TrueType 字型時，文字的顯示方式與 C<unicode> 編碼類似。"
+
+#. type: textblock
+#: dos2unix.pod:222
+msgid "The disadvantage is that when you use the default raster font all non-ASCII characters are displayed wrong. Not only unicode file names, but also translated messages become unreadable. On Windows configured for an East-Asian region you may see a lot of flickering of the console when the messages are displayed."
+msgstr "缺點是當您使用預設的點陣字型時，所有非 ASCII 字元都會顯示錯誤。不只 unicode 檔案名稱，連翻譯後的訊息也會變得無法閱讀。在設定為東亞地區的 Windows 上，顯示訊息時主控台可能會閃爍得很厲害。"
+
+#. type: textblock
+#: dos2unix.pod:228
+msgid "In a ConEmu console the utf8 encoding method works well."
+msgstr "在 ConEmu 主控台中，utf8 編碼方法運作良好。"
+
+#. type: textblock
+#: dos2unix.pod:230
+msgid "When method C<utf8bom> is used the UTF-8 text will be preceded with a BOM (Byte Order Mark). A BOM is required for correct redirection or piping in PowerShell."
+msgstr "使用 C<utf8bom> 方法時，UTF-8 文字前會加上 BOM（位元組順序標記）。在 PowerShell 中要正確重新導向或進行管道處理時需要 BOM。"
+
+#. type: textblock
+#: dos2unix.pod:237
+msgid "The default encoding can be changed with environment variable DOS2UNIX_DISPLAY_ENC by setting it to C<unicode>, C<unicodebom>, C<utf8>, or C<utf8bom>."
+msgstr "預設編碼可以透過環境變數 DOS2UNIX_DISPLAY_ENC 變更，將其設為 C<unicode>、C<unicodebom>、C<utf8> 或 C<utf8bom>。"
+
+#. type: =item
+#: dos2unix.pod:240
+msgid "B<-e, --add-eol>"
+msgstr "B<-e, --add-eol>"
+
+#. type: textblock
+#: dos2unix.pod:242
+msgid "Add a line break to the last line if there isn't one. This works for every conversion."
+msgstr "如果最後一行沒有換行，就加上換行。這適用於所有轉換。"
+
+#. type: textblock
+#: dos2unix.pod:245
+msgid "A file converted from DOS to Unix format may lack a line break on the last line. There are text editors that write text files without a line break on the last line. Some Unix programs have problems processing these files, because the POSIX standard defines that every line in a text file must end with a terminating newline character. For instance concatenating files may not give the expected result."
+msgstr "從 DOS 轉換為 Unix 格式的檔案，最後一行可能缺少換行。有些文字編輯器寫入文字檔時，最後一行沒有換行。部分 Unix 程式處理這類檔案會有問題，因為 POSIX 標準規定文字檔中的每一行都必須以換行字元結尾。例如串接檔案可能得不到預期的結果。"
+
+#. type: =item
+#: dos2unix.pod:252
+msgid "B<--error-binary>"
+msgstr "B<--error-binary>"
+
+#. type: textblock
+#: dos2unix.pod:254
+msgid "Return an error if a binary file is skipped."
+msgstr "當二進位檔被略過時回傳錯誤。"
+
+#. type: =item
+#: dos2unix.pod:256
+msgid "B<-f, --force>"
+msgstr "B<-f, --force>"
+
+#. type: textblock
+#: dos2unix.pod:258
+msgid "Force conversion of binary files."
+msgstr "強制轉換二進位檔。"
+
+#. type: =item
+#: dos2unix.pod:260
+msgid "B<-gb, --gb18030>"
+msgstr "B<-gb, --gb18030>"
+
+#. type: textblock
+#: dos2unix.pod:262
+msgid "On Windows UTF-16 files are by default converted to UTF-8, regardless of the locale setting. Use this option to convert UTF-16 files to GB18030. This option is only available on Windows. See also section GB18030."
+msgstr "在 Windows 上，無論 locale 設定為何，UTF-16 檔預設都會轉換為 UTF-8。使用這個選項可將 UTF-16 檔轉換為 GB18030。此選項僅在 Windows 上可用。另請參見「GB18030」一節。"
+
+#. type: =item
+#: dos2unix.pod:266
+msgid "B<-h, --help>"
+msgstr "B<-h, --help>"
+
+#. type: textblock
+#: dos2unix.pod:268
+msgid "Display help and exit."
+msgstr "顯示說明後結束。"
+
+#. type: =item
+#: dos2unix.pod:270
+msgid "B<-i[FLAGS], --info[=FLAGS] FILE ...>"
+msgstr "B<-i[FLAGS], --info[=FLAGS] FILE ...>"
+
+#. type: textblock
+#: dos2unix.pod:272
+msgid "Display file information. No conversion is done."
+msgstr "顯示檔案資訊。不進行轉換。"
+
+#. type: textblock
+#: dos2unix.pod:274
+msgid "The following information is printed, in this order: number of DOS line breaks, number of Unix line breaks, number of Mac line breaks, byte order mark, text or binary, file name."
+msgstr "依下列順序列印資訊：DOS 換行數、Unix 換行數、Mac 換行數、位元組順序標記、文字或二進位、檔案名稱。"
+
+#. type: textblock
+#: dos2unix.pod:278 dos2unix.pod:294
+msgid "Example output:"
+msgstr "輸出範例："
+
+#. type: verbatim
+#: dos2unix.pod:280
+#, no-wrap
+msgid ""
+"     6       0       0  no_bom    text    dos.txt\n"
+"     0       6       0  no_bom    text    unix.txt\n"
+"     0       0       6  no_bom    text    mac.txt\n"
+"     6       6       6  no_bom    text    mixed.txt\n"
+"    50       0       0  UTF-16LE  text    utf16le.txt\n"
+"     0      50       0  no_bom    text    utf8unix.txt\n"
+"    50       0       0  UTF-8     text    utf8dos.txt\n"
+"     2     418     219  no_bom    binary  dos2unix.exe\n"
+"\n"
+msgstr ""
+"     6       0       0  no_bom    text    dos.txt\n"
+"     0       6       0  no_bom    text    unix.txt\n"
+"     0       0       6  no_bom    text    mac.txt\n"
+"     6       6       6  no_bom    text    mixed.txt\n"
+"    50       0       0  UTF-16LE  text    utf16le.txt\n"
+"     0      50       0  no_bom    text    utf8unix.txt\n"
+"    50       0       0  UTF-8     text    utf8dos.txt\n"
+"     2     418     219  no_bom    binary  dos2unix.exe\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:289
+msgid "Note that sometimes a binary file can be mistaken for a text file. See also option C<-s>."
+msgstr "請注意，二進位檔有時會被誤認為文字檔。另請參見 C<-s> 選項。"
+
+#. type: textblock
+#: dos2unix.pod:291
+msgid "If in addition option C<-e> or C<--add-eol> is used also the type of the line break of the last line is printed, or C<noeol> if there is none."
+msgstr "若另外使用了 C<-e> 或 C<--add-eol> 選項，也會列印最後一行換行的類型，若沒有換行則列印 C<noeol>。"
+
+#. type: verbatim
+#: dos2unix.pod:296
+#, no-wrap
+msgid ""
+"     6       0       0  no_bom    text   dos     dos.txt\n"
+"     0       6       0  no_bom    text   unix    unix.txt\n"
+"     0       0       6  no_bom    text   mac     mac.txt\n"
+"     1       0       0  no_bom    text   noeol   noeol_dos.txt\n"
+"\n"
+msgstr ""
+"     6       0       0  no_bom    text   dos     dos.txt\n"
+"     0       6       0  no_bom    text   unix    unix.txt\n"
+"     0       0       6  no_bom    text   mac     mac.txt\n"
+"     1       0       0  no_bom    text   noeol   noeol_dos.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:301
+msgid "Optionally extra flags can be set to change the output. One or more flags can be added."
+msgstr "您可以選擇性地設定其他旗標來變更輸出。可以加入一個以上的旗標。"
+
+#. type: =item
+#: dos2unix.pod:306
+msgid "B<0>"
+msgstr "B<0>"
+
+#. type: textblock
+#: dos2unix.pod:308
+msgid "Print the file information lines followed by a null character instead of a newline character. This enables correct interpretation of file names with spaces or quotes when flag c is used. Use this flag in combination with xargs(1) option C<-0> or C<--null>."
+msgstr "列印檔案資訊列後跟一個 null 字元，而非換行字元。這樣在使用 c 旗標時，可以正確解讀含有空格或引號的檔案名稱。請搭配 xargs(1) 的 C<-0> 或 C<--null> 選項使用這個旗標。"
+
+#. type: =item
+#: dos2unix.pod:313
+msgid "B<d>"
+msgstr "B<d>"
+
+#. type: textblock
+#: dos2unix.pod:315
+msgid "Print number of DOS line breaks."
+msgstr "列印 DOS 換行數。"
+
+#. type: =item
+#: dos2unix.pod:317
+msgid "B<u>"
+msgstr "B<u>"
+
+#. type: textblock
+#: dos2unix.pod:319
+msgid "Print number of Unix line breaks."
+msgstr "列印 Unix 換行數。"
+
+#. type: =item
+#: dos2unix.pod:321
+msgid "B<m>"
+msgstr "B<m>"
+
+#. type: textblock
+#: dos2unix.pod:323
+msgid "Print number of Mac line breaks."
+msgstr "列印 Mac 換行數。"
+
+#. type: =item
+#: dos2unix.pod:325
+msgid "B<b>"
+msgstr "B<b>"
+
+#. type: textblock
+#: dos2unix.pod:327
+msgid "Print the byte order mark."
+msgstr "列印位元組順序標記。"
+
+#. type: =item
+#: dos2unix.pod:329
+msgid "B<t>"
+msgstr "B<t>"
+
+#. type: textblock
+#: dos2unix.pod:331
+msgid "Print if file is text or binary."
+msgstr "列印檔案是文字或二進位。"
+
+#. type: =item
+#: dos2unix.pod:333
+msgid "B<e>"
+msgstr "B<e>"
+
+#. type: textblock
+#: dos2unix.pod:335
+msgid "Print the type of the line break of the last line, or C<noeol> if there is none."
+msgstr "列印最後一行換行的類型，若沒有換行則列印 C<noeol>。"
+
+#. type: =item
+#: dos2unix.pod:337
+msgid "B<c>"
+msgstr "B<c>"
+
+#. type: textblock
+#: dos2unix.pod:339
+msgid "Print only the files that would be converted."
+msgstr "只列印會被轉換的檔案。"
+
+#. type: textblock
+#: dos2unix.pod:341
+msgid "With the C<c> flag dos2unix will print only the files that contain DOS line breaks, unix2dos will print only file names that have Unix line breaks."
+msgstr "使用 C<c> 旗標時，dos2unix 只會列印含有 DOS 換行的檔案，unix2dos 只會列印含有 Unix 換行的檔案名稱。"
+
+#. type: textblock
+#: dos2unix.pod:344
+msgid "If in addition option C<-e> or C<--add-eol> is used also the files that lack a line break on the last line will be printed."
+msgstr "若另外使用了 C<-e> 或 C<--add-eol> 選項，也會列印最後一行缺少換行的檔案。"
+
+#. type: =item
+#: dos2unix.pod:347
+msgid "B<h>"
+msgstr "B<h>"
+
+#. type: textblock
+#: dos2unix.pod:349
+msgid "Print a header."
+msgstr "列印標題列。"
+
+#. type: =item
+#: dos2unix.pod:351
+msgid "B<p>"
+msgstr "B<p>"
+
+#. type: textblock
+#: dos2unix.pod:353
+msgid "Show file names without path."
+msgstr "只顯示檔案名稱，不含路徑。"
+
+#. type: textblock
+#: dos2unix.pod:357
+msgid "Examples:"
+msgstr "範例："
+
+#. type: textblock
+#: dos2unix.pod:359
+msgid "Show information for all *.txt files:"
+msgstr "顯示所有 *.txt 檔案的資訊："
+
+#. type: verbatim
+#: dos2unix.pod:361
+#, no-wrap
+msgid ""
+"    dos2unix -i *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -i *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:363
+msgid "Show only the number of DOS line breaks and Unix line breaks:"
+msgstr "只顯示 DOS 換行數與 Unix 換行數："
+
+#. type: verbatim
+#: dos2unix.pod:365
+#, no-wrap
+msgid ""
+"    dos2unix -idu *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -idu *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:367
+msgid "Show only the byte order mark:"
+msgstr "只顯示位元組順序標記："
+
+#. type: verbatim
+#: dos2unix.pod:369
+#, no-wrap
+msgid ""
+"    dos2unix --info=b *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix --info=b *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:371
+msgid "List the files that have DOS line breaks:"
+msgstr "列出含有 DOS 換行的檔案："
+
+#. type: verbatim
+#: dos2unix.pod:373
+#, no-wrap
+msgid ""
+"    dos2unix -ic *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -ic *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:375
+msgid "List the files that have Unix line breaks:"
+msgstr "列出含有 Unix 換行的檔案："
+
+#. type: verbatim
+#: dos2unix.pod:377
+#, no-wrap
+msgid ""
+"    unix2dos -ic *.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -ic *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:379
+msgid "List the files that have DOS line breaks or lack a line break on the last line:"
+msgstr "列出含有 DOS 換行或最後一行缺少換行的檔案："
+
+#. type: verbatim
+#: dos2unix.pod:381
+#, no-wrap
+msgid ""
+"    dos2unix -e -ic *.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -e -ic *.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:383
+msgid "Convert only files that have DOS line breaks and leave the other files untouched:"
+msgstr "只轉換含有 DOS 換行的檔案，其他檔案保持原樣："
+
+#. type: verbatim
+#: dos2unix.pod:385
+#, no-wrap
+msgid ""
+"    dos2unix -ic0 *.txt | xargs -0 dos2unix\n"
+"\n"
+msgstr ""
+"    dos2unix -ic0 *.txt | xargs -0 dos2unix\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:387
+msgid "Find text files that have DOS line breaks:"
+msgstr "找出含有 DOS 換行的文字檔："
+
+#. type: verbatim
+#: dos2unix.pod:389
+#, no-wrap
+msgid ""
+"    find -name '*.txt' -print0 | xargs -0 dos2unix -ic\n"
+"\n"
+msgstr ""
+"    find -name '*.txt' -print0 | xargs -0 dos2unix -ic\n"
+"\n"
+
+#. type: =item
+#: dos2unix.pod:391
+msgid "B<-k, --keepdate>"
+msgstr "B<-k, --keepdate>"
+
+#. type: textblock
+#: dos2unix.pod:393
+msgid "Keep the date stamp of output file same as input file."
+msgstr "讓輸出檔的日期戳記與輸入檔相同。"
+
+#. type: =item
+#: dos2unix.pod:395
+msgid "B<-L, --license>"
+msgstr "B<-L, --license>"
+
+#. type: textblock
+#: dos2unix.pod:397
+msgid "Display program's license."
+msgstr "顯示程式的授權。"
+
+#. type: =item
+#: dos2unix.pod:399
+msgid "B<-l, --newline>"
+msgstr "B<-l, --newline>"
+
+#. type: textblock
+#: dos2unix.pod:401
+msgid "Add additional newline."
+msgstr "額外加入換行。"
+
+#. type: textblock
+#: dos2unix.pod:403
+msgid "B<dos2unix>: Only DOS line breaks are changed to two Unix line breaks.  In Mac mode only Mac line breaks are changed to two Unix line breaks."
+msgstr "B<dos2unix>：只將 DOS 換行變更為兩個 Unix 換行。在 Mac 模式中，只將 Mac 換行變更為兩個 Unix 換行。"
+
+#. type: textblock
+#: dos2unix.pod:407
+msgid "B<unix2dos>: Only Unix line breaks are changed to two DOS line breaks.  In Mac mode Unix line breaks are changed to two Mac line breaks."
+msgstr "B<unix2dos>：只將 Unix 換行變更為兩個 DOS 換行。在 Mac 模式中，Unix 換行變更為兩個 Mac 換行。"
+
+#. type: =item
+#: dos2unix.pod:410
+msgid "B<-m, --add-bom>"
+msgstr "B<-m, --add-bom>"
+
+#. type: textblock
+#: dos2unix.pod:412
+msgid "Write a Byte Order Mark (BOM) in the output file. By default an UTF-8 BOM is written."
+msgstr "在輸出檔中寫入位元組順序標記 (BOM)。預設寫入 UTF-8 BOM。"
+
+#. type: textblock
+#: dos2unix.pod:415
+msgid "When the input file is UTF-16, and the option C<-u> is used, an UTF-16 BOM will be written."
+msgstr "當輸入檔是 UTF-16，且使用了 C<-u> 選項時，會寫入 UTF-16 BOM。"
+
+#. type: textblock
+#: dos2unix.pod:418
+msgid "Never use this option when the output encoding is other than UTF-8, UTF-16, or GB18030. See also section UNICODE."
+msgstr "當輸出編碼不是 UTF-8、UTF-16 或 GB18030 時，絕對不要使用這個選項。另請參見「Unicode」一節。"
+
+#. type: =item
+#: dos2unix.pod:422
+msgid "B<-n, --newfile INFILE OUTFILE ...>"
+msgstr "B<-n, --newfile INFILE OUTFILE ...>"
+
+#. type: textblock
+#: dos2unix.pod:424
+msgid "New file mode. Convert file INFILE and write output to file OUTFILE.  File names must be given in pairs and wildcard names should I<not> be used or you I<will> lose your files."
+msgstr "新檔模式。轉換檔案 INFILE 並將輸出寫入檔案 OUTFILE。檔案名稱必須成對提供，且萬用字元名稱 I<不應> 使用，否則您 I<會> 遺失您的檔案。"
+
+#. type: textblock
+#: dos2unix.pod:428
+msgid "The person who starts the conversion in new file (paired) mode will be the owner of the converted file. The read/write permissions of the new file will be the permissions of the original file minus the umask(1) of the person who runs the conversion."
+msgstr "在新檔（成對）模式中啟動轉換的人，會是轉換後檔案的擁有者。新檔案的讀寫權限會是原始檔案的權限減去執行轉換者的 umask(1)。"
+
+#. type: =item
+#: dos2unix.pod:433
+msgid "B<--no-allow-chown>"
+msgstr "B<--no-allow-chown>"
+
+#. type: textblock
+#: dos2unix.pod:435
+msgid "Don't allow file ownership change in old file mode (default)."
+msgstr "不允許在舊檔模式中變更檔案擁有權（預設）。"
+
+#. type: textblock
+#: dos2unix.pod:437
+msgid "Abort conversion when the user and/or group ownership of the original file can't be preserved in old file mode. See also options C<-o> and C<-n>. This option is only available if dos2unix has support for preserving the user and group ownership of files."
+msgstr "當在舊檔模式中無法保留原始檔案的使用者與/或群組擁有權時，中止轉換。另請參見 C<-o> 與 C<-n> 選項。只有當 dos2unix 支援保留檔案的使用者與群組擁有權時，這個選項才可用。"
+
+#. type: =item
+#: dos2unix.pod:442
+msgid "B<--no-add-eol>"
+msgstr "B<--no-add-eol>"
+
+#. type: textblock
+#: dos2unix.pod:444
+msgid "Do not add a line break to the last line if there isn't one (default)."
+msgstr "如果最後一行沒有換行，不要加上換行（預設）。"
+
+#. type: =item
+#: dos2unix.pod:446
+msgid "B<--no-error-binary>"
+msgstr "B<--no-error-binary>"
+
+#. type: textblock
+#: dos2unix.pod:448
+msgid "Do not return an error if a binary file is skipped (default)."
+msgstr "當二進位檔被略過時不回傳錯誤（預設）。"
+
+#. type: =item
+#: dos2unix.pod:450
+msgid "B<-O, --to-stdout>"
+msgstr "B<-O, --to-stdout>"
+
+#. type: textblock
+#: dos2unix.pod:452
+msgid "Write to standard output, like a Unix filter. Use option C<-o> to go back to old file (in-place) mode."
+msgstr "寫入標準輸出，就像 Unix 濾波器一樣。使用 C<-o> 選項可回到舊檔（就地）模式。"
+
+#. type: textblock
+#: dos2unix.pod:455
+msgid "Combined with option C<-e> files can be properly concatenated. No merged last and first lines, and no Unicode byte order marks in the middle of the concatenated file. Example:"
+msgstr "搭配 C<-e> 選項時，可以正確地串接檔案。不會合併最後一行與第一行，串接後的檔案中間也不會有 Unicode 位元組順序標記。範例："
+
+#. type: verbatim
+#: dos2unix.pod:459
+#, no-wrap
+msgid ""
+"    dos2unix -e -O file1.txt file2.txt > output.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -e -O file1.txt file2.txt > output.txt\n"
+"\n"
+
+#. type: =item
+#: dos2unix.pod:461
+msgid "B<-o, --oldfile FILE ...>"
+msgstr "B<-o, --oldfile FILE ...>"
+
+#. type: textblock
+#: dos2unix.pod:463
+msgid "Old file mode. Convert file FILE and overwrite output to it. The program defaults to run in this mode. Wildcard names may be used."
+msgstr "舊檔模式。轉換檔案 FILE 並將輸出覆寫回該檔案。程式預設以此模式執行。可以使用萬用字元名稱。"
+
+#. type: textblock
+#: dos2unix.pod:466
+msgid "In old file (in-place) mode the converted file gets the same owner, group, and read/write permissions as the original file. Also when the file is converted by another user who has write permissions on the file (e.g. user root).  The conversion will be aborted when it is not possible to preserve the original values.  Change of owner could mean that the original owner is not able to read the file any more. Change of group could be a security risk, the file could be made readable for persons for whom it is not intended.  Preservation of owner, group, and read/write permissions is only supported on Unix."
+msgstr "在舊檔（就地）模式中，轉換後的檔案會取得與原始檔案相同的擁有者、群組與讀寫權限。即使轉換是由其他對該檔案有寫入權限的使用者（例如 root 使用者）執行亦然。當無法保留原始值時，轉換會中止。變更擁有者可能意味著原始擁有者再也無法讀取檔案。變更群組可能造成安全風險，檔案可能因此可被非預期的人讀取。保留擁有者、群組與讀寫權限僅在 Unix 上支援。"
+
+#. type: textblock
+#: dos2unix.pod:475
+msgid "To check if dos2unix has support for preserving the user and group ownership of files type C<dos2unix -V>."
+msgstr "若要檢查 dos2unix 是否支援保留檔案的使用者與群組擁有權，請輸入 C<dos2unix -V>。"
+
+#. type: textblock
+#: dos2unix.pod:478
+msgid "Conversion is always done via a temporary file. When an error occurs halfway the conversion, the temporary file is deleted and the original file stays intact. When the conversion is successful, the original file is replaced with the temporary file. You may have write permission on the original file, but no permission to put the same user and/or group ownership properties on the temporary file as the original file has. This means you are not able to preserve the user and/or group ownership of the original file. In this case you can use option C<--allow-chown> to continue with the conversion:"
+msgstr "轉換一律透過暫存檔進行。當轉換中途發生錯誤時，暫存檔會被刪除，原始檔案保持完整。轉換成功時，原始檔案會被暫存檔取代。您可能對原始檔案有寫入權限，但沒有權限將與原始檔案相同的使用者與/或群組擁有權屬性設定到暫存檔上。這表示您無法保留原始檔案的使用者與/或群組擁有權。此時您可以使用 C<--allow-chown> 選項繼續轉換："
+
+#. type: verbatim
+#: dos2unix.pod:487
+#, no-wrap
+msgid ""
+"    dos2unix --allow-chown foo.txt\n"
+"\n"
+msgstr ""
+"    dos2unix --allow-chown foo.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:489
+msgid "Another option is to use new file mode:"
+msgstr "另一個選項是使用新檔模式："
+
+#. type: verbatim
+#: dos2unix.pod:491
+#, no-wrap
+msgid ""
+"    dos2unix -n foo.txt foo.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -n foo.txt foo.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:493
+msgid "The advantage of the C<--allow-chown> option is that you can use wildcards, and the ownership properties will be preserved when possible."
+msgstr "C<--allow-chown> 選項的優點是您可以使用萬用字元，且擁有權屬性會在可能時保留。"
+
+#. type: =item
+#: dos2unix.pod:496
+msgid "B<-q, --quiet>"
+msgstr "B<-q, --quiet>"
+
+#. type: textblock
+#: dos2unix.pod:498
+msgid "Quiet mode. Suppress all warnings and messages. The return value is zero.  Except when wrong command-line options are used."
+msgstr "安靜模式。隱藏所有警告與訊息。回傳值為零。除非使用了錯誤的命令列選項。"
+
+#. type: =item
+#: dos2unix.pod:501
+msgid "B<-r, --remove-bom>"
+msgstr "B<-r, --remove-bom>"
+
+#. type: textblock
+#: dos2unix.pod:503
+msgid "Remove Byte Order Mark (BOM). Do not write a BOM in the output file.  This is the default behavior when converting to Unix line breaks.  See also option C<-b>."
+msgstr "移除位元組順序標記 (BOM)。不在輸出檔中寫入 BOM。這是轉換為 Unix 換行時的預設行為。另請參見 C<-b> 選項。"
+
+#. type: =item
+#: dos2unix.pod:507
+msgid "B<-s, --safe>"
+msgstr "B<-s, --safe>"
+
+#. type: textblock
+#: dos2unix.pod:509
+msgid "Skip binary files (default)."
+msgstr "略過二進位檔（預設）。"
+
+#. type: textblock
+#: dos2unix.pod:511
+msgid "The skipping of binary files is done to avoid accidental mistakes. Be aware that the detection of binary files is not 100% foolproof. Input files are scanned for binary symbols which are typically not found in text files. It is possible that a binary file contains only normal text characters. Such a binary file will mistakenly be seen as a text file."
+msgstr "略過二進位檔是為了避免意外錯誤。請注意，二進位檔的偵測並非 100% 萬無一失。輸入檔會掃描通常不會出現在文字檔中的二進位符號。二進位檔有可能只包含正常的文字字元。這樣的二進位檔會被誤判為文字檔。"
+
+#. type: textblock
+#: dos2unix.pod:517
+msgid "By default, no error is returned when a binary file is skipped. When the C<--error-binary> option is used, an error is returned."
+msgstr "依預設，二進位檔被略過時不會回傳錯誤。使用 C<--error-binary> 選項時會回傳錯誤。"
+
+#. type: =item
+#: dos2unix.pod:520
+msgid "B<-u, --keep-utf16>"
+msgstr "B<-u, --keep-utf16>"
+
+#. type: textblock
+#: dos2unix.pod:522
+msgid "Keep the original UTF-16 encoding of the input file. The output file will be written in the same UTF-16 encoding, little- or big-endian, as the input file.  This prevents transformation to UTF-8. An UTF-16 BOM will be written accordingly. This option can be disabled with the C<-ascii> option."
+msgstr "保留輸入檔原本的 UTF-16 編碼。輸出檔會以與輸入檔相同的 UTF-16 編碼（little-endian 或 big-endian）寫入。這可以避免轉換為 UTF-8。會相應地寫入 UTF-16 BOM。這個選項可以用 C<-ascii> 選項停用。"
+
+#. type: =item
+#: dos2unix.pod:527
+msgid "B<-ul, --assume-utf16le>"
+msgstr "B<-ul, --assume-utf16le>"
+
+#. type: textblock
+#: dos2unix.pod:529
+msgid "Assume that the input file format is UTF-16LE."
+msgstr "假定輸入檔的格式是 UTF-16LE。"
+
+#. type: textblock
+#: dos2unix.pod:531
+msgid "When there is a Byte Order Mark in the input file the BOM has priority over this option."
+msgstr "當輸入檔中有位元組順序標記時，BOM 的優先順序高於這個選項。"
+
+#. type: textblock
+#: dos2unix.pod:534
+msgid "When you made a wrong assumption (the input file was not in UTF-16LE format) and the conversion succeeded, you will get an UTF-8 output file with wrong text.  You can undo the wrong conversion with iconv(1) by converting the UTF-8 output file back to UTF-16LE. This will bring back the original file."
+msgstr "當您做了錯誤的假定（輸入檔並非 UTF-16LE 格式）且轉換成功時，您會得到含有錯誤文字的 UTF-8 輸出檔。您可以使用 iconv(1) 將 UTF-8 輸出檔轉換回 UTF-16LE，以復原錯誤的轉換。這會還原原始檔案。"
+
+#. type: textblock
+#: dos2unix.pod:539
+msgid "The assumption of UTF-16LE works as a I<conversion mode>. By switching to the default I<ascii> mode the UTF-16LE assumption is turned off."
+msgstr "UTF-16LE 的假定以 I<轉換模式> 運作。切換回預設的 I<ascii> 模式時，UTF-16LE 假定會關閉。"
+
+#. type: =item
+#: dos2unix.pod:542
+msgid "B<-ub, --assume-utf16be>"
+msgstr "B<-ub, --assume-utf16be>"
+
+#. type: textblock
+#: dos2unix.pod:544
+msgid "Assume that the input file format is UTF-16BE."
+msgstr "假定輸入檔的格式是 UTF-16BE。"
+
+#. type: textblock
+#: dos2unix.pod:546
+msgid "This option works the same as option C<-ul>."
+msgstr "這個選項與 C<-ul> 選項作用相同。"
+
+#. type: =item
+#: dos2unix.pod:548
+msgid "B<-v, --verbose>"
+msgstr "B<-v, --verbose>"
+
+#. type: textblock
+#: dos2unix.pod:550
+msgid "Display verbose messages. Extra information is displayed about Byte Order Marks and the amount of converted line breaks."
+msgstr "顯示詳細訊息。會顯示關於位元組順序標記與轉換換行數量的額外資訊。"
+
+#. type: =item
+#: dos2unix.pod:553
+msgid "B<-F, --follow-symlink>"
+msgstr "B<-F, --follow-symlink>"
+
+#. type: textblock
+#: dos2unix.pod:555
+msgid "Follow symbolic links and convert the targets."
+msgstr "跟隨符號連結並轉換其目標。"
+
+#. type: =item
+#: dos2unix.pod:557
+msgid "B<-R, --replace-symlink>"
+msgstr "B<-R, --replace-symlink>"
+
+#. type: textblock
+#: dos2unix.pod:559
+msgid "Replace symbolic links with converted files (original target files remain unchanged)."
+msgstr "以轉換後的檔案取代符號連結（原始目標檔案保持不變）。"
+
+#. type: =item
+#: dos2unix.pod:562
+msgid "B<-S, --skip-symlink>"
+msgstr "B<-S, --skip-symlink>"
+
+#. type: textblock
+#: dos2unix.pod:564
+msgid "Keep symbolic links and targets unchanged (default)."
+msgstr "保持符號連結與目標不變（預設）。"
+
+#. type: =item
+#: dos2unix.pod:566
+msgid "B<-V, --version>"
+msgstr "B<-V, --version>"
+
+#. type: textblock
+#: dos2unix.pod:568
+msgid "Display version information and exit."
+msgstr "顯示版本資訊後結束。"
+
+#. type: =head1
+#: dos2unix.pod:572
+msgid "MAC MODE"
+msgstr "Mac 模式"
+
+#. type: textblock
+#: dos2unix.pod:574
+msgid "By default line breaks are converted from DOS to Unix and vice versa.  Mac line breaks are not converted."
+msgstr "依預設，換行會從 DOS 轉換為 Unix，反之亦然。Mac 換行不會被轉換。"
+
+#. type: textblock
+#: dos2unix.pod:577
+msgid "In Mac mode line breaks are converted from Mac to Unix and vice versa. DOS line breaks are not changed."
+msgstr "在 Mac 模式中，換行會從 Mac 轉換為 Unix，反之亦然。DOS 換行不會被變更。"
+
+#. type: textblock
+#: dos2unix.pod:580
+msgid "To run in Mac mode use the command-line option C<-c mac> or use the commands C<mac2unix> or C<unix2mac>."
+msgstr "若要執行 Mac 模式，請使用命令列選項 C<-c mac>，或使用 C<mac2unix> 或 C<unix2mac> 命令。"
+
+#. type: =head1
+#: dos2unix.pod:583
+msgid "CONVERSION MODES"
+msgstr "轉換模式"
+
+#. type: =item
+#: dos2unix.pod:587
+msgid "B<ascii>"
+msgstr "B<ascii>"
+
+#. type: textblock
+#: dos2unix.pod:589
+msgid "This is the default conversion mode. This mode is for converting ASCII and ASCII-compatible encoded files, like UTF-8. Enabling B<ascii> mode disables B<7bit> and B<iso> mode."
+msgstr "這是預設的轉換模式。此模式用於轉換 ASCII 及與 ASCII 相容的編碼檔案，例如 UTF-8。啟用 B<ascii> 模式會停用 B<7bit> 與 B<iso> 模式。"
+
+#. type: textblock
+#: dos2unix.pod:593
+msgid "If dos2unix has UTF-16 support, UTF-16 encoded files are converted to the current locale character encoding on POSIX systems and to UTF-8 on Windows.  Enabling B<ascii> mode disables the option to keep UTF-16 encoding (C<-u>) and the options to assume UTF-16 input (C<-ul> and C<-ub>).  To see if dos2unix has UTF-16 support type C<dos2unix -V>. See also section UNICODE."
+msgstr "若 dos2unix 支援 UTF-16，UTF-16 編碼的檔案在 POSIX 系統上會轉換為目前的 locale 字元編碼，在 Windows 上則轉換為 UTF-8。啟用 B<ascii> 模式會停用保留 UTF-16 編碼的選項 (C<-u>)，以及假定 UTF-16 輸入的選項 (C<-ul> 與 C<-ub>)。若要查看 dos2unix 是否支援 UTF-16，請輸入 C<dos2unix -V>。另請參見「Unicode」一節。"
+
+#. type: =item
+#: dos2unix.pod:599
+msgid "B<7bit>"
+msgstr "B<7bit>"
+
+#. type: textblock
+#: dos2unix.pod:601
+msgid "In this mode all 8 bit non-ASCII characters (with values from 128 to 255)  are converted to a 7 bit space."
+msgstr "在此模式中，所有 8 位元非 ASCII 字元（值介於 128 到 255）都會轉換為 7 位元空白。"
+
+#. type: =item
+#: dos2unix.pod:604
+msgid "B<iso>"
+msgstr "B<iso>"
+
+#. type: textblock
+#: dos2unix.pod:606
+msgid "Characters are converted between a DOS character set (code page) and ISO character set ISO-8859-1 (Latin-1) on Unix. DOS characters without ISO-8859-1 equivalent, for which conversion is not possible, are converted to a dot. The same counts for ISO-8859-1 characters without DOS counterpart."
+msgstr "字元會在 DOS 字元集（碼頁）與 Unix 上的 ISO 字元集 ISO-8859-1 (Latin-1) 之間轉換。沒有 ISO-8859-1 對應、無法轉換的 DOS 字元會轉換為句點。沒有 DOS 對應的 ISO-8859-1 字元亦然。"
+
+#. type: textblock
+#: dos2unix.pod:611
+msgid "When only option C<-iso> is used dos2unix will try to determine the active code page. When this is not possible dos2unix will use default code page CP437, which is mainly used in the USA.  To force a specific code page use options C<-437> (US), C<-850> (Western European), C<-860> (Portuguese), C<-863> (French Canadian), or C<-865> (Nordic).  Windows code page CP1252 (Western European) is also supported with option C<-1252>. For other code pages use dos2unix in combination with iconv(1).  Iconv can convert between a long list of character encodings."
+msgstr "只使用 C<-iso> 選項時，dos2unix 會嘗試判斷作用中的碼頁。若無法判斷，dos2unix 會使用預設碼頁 CP437，此碼頁主要在美國使用。若要強制指定特定碼頁，請使用 C<-437>（美國）、C<-850>（西歐）、C<-860>（葡萄牙）、C<-863>（法屬加拿大）或 C<-865>（北歐）選項。也支援 Windows 碼頁 CP1252（西歐），使用 C<-1252> 選項。其他碼頁請搭配 iconv(1) 使用 dos2unix。Iconv 可以在一大串字元編碼之間轉換。"
+
+#. type: textblock
+#: dos2unix.pod:620
+msgid "Never use ISO conversion on Unicode text files. It will corrupt UTF-8 encoded files."
+msgstr "絕對不要在 Unicode 文字檔上使用 ISO 轉換。它會損壞 UTF-8 編碼的檔案。"
+
+#. type: textblock
+#: dos2unix.pod:622
+msgid "Some examples:"
+msgstr "一些範例："
+
+#. type: textblock
+#: dos2unix.pod:624
+msgid "Convert from DOS default code page to Unix Latin-1:"
+msgstr "從 DOS 預設碼頁轉換為 Unix Latin-1："
+
+#. type: verbatim
+#: dos2unix.pod:626
+#, no-wrap
+msgid ""
+"    dos2unix -iso -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -iso -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:628
+msgid "Convert from DOS CP850 to Unix Latin-1:"
+msgstr "從 DOS CP850 轉換為 Unix Latin-1："
+
+#. type: verbatim
+#: dos2unix.pod:630
+#, no-wrap
+msgid ""
+"    dos2unix -850 -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -850 -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:632
+msgid "Convert from Windows CP1252 to Unix Latin-1:"
+msgstr "從 Windows CP1252 轉換為 Unix Latin-1："
+
+#. type: verbatim
+#: dos2unix.pod:634
+#, no-wrap
+msgid ""
+"    dos2unix -1252 -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -1252 -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:636
+msgid "Convert from Windows CP1252 to Unix UTF-8 (Unicode):"
+msgstr "從 Windows CP1252 轉換為 Unix UTF-8 (Unicode)："
+
+#. type: verbatim
+#: dos2unix.pod:638
+#, no-wrap
+msgid ""
+"    iconv -f CP1252 -t UTF-8 in.txt | dos2unix > out.txt\n"
+"\n"
+msgstr ""
+"    iconv -f CP1252 -t UTF-8 in.txt | dos2unix > out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:640
+msgid "Convert from Unix Latin-1 to DOS default code page:"
+msgstr "從 Unix Latin-1 轉換為 DOS 預設碼頁："
+
+#. type: verbatim
+#: dos2unix.pod:642
+#, no-wrap
+msgid ""
+"    unix2dos -iso -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -iso -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:644
+msgid "Convert from Unix Latin-1 to DOS CP850:"
+msgstr "從 Unix Latin-1 轉換為 DOS CP850："
+
+#. type: verbatim
+#: dos2unix.pod:646
+#, no-wrap
+msgid ""
+"    unix2dos -850 -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -850 -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:648
+msgid "Convert from Unix Latin-1 to Windows CP1252:"
+msgstr "從 Unix Latin-1 轉換為 Windows CP1252："
+
+#. type: verbatim
+#: dos2unix.pod:650
+#, no-wrap
+msgid ""
+"    unix2dos -1252 -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -1252 -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:652
+msgid "Convert from Unix UTF-8 (Unicode) to Windows CP1252:"
+msgstr "從 Unix UTF-8 (Unicode) 轉換為 Windows CP1252："
+
+#. type: verbatim
+#: dos2unix.pod:654
+#, no-wrap
+msgid ""
+"    unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos < in.txt | iconv -f UTF-8 -t CP1252 > out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:656
+msgid "See also L<https://czyborra.com/charsets/codepages.html> and L<https://czyborra.com/charsets/iso8859.html>."
+msgstr "另請參見 L<https://czyborra.com/charsets/codepages.html> 與 L<https://czyborra.com/charsets/iso8859.html>。"
+
+#. type: =head1
+#: dos2unix.pod:661
+msgid "UNICODE"
+msgstr "Unicode"
+
+#. type: =head2
+#: dos2unix.pod:663
+msgid "Encodings"
+msgstr "編碼"
+
+#. type: textblock
+#: dos2unix.pod:665
+msgid "There exist different Unicode encodings. On Unix and Linux Unicode files are typically encoded in UTF-8 encoding. On Windows Unicode text files can be encoded in UTF-8, UTF-16, or UTF-16 big-endian, but are mostly encoded in UTF-16 format."
+msgstr "存在不同的 Unicode 編碼。在 Unix 與 Linux 上，Unicode 檔案通常以 UTF-8 編碼。在 Windows 上，Unicode 文字檔可以編碼為 UTF-8、UTF-16 或 UTF-16 big-endian，但大多編碼為 UTF-16 格式。"
+
+#. type: =head2
+#: dos2unix.pod:670
+msgid "Conversion"
+msgstr "轉換"
+
+#. type: textblock
+#: dos2unix.pod:672
+msgid "Unicode text files can have DOS, Unix or Mac line breaks, like ASCII text files."
+msgstr "Unicode 文字檔可以有 DOS、Unix 或 Mac 換行，就像 ASCII 文字檔一樣。"
+
+#. type: textblock
+#: dos2unix.pod:675
+msgid "All versions of dos2unix and unix2dos can convert UTF-8 encoded files, because UTF-8 was designed for backward compatibility with ASCII."
+msgstr "所有版本的 dos2unix 與 unix2dos 都可以轉換 UTF-8 編碼的檔案，因為 UTF-8 是以與 ASCII 的向下相容為設計目標。"
+
+#. type: textblock
+#: dos2unix.pod:678
+msgid "dos2unix and unix2dos with Unicode UTF-16 support, can read little- and big-endian UTF-16 encoded text files. To see if dos2unix was built with UTF-16 support type C<dos2unix -V>."
+msgstr "具備 Unicode UTF-16 支援的 dos2unix 與 unix2dos 可以讀取 little-endian 與 big-endian 的 UTF-16 編碼文字檔。若要查看 dos2unix 是否以 UTF-16 支援建置，請輸入 C<dos2unix -V>。"
+
+#. type: textblock
+#: dos2unix.pod:682
+msgid "On Unix/Linux UTF-16 encoded files are converted to the locale character encoding. Use the locale(1) command to find out what the locale character encoding is. When conversion is not possible a conversion error will occur and the file will be skipped."
+msgstr "在 Unix/Linux 上，UTF-16 編碼的檔案會轉換為 locale 字元編碼。可以使用 locale(1) 命令查詢 locale 字元編碼。當無法轉換時會發生轉換錯誤，且檔案會被略過。"
+
+#. type: textblock
+#: dos2unix.pod:687
+msgid "On Windows UTF-16 files are by default converted to UTF-8. UTF-8 formatted text files are well supported on both Windows and Unix/Linux."
+msgstr "在 Windows 上，UTF-16 檔預設轉換為 UTF-8。UTF-8 格式的文字檔在 Windows 與 Unix/Linux 上都支援良好。"
+
+#. type: textblock
+#: dos2unix.pod:690
+msgid "UTF-16 and UTF-8 encoding are fully compatible, there will no text be lost in the conversion. When an UTF-16 to UTF-8 conversion error occurs, for instance when the UTF-16 input file contains an error, the file will be skipped."
+msgstr "UTF-16 與 UTF-8 編碼完全相容，轉換時不會有文字遺失。當 UTF-16 轉 UTF-8 發生轉換錯誤時，例如 UTF-16 輸入檔內容有誤，檔案會被略過。"
+
+#. type: textblock
+#: dos2unix.pod:694
+msgid "When option C<-u> is used, the output file will be written in the same UTF-16 encoding as the input file. Option C<-u> prevents conversion to UTF-8."
+msgstr "使用 C<-u> 選項時，輸出檔會以與輸入檔相同的 UTF-16 編碼寫入。C<-u> 選項可避免轉換為 UTF-8。"
+
+#. type: textblock
+#: dos2unix.pod:697
+msgid "dos2unix and unix2dos have no option to convert UTF-8 files to UTF-16."
+msgstr "dos2unix 與 unix2dos 沒有將 UTF-8 檔轉換為 UTF-16 的選項。"
+
+#. type: textblock
+#: dos2unix.pod:699
+msgid "ISO and 7-bit mode conversion do not work on UTF-16 files."
+msgstr "ISO 與 7-bit 模式轉換不適用於 UTF-16 檔。"
+
+#. type: =head2
+#: dos2unix.pod:701
+msgid "Byte Order Mark"
+msgstr "位元組順序標記"
+
+#. type: textblock
+#: dos2unix.pod:703
+msgid "On Windows Unicode text files typically have a Byte Order Mark (BOM), because many Windows programs (including Notepad) add BOMs by default. See also L<https://en.wikipedia.org/wiki/Byte_order_mark>."
+msgstr "在 Windows 上，Unicode 文字檔通常有位元組順序標記 (BOM)，因為許多 Windows 程式（包括記事本）預設會加入 BOM。另請參見 L<https://en.wikipedia.org/wiki/Byte_order_mark>。"
+
+#. type: textblock
+#: dos2unix.pod:707
+msgid "On Unix Unicode files typically don't have a BOM. It is assumed that text files are encoded in the locale character encoding."
+msgstr "在 Unix 上，Unicode 檔通常沒有 BOM。一般假定文字檔以 locale 字元編碼。"
+
+#. type: textblock
+#: dos2unix.pod:710
+msgid "dos2unix can only detect if a file is in UTF-16 format if the file has a BOM.  When an UTF-16 file doesn't have a BOM, dos2unix will see the file as a binary file."
+msgstr "dos2unix 只有在檔案有 BOM 時才能偵測檔案是否為 UTF-16 格式。當 UTF-16 檔沒有 BOM 時，dos2unix 會將檔案視為二進位檔。"
+
+#. type: textblock
+#: dos2unix.pod:714
+msgid "Use option C<-ul> or C<-ub> to convert an UTF-16 file without BOM."
+msgstr "使用 C<-ul> 或 C<-ub> 選項轉換沒有 BOM 的 UTF-16 檔。"
+
+#. type: textblock
+#: dos2unix.pod:716
+msgid "dos2unix writes by default no BOM in the output file. With option C<-b> dos2unix writes a BOM when the input file has a BOM."
+msgstr "dos2unix 預設不在輸出檔中寫入 BOM。使用 C<-b> 選項時，dos2unix 會在輸入檔有 BOM 時寫入 BOM。"
+
+#. type: textblock
+#: dos2unix.pod:719
+msgid "unix2dos writes by default a BOM in the output file when the input file has a BOM. Use option C<-r> to remove the BOM."
+msgstr "unix2dos 在輸入檔有 BOM 時，預設會在輸出檔中寫入 BOM。使用 C<-r> 選項可移除 BOM。"
+
+#. type: textblock
+#: dos2unix.pod:722
+msgid "dos2unix and unix2dos write always a BOM when option C<-m> is used."
+msgstr "使用 C<-m> 選項時，dos2unix 與 unix2dos 一律會寫入 BOM。"
+
+#. type: =head2
+#: dos2unix.pod:724
+msgid "Unicode file names on Windows"
+msgstr "Windows 上的 Unicode 檔案名稱"
+
+#. type: textblock
+#: dos2unix.pod:726
+msgid "dos2unix has optional support for reading and writing Unicode file names in the Windows Command Prompt. That means that dos2unix can open files that have characters in the name that are not part of the default system ANSI code page.  To see if dos2unix for Windows was built with Unicode file name support type C<dos2unix -V>."
+msgstr "dos2unix 在 Windows 命令提示字元中，選擇性地支援讀寫 Unicode 檔案名稱。這表示 dos2unix 可以開啟名稱中含有不屬於系統預設 ANSI 碼頁之字元的檔案。若要查看 Windows 版 dos2unix 是否以 Unicode 檔案名稱支援建置，請輸入 C<dos2unix -V>。"
+
+#. type: textblock
+#: dos2unix.pod:732
+msgid "There are some issues with displaying Unicode file names in a Windows console.  See option C<-D>, C<--display-enc>. The file names may be displayed wrongly in the console, but the files will be written with the correct name."
+msgstr "在 Windows 主控台中顯示 Unicode 檔案名稱有一些問題。請參見 C<-D>、C<--display-enc> 選項。檔案名稱在主控台中的顯示可能錯誤，但檔案會以正確名稱寫入。"
+
+#. type: =head2
+#: dos2unix.pod:736
+msgid "Unicode examples"
+msgstr "Unicode 範例"
+
+#. type: textblock
+#: dos2unix.pod:738
+msgid "Convert from Windows UTF-16 (with BOM) to Unix UTF-8:"
+msgstr "從 Windows UTF-16（含 BOM）轉換為 Unix UTF-8："
+
+#. type: verbatim
+#: dos2unix.pod:740
+#, no-wrap
+msgid ""
+"    dos2unix -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:742
+msgid "Convert from Windows UTF-16LE (without BOM) to Unix UTF-8:"
+msgstr "從 Windows UTF-16LE（不含 BOM）轉換為 Unix UTF-8："
+
+#. type: verbatim
+#: dos2unix.pod:744
+#, no-wrap
+msgid ""
+"    dos2unix -ul -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -ul -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:746
+msgid "Convert from Unix UTF-8 to Windows UTF-8 with BOM:"
+msgstr "從 Unix UTF-8 轉換為含 BOM 的 Windows UTF-8："
+
+#. type: verbatim
+#: dos2unix.pod:748
+#, no-wrap
+msgid ""
+"    unix2dos -m -n in.txt out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -m -n in.txt out.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:750
+msgid "Convert from Unix UTF-8 to Windows UTF-16:"
+msgstr "從 Unix UTF-8 轉換為 Windows UTF-16："
+
+#. type: verbatim
+#: dos2unix.pod:752
+#, no-wrap
+msgid ""
+"    unix2dos < in.txt | iconv -f UTF-8 -t UTF-16 > out.txt\n"
+"\n"
+msgstr ""
+"    unix2dos < in.txt | iconv -f UTF-8 -t UTF-16 > out.txt\n"
+"\n"
+
+#. type: =head1
+#: dos2unix.pod:754
+msgid "GB18030"
+msgstr "GB18030"
+
+#. type: textblock
+#: dos2unix.pod:756
+msgid "GB18030 is a Chinese government standard. A mandatory subset of the GB18030 standard is officially required for all software products sold in China. See also L<https://en.wikipedia.org/wiki/GB_18030>."
+msgstr "GB18030 是中國政府的標準。在中國銷售的所有軟體產品，官方要求必須符合 GB18030 標準的強制子集。另請參見 L<https://en.wikipedia.org/wiki/GB_18030>。"
+
+#. type: textblock
+#: dos2unix.pod:760
+msgid "GB18030 is fully compatible with Unicode, and can be considered an unicode transformation format. Like UTF-8, GB18030 is compatible with ASCII. GB18030 is also compatible with Windows code page 936, also known as GBK."
+msgstr "GB18030 與 Unicode 完全相容，可視為一種 unicode 轉換格式。與 UTF-8 一樣，GB18030 與 ASCII 相容。GB18030 也與 Windows 碼頁 936（又稱 GBK）相容。"
+
+#. type: textblock
+#: dos2unix.pod:764
+msgid "On Unix/Linux UTF-16 files are converted to GB18030 when the locale encoding is set to GB18030. Note that this will only work if the locale is supported by the system. Use command C<locale -a> to get the list of supported locales."
+msgstr "在 Unix/Linux 上，當 locale 編碼設為 GB18030 時，UTF-16 檔會轉換為 GB18030。請注意，這只有在系統支援該 locale 時才會運作。使用 C<locale -a> 命令可取得受支援 locale 的清單。"
+
+#. type: textblock
+#: dos2unix.pod:768
+msgid "On Windows you need to use option C<-gb> to convert UTF-16 files to GB18030."
+msgstr "在 Windows 上，您需要使用 C<-gb> 選項將 UTF-16 檔轉換為 GB18030。"
+
+#. type: textblock
+#: dos2unix.pod:770
+msgid "GB18030 encoded files can have a Byte Order Mark, like Unicode files."
+msgstr "GB18030 編碼的檔案可以有位元組順序標記，就像 Unicode 檔一樣。"
+
+#. type: =head1
+#: dos2unix.pod:772
+msgid "EXAMPLES"
+msgstr "範例"
+
+#. type: textblock
+#: dos2unix.pod:774
+msgid "Read input from 'stdin' and write output to 'stdout':"
+msgstr "從「stdin」讀取輸入，並將輸出寫入「stdout」："
+
+#. type: verbatim
+#: dos2unix.pod:776
+#, no-wrap
+msgid ""
+"    dos2unix < a.txt\n"
+"    cat a.txt | dos2unix\n"
+"\n"
+msgstr ""
+"    dos2unix < a.txt\n"
+"    cat a.txt | dos2unix\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:779
+msgid "Convert and replace a.txt. Convert and replace b.txt:"
+msgstr "轉換並取代 a.txt。轉換並取代 b.txt："
+
+#. type: verbatim
+#: dos2unix.pod:781
+#, no-wrap
+msgid ""
+"    dos2unix a.txt b.txt\n"
+"    dos2unix -o a.txt b.txt\n"
+"\n"
+msgstr ""
+"    dos2unix a.txt b.txt\n"
+"    dos2unix -o a.txt b.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:784
+msgid "Convert and replace a.txt in ascii conversion mode:"
+msgstr "以 ascii 轉換模式轉換並取代 a.txt："
+
+#. type: verbatim
+#: dos2unix.pod:786
+#, no-wrap
+msgid ""
+"    dos2unix a.txt\n"
+"\n"
+msgstr ""
+"    dos2unix a.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:788
+msgid "Convert and replace a.txt in ascii conversion mode, convert and replace b.txt in 7bit conversion mode:"
+msgstr "以 ascii 轉換模式轉換並取代 a.txt，以 7bit 轉換模式轉換並取代 b.txt："
+
+#. type: verbatim
+#: dos2unix.pod:791
+#, no-wrap
+msgid ""
+"    dos2unix a.txt -c 7bit b.txt\n"
+"    dos2unix -c ascii a.txt -c 7bit b.txt\n"
+"    dos2unix -ascii a.txt -7 b.txt\n"
+"\n"
+msgstr ""
+"    dos2unix a.txt -c 7bit b.txt\n"
+"    dos2unix -c ascii a.txt -c 7bit b.txt\n"
+"    dos2unix -ascii a.txt -7 b.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:795
+msgid "Convert a.txt from Mac to Unix format:"
+msgstr "將 a.txt 從 Mac 格式轉換為 Unix 格式："
+
+#. type: verbatim
+#: dos2unix.pod:797
+#, no-wrap
+msgid ""
+"    dos2unix -c mac a.txt\n"
+"    mac2unix a.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -c mac a.txt\n"
+"    mac2unix a.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:800
+msgid "Convert a.txt from Unix to Mac format:"
+msgstr "將 a.txt 從 Unix 格式轉換為 Mac 格式："
+
+#. type: verbatim
+#: dos2unix.pod:802
+#, no-wrap
+msgid ""
+"    unix2dos -c mac a.txt\n"
+"    unix2mac a.txt\n"
+"\n"
+msgstr ""
+"    unix2dos -c mac a.txt\n"
+"    unix2mac a.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:805
+msgid "Convert and replace a.txt while keeping original date stamp:"
+msgstr "轉換並取代 a.txt，同時保留原始日期戳記："
+
+#. type: verbatim
+#: dos2unix.pod:807
+#, no-wrap
+msgid ""
+"    dos2unix -k a.txt\n"
+"    dos2unix -k -o a.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -k a.txt\n"
+"    dos2unix -k -o a.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:810
+msgid "Convert a.txt and write to e.txt:"
+msgstr "轉換 a.txt 並寫入 e.txt："
+
+#. type: verbatim
+#: dos2unix.pod:812
+#, no-wrap
+msgid ""
+"    dos2unix -n a.txt e.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -n a.txt e.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:814
+msgid "Convert a.txt and write to e.txt, keep date stamp of e.txt same as a.txt:"
+msgstr "轉換 a.txt 並寫入 e.txt，讓 e.txt 的日期戳記與 a.txt 相同："
+
+#. type: verbatim
+#: dos2unix.pod:816
+#, no-wrap
+msgid ""
+"    dos2unix -k -n a.txt e.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -k -n a.txt e.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:818
+msgid "Convert and replace a.txt, convert b.txt and write to e.txt:"
+msgstr "轉換並取代 a.txt，轉換 b.txt 並寫入 e.txt："
+
+#. type: verbatim
+#: dos2unix.pod:820
+#, no-wrap
+msgid ""
+"    dos2unix a.txt -n b.txt e.txt\n"
+"    dos2unix -o a.txt -n b.txt e.txt\n"
+"\n"
+msgstr ""
+"    dos2unix a.txt -n b.txt e.txt\n"
+"    dos2unix -o a.txt -n b.txt e.txt\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:823
+msgid "Convert c.txt and write to e.txt, convert and replace a.txt, convert and replace b.txt, convert d.txt and write to f.txt:"
+msgstr "轉換 c.txt 並寫入 e.txt，轉換並取代 a.txt，轉換並取代 b.txt，轉換 d.txt 並寫入 f.txt："
+
+#. type: verbatim
+#: dos2unix.pod:826
+#, no-wrap
+msgid ""
+"    dos2unix -n c.txt e.txt -o a.txt b.txt -n d.txt f.txt\n"
+"\n"
+msgstr ""
+"    dos2unix -n c.txt e.txt -o a.txt b.txt -n d.txt f.txt\n"
+"\n"
+
+#. type: =head1
+#: dos2unix.pod:828
+msgid "RECURSIVE CONVERSION"
+msgstr "遞迴轉換"
+
+#. type: textblock
+#: dos2unix.pod:830
+msgid "In a Unix shell the find(1) and xargs(1) commands can be used to run dos2unix recursively over all text files in a directory tree. For instance to convert all .txt files in the directory tree under the current directory type:"
+msgstr "在 Unix shell 中，可以使用 find(1) 與 xargs(1) 命令，在目錄樹中的所有文字檔上遞迴執行 dos2unix。例如要轉換目前目錄下目錄樹中的所有 .txt 檔，請輸入："
+
+#. type: verbatim
+#: dos2unix.pod:834
+#, no-wrap
+msgid ""
+"    find . -name '*.txt' -print0 |xargs -0 dos2unix\n"
+"\n"
+msgstr ""
+"    find . -name '*.txt' -print0 |xargs -0 dos2unix\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:836
+msgid "The find(1) option C<-print0> and corresponding xargs(1) option C<-0> are needed when there are files with spaces or quotes in the name. Otherwise these options can be omitted. Another option is to use find(1) with the C<-exec> option:"
+msgstr "當有檔案名稱含有空格或引號時，需要 find(1) 的 C<-print0> 選項與對應的 xargs(1) C<-0> 選項。否則可以省略這些選項。另一個選項是搭配 C<-exec> 選項使用 find(1)："
+
+#. type: verbatim
+#: dos2unix.pod:840
+#, no-wrap
+msgid ""
+"    find . -name '*.txt' -exec dos2unix {} \\;\n"
+"\n"
+msgstr ""
+"    find . -name '*.txt' -exec dos2unix {} \\;\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:842
+msgid "In a Windows Command Prompt the following command can be used:"
+msgstr "在 Windows 命令提示字元中，可以使用下列命令："
+
+#. type: verbatim
+#: dos2unix.pod:844
+#, no-wrap
+msgid ""
+"    for /R %G in (*.txt) do dos2unix \"%G\"\n"
+"\n"
+msgstr ""
+"    for /R %G in (*.txt) do dos2unix \"%G\"\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:846
+msgid "PowerShell users can use the following command in Windows PowerShell:"
+msgstr "PowerShell 使用者可以在 Windows PowerShell 中使用下列命令："
+
+#. type: verbatim
+#: dos2unix.pod:848
+#, no-wrap
+msgid ""
+"    get-childitem -path . -filter '*.txt' -recurse | foreach-object {dos2unix $_.Fullname}\n"
+"\n"
+msgstr ""
+"    get-childitem -path . -filter '*.txt' -recurse | foreach-object {dos2unix $_.Fullname}\n"
+"\n"
+
+#. type: =head1
+#: dos2unix.pod:851
+msgid "LOCALIZATION"
+msgstr "在地化"
+
+#. type: =item
+#: dos2unix.pod:855
+msgid "B<LANG>"
+msgstr "B<LANG>"
+
+#. type: textblock
+#: dos2unix.pod:857
+msgid "The primary language is selected with the environment variable LANG. The LANG variable consists out of several parts. The first part is in small letters the language code. The second is optional and is the country code in capital letters, preceded with an underscore. There is also an optional third part: character encoding, preceded with a dot. A few examples for POSIX standard type shells:"
+msgstr "主要語言以環境變數 LANG 選取。LANG 變數由數個部分組成。第一部分是小寫的語言代碼。第二部分可選，是前接底線的大寫國家代碼。第三部分也可選：字元編碼，前接一個句點。POSIX 標準型 shell 的幾個範例："
+
+#. type: verbatim
+#: dos2unix.pod:864
+#, no-wrap
+msgid ""
+"    export LANG=nl               Dutch\n"
+"    export LANG=nl_NL            Dutch, The Netherlands\n"
+"    export LANG=nl_BE            Dutch, Belgium\n"
+"    export LANG=es_ES            Spanish, Spain\n"
+"    export LANG=es_MX            Spanish, Mexico\n"
+"    export LANG=en_US.iso88591   English, USA, Latin-1 encoding\n"
+"    export LANG=en_GB.UTF-8      English, UK, UTF-8 encoding\n"
+"\n"
+msgstr ""
+"    export LANG=nl               Dutch\n"
+"    export LANG=nl_NL            Dutch, The Netherlands\n"
+"    export LANG=nl_BE            Dutch, Belgium\n"
+"    export LANG=es_ES            Spanish, Spain\n"
+"    export LANG=es_MX            Spanish, Mexico\n"
+"    export LANG=en_US.iso88591   English, USA, Latin-1 encoding\n"
+"    export LANG=en_GB.UTF-8      English, UK, UTF-8 encoding\n"
+"\n"
+
+#. type: textblock
+#: dos2unix.pod:872
+msgid "For a complete list of language and country codes see the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>"
+msgstr "語言與國家代碼的完整清單請參見 gettext 手冊：L<https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html>"
+
+#. type: textblock
+#: dos2unix.pod:875
+msgid "On Unix systems you can use the command locale(1) to get locale specific information."
+msgstr "在 Unix 系統上，您可以使用 locale(1) 命令取得 locale 相關資訊。"
+
+#. type: =item
+#: dos2unix.pod:878
+msgid "B<LANGUAGE>"
+msgstr "B<LANGUAGE>"
+
+#. type: textblock
+#: dos2unix.pod:880
+msgid "With the LANGUAGE environment variable you can specify a priority list of languages, separated by colons. dos2unix gives preference to LANGUAGE over LANG.  For instance, first Dutch and then German: C<LANGUAGE=nl:de>. You have to first enable localization, by setting LANG (or LC_ALL) to a value other than \"C\", before you can use a language priority list through the LANGUAGE variable. See also the gettext manual: L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
+msgstr "使用 LANGUAGE 環境變數，您可以指定以冒號分隔的語言優先順序清單。dos2unix 偏好 LANGUAGE 勝過 LANG。例如，先荷蘭語後德語：C<LANGUAGE=nl:de>。您必須先啟用在地化，將 LANG（或 LC_ALL）設為「C」以外的值，才能透過 LANGUAGE 變數使用語言優先順序清單。另請參見 gettext 手冊：L<https://www.gnu.org/software/gettext/manual/html_node/The-LANGUAGE-variable.html>"
+
+#. type: textblock
+#: dos2unix.pod:888
+msgid "If you select a language which is not available you will get the standard English messages."
+msgstr "如果您選取的語言不可用，您會看到標準英文訊息。"
+
+#. type: =item
+#: dos2unix.pod:892
+msgid "B<DOS2UNIX_LOCALEDIR>"
+msgstr "B<DOS2UNIX_LOCALEDIR>"
+
+#. type: textblock
+#: dos2unix.pod:894
+msgid "With the environment variable DOS2UNIX_LOCALEDIR the LOCALEDIR set during compilation can be overruled. LOCALEDIR is used to find the language files. The GNU default value is C</usr/local/share/locale>.  Option B<--version> will display the LOCALEDIR that is used."
+msgstr "使用環境變數 DOS2UNIX_LOCALEDIR 可以覆寫編譯期間設定的 LOCALEDIR。LOCALEDIR 用於尋找語言檔。GNU 預設值為 C</usr/local/share/locale>。B<--version> 選項會顯示所使用的 LOCALEDIR。"
+
+#. type: textblock
+#: dos2unix.pod:899
+msgid "Example (POSIX shell):"
+msgstr "範例（POSIX shell）："
+
+#. type: verbatim
+#: dos2unix.pod:901
+#, no-wrap
+msgid ""
+"    export DOS2UNIX_LOCALEDIR=$HOME/share/locale\n"
+"\n"
+msgstr ""
+"    export DOS2UNIX_LOCALEDIR=$HOME/share/locale\n"
+"\n"
+
+#. type: =head1
+#: dos2unix.pod:906
+msgid "RETURN VALUE"
+msgstr "回傳值"
+
+#. type: textblock
+#: dos2unix.pod:908
+msgid "On success, zero is returned.  When a system error occurs the last system error will be returned. For other errors 1 is returned."
+msgstr "成功時回傳零。發生系統錯誤時，會回傳最後一個系統錯誤。其他錯誤回傳 1。"
+
+#. type: textblock
+#: dos2unix.pod:911
+msgid "The return value is always zero in quiet mode, except when wrong command-line options are used."
+msgstr "在安靜模式中，回傳值一律為零，除非使用了錯誤的命令列選項。"
+
+#. type: =head1
+#: dos2unix.pod:914
+msgid "STANDARDS"
+msgstr "標準"
+
+#. type: textblock
+#: dos2unix.pod:916
+msgid "L<https://en.wikipedia.org/wiki/Text_file>"
+msgstr "L<https://en.wikipedia.org/wiki/Text_file>"
+
+#. type: textblock
+#: dos2unix.pod:918
+msgid "L<https://en.wikipedia.org/wiki/Carriage_return>"
+msgstr "L<https://en.wikipedia.org/wiki/Carriage_return>"
+
+#. type: textblock
+#: dos2unix.pod:920
+msgid "L<https://en.wikipedia.org/wiki/Newline>"
+msgstr "L<https://en.wikipedia.org/wiki/Newline>"
+
+#. type: textblock
+#: dos2unix.pod:922
+msgid "L<https://en.wikipedia.org/wiki/Unicode>"
+msgstr "L<https://en.wikipedia.org/wiki/Unicode>"
+
+#. type: =head1
+#: dos2unix.pod:924
+msgid "AUTHORS"
+msgstr "作者"
+
+#. type: textblock
+#: dos2unix.pod:926
+msgid "Benjamin Lin - <blin@socs.uts.edu.au>, Bernd Johannes Wuebben (mac2unix mode) - <wuebben@kde.org>, Christian Wurll (add extra newline) - <wurll@ira.uka.de>, Erwin Waterlander - <waterlan@xs4all.nl> (maintainer)"
+msgstr "Benjamin Lin - <blin@socs.uts.edu.au>、Bernd Johannes Wuebben（mac2unix 模式）- <wuebben@kde.org>、Christian Wurll（加入額外換行）- <wurll@ira.uka.de>、Erwin Waterlander - <waterlan@xs4all.nl>（維護者）"
+
+#. type: textblock
+#: dos2unix.pod:931
+msgid "Project page: L<https://waterlander.net/dos2unix/>"
+msgstr "專案頁面：L<https://waterlander.net/dos2unix/>"
+
+#. type: textblock
+#: dos2unix.pod:933
+msgid "SourceForge page: L<https://sourceforge.net/projects/dos2unix/>"
+msgstr "SourceForge 頁面：L<https://sourceforge.net/projects/dos2unix/>"
+
+#. type: =head1
+#: dos2unix.pod:935
+msgid "SEE ALSO"
+msgstr "參見"
+
+#. type: textblock
+#: dos2unix.pod:937
+msgid "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
+msgstr "file(1)  find(1)  iconv(1)  locale(1)  xargs(1)"
