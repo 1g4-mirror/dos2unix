@@ -1,3 +1,14 @@
+2026-10-30 <acts1631kjv@proton.me>
+	* Fix possible metadata updates (permission/owner/timestamp) on an
+	  user chosen path (Found by AI).
+	  Could happen if a privileged process converts files in a directory
+	  that a less privileged user can modify. Dos2unix applied metadata
+	  updates on the temporary file after it was closed, based on path. If
+	  a user could in the meantime replace the tempfile with a symlink to
+	  a random file, the random file would get the metadata updates.
+	  The fix keeps the temporary stream open while applying the updates.
+	  It is no longer dependent on the temporary pathname.
+
 2026-09-13 Alang Hsu <alang.hsu@gmail.com>
 	* New traditional Chinese translation of the manual.
 

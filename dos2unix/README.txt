@@ -209,6 +209,7 @@ ACKNOWLEDGEMENTS
         acts1631kjv           Detect a missing UTF-16 low surrogate at the end of a file.
         acts1631kjv           Fixed the processing of files containing only half a BOM.
         acts1631kjv           Fixed conversion of CR-CR-LF in unix2dos.
+	acts1631kjv           Fixed possible metadata updates on an user chosen path.
 
 
 FINDUTILS

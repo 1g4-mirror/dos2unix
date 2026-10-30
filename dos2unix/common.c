@@ -29,6 +29,12 @@
 #include "querycp.h"
 
 #include <stdarg.h>
+#include <time.h>
+
+#if !defined(_WIN32) && !defined(__MSDOS__) && !defined(__OS2__) && \
+    defined(_POSIX_C_SOURCE) && (_POSIX_C_SOURCE >= 200809L)
+#define D2U_USE_FUTIMENS 1
+#endif
 
 #if defined(D2U_UNIFILE) || (defined(D2U_UNICODE) && defined(_WIN32))
 #include <windows.h>
@@ -1507,6 +1513,7 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
   struct stat StatBuf;
 #endif
   struct utimbuf UTimeBuf;
+  int TempFd = -1;
 #ifndef NO_CHMOD
   mode_t mask;
 #endif
@@ -1655,21 +1662,34 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
   if (d2u_bsclose(InB, ipInFN, ipFlag, "r", progname) == EOF)
     RetVal = -1;
 
-  /* can close output file? */
-  if (TempF) {
-    if (d2u_fclose(TempF, TempPath, ipFlag, "w", progname) == EOF)
+  /* Flush buffered output before changing its timestamps.
+   * The flush is required so that the final fclose() does not
+   * refresh the timestamp after futimens(). */
+  if (!RetVal && TempF) {
+    if (fflush(TempF) == EOF)
       RetVal = -1;
   }
+
+  /* Keep the temporary file open while changing its metadata.  The
+     pathname can be replaced by another process after mkstemp(), so
+     pathname-based metadata operations are not safe here. */
+#if !defined(NO_CHMOD) || !defined(NO_CHOWN) || defined(D2U_USE_FUTIMENS)
+  if (!RetVal && TempF) {
+    TempFd = fileno(TempF);
+    if (TempFd == -1)
+      RetVal = -1;
+  }
+#endif
 
 #ifndef NO_CHMOD
   if (!RetVal)
   {
     if (ipFlag->NewFile == 0) { /* old-file mode */
-       RetVal = chmod (TempPath, StatBuf.st_mode); /* set original permissions */
+       RetVal = fchmod (TempFd, StatBuf.st_mode); /* set original permissions */
     } else {
        mask = umask(0); /* get process's umask */
        umask(mask); /* set umask back to original */
-       RetVal = chmod(TempPath, StatBuf.st_mode & ~mask); /* set original permissions, minus umask */
+       RetVal = fchmod(TempFd, StatBuf.st_mode & ~mask); /* set original permissions, minus umask */
     }
 
     if (RetVal) {
@@ -1689,7 +1709,7 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
      /* Change owner and group of the temporary output file to the original file's uid and gid. */
      /* Required when a different user (e.g. root) has write permission on the original file. */
      /* Make sure that the original owner can still access the file. */
-     if (chown(TempPath, StatBuf.st_uid, StatBuf.st_gid)) {
+     if (fchown(TempFd, StatBuf.st_uid, StatBuf.st_gid)) {
         if (ipFlag->AllowChown) {
           if (ipFlag->verbose) {
             D2U_UTF8_FPRINTF(stderr, "%s: ", progname);
@@ -1699,7 +1719,7 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
           /* Set read/write permissions same as in new file mode. */
           mask = umask(0); /* get process's umask */
           umask(mask); /* set umask back to original */
-          RetVal = chmod(TempPath, StatBuf.st_mode & ~mask); /* set original permissions, minus umask */
+          RetVal = fchmod(TempFd, StatBuf.st_mode & ~mask); /* set original permissions, minus umask */
           if (RetVal) {
              if (ipFlag->verbose) {
                ipFlag->error = errno;
@@ -1729,6 +1749,24 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
     UTimeBuf.actime = StatBuf.st_atime;
     UTimeBuf.modtime = StatBuf.st_mtime;
     /* can change output file time to in file time? */
+#if defined(D2U_USE_FUTIMENS)
+    {
+      struct timespec Times[2];
+      Times[0].tv_sec = UTimeBuf.actime;
+      Times[0].tv_nsec = 0;
+      Times[1].tv_sec = UTimeBuf.modtime;
+      Times[1].tv_nsec = 0;
+      if (futimens(TempFd, Times) == -1) {
+        if (ipFlag->verbose) {
+          ipFlag->error = errno;
+          errstr = strerror(errno);
+          D2U_UTF8_FPRINTF(stderr, "%s: %s:", progname, TempPath);
+          D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
+        }
+        RetVal = -1;
+      }
+    }
+#else
     if (utime(TempPath, &UTimeBuf) == -1) {
       if (ipFlag->verbose) {
         ipFlag->error = errno;
@@ -1738,6 +1776,13 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
       }
       RetVal = -1;
     }
+#endif
+  }
+
+  /* can close output file? */
+  if (TempF) {
+    if (d2u_fclose(TempF, TempPath, ipFlag, "w", progname) == EOF)
+      RetVal = -1;
   }
 
   /* any error? cleanup the temp file */
