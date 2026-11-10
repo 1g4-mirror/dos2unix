@@ -28,6 +28,9 @@
 #include "dos2unix.h"
 #include "querycp.h"
 
+#if !defined(__MSDOS__) && !defined(_WIN32) && !defined(__OS2__)
+#include <fcntl.h>
+#endif
 #include <stdarg.h>
 #include <time.h>
 
@@ -842,6 +845,58 @@ FILE* OpenInFile(char *ipFN)
 #endif
 }
 
+#if !defined(__MSDOS__) && !defined(_WIN32) && !defined(__OS2__)
+/* Open a regular input file without allowing a pathname replacement to
+ * redirect the open to another inode. */
+FILE* OpenInFileNoFollow(const char *ipFN, struct stat *statbuf)
+{
+  struct stat PathStat;
+  struct stat FileStat;
+  int fd;
+  int saved_errno;
+  FILE *fp;
+  int open_flags = O_RDONLY | O_NONBLOCK;
+
+  if (lstat(ipFN, &PathStat) == -1)
+    return NULL;
+  if (!S_ISREG(PathStat.st_mode)) {
+    errno = EINVAL;
+    return NULL;
+  }
+
+#ifdef O_NOFOLLOW
+  open_flags |= O_NOFOLLOW;
+#endif
+  fd = open(ipFN, open_flags);
+  if (fd == -1)
+    return NULL;
+
+  saved_errno = 0;
+  if (fstat(fd, &FileStat) == -1)
+    saved_errno = errno;
+  else if (!S_ISREG(FileStat.st_mode))
+    saved_errno = EINVAL;
+  else if ((PathStat.st_dev != FileStat.st_dev) ||
+           (PathStat.st_ino != FileStat.st_ino))
+    saved_errno = EAGAIN;
+  if (saved_errno != 0) {
+    close(fd);
+    errno = saved_errno;
+    return NULL;
+  }
+
+  fp = fdopen(fd, R_CNTRL);
+  if (fp == NULL) {
+    saved_errno = errno;
+    close(fd);
+    errno = saved_errno;
+    return NULL;
+  }
+  *statbuf = FileStat;
+  return fp;
+}
+#endif
+
 BufferedStream* d2u_bsopen(FILE *f) {
     BufferedStream *stream;
 
@@ -1551,24 +1606,26 @@ int ConvertNewFile(char *ipInFN, char *ipOutFN, CFlag *ipFlag, const char *progn
     return -1;
   }
 
-  /* retrieve ipInFN file date stamp */
+  /* Open and validate the input in one descriptor-based operation for the
+     default old-file mode.  The pathname is also the output name in this
+     mode, so following a replacement symlink would disclose another file. */
+#if !defined(__MSDOS__) && !defined(_WIN32) && !defined(__OS2__)
+  if ((ipFlag->NewFile == 0) && (ipFlag->Follow == SYMLINK_SKIP)) {
+    InF = OpenInFileNoFollow(ipInFN, &StatBuf);
+  } else {
+    if (stat(ipInFN, &StatBuf) == 0)
+      InF = OpenInFile(ipInFN);
+  }
+#else
 #ifdef D2U_UNIFILE
   d2u_MultiByteToWideChar(CP_UTF8, 0, ipInFN, -1, pathw, D2U_MAX_PATH);
-  if (_wstat(pathw, &StatBuf)) {
+  if (_wstat(pathw, &StatBuf) == 0)
 #else
-  if (stat(ipInFN, &StatBuf)) {
+  if (stat(ipInFN, &StatBuf) == 0)
 #endif
-    if (ipFlag->verbose) {
-      ipFlag->error = errno;
-      errstr = strerror(errno);
-      D2U_UTF8_FPRINTF(stderr, "%s: %s:", progname, ipInFN);
-      D2U_ANSI_FPRINTF(stderr, " %s\n", errstr);
-    }
-    return -1;
-  }
+    InF = OpenInFile(ipInFN);
+#endif
 
-  /* can open in file? */
-  InF=OpenInFile(ipInFN);
   if (InF == NULL) {
     if (ipFlag->verbose) {
       ipFlag->error = errno;

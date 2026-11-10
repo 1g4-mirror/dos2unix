@@ -1,3 +1,13 @@
+2026-11-10 <acts1631kjv@proton.me>
+	* Fix: Validated input pathname could be swapped before opening.
+	  (Found by AI). Could happen if a privileged process converts files
+	  in a directory that a less privileged user can modify.
+	  In old file with skip symlink mode, a user could after the symlink
+	  check replace the file with a symlink to a random file. Dos2unix
+	  would then convert the symlynk target to a file with the original
+	  input file name. Dos2unix will now check if the opened file is
+	  not a symlink.
+
 2026-10-30 <acts1631kjv@proton.me>
 	* Fix possible metadata updates (permission/owner/timestamp) on an
 	  user chosen path (Found by AI).

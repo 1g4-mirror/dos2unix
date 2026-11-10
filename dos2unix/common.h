@@ -264,6 +264,9 @@ void PrintVersion(const char *progname, const char *localedir);
 void PrintLocaledir(const char *localedir);
 #endif
 FILE* OpenInFile(char *ipFN);
+#if !defined(__MSDOS__) && !defined(_WIN32) && !defined(__OS2__)
+FILE* OpenInFileNoFollow(const char *ipFN, struct stat *statbuf);
+#endif
 FILE* OpenOutFile(char *opFN);
 FILE* OpenOutFiled(int fd);
 #if defined(__TURBOC__) || defined(__MSYS__)

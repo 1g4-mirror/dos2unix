@@ -1,3 +1,9 @@
+2026-??-??: Version 7.5.8
+
+ * Fixed possible metadata updates on an user chosen path.
+ * Fix: Validated input pathname could be swapped before opening.
+ * New traditional Chinese translation of the manual.
+
 2026-08-27: Version 7.5.7
 
  * Detect a missing UTF-16 low surrogate at the end of a file.
