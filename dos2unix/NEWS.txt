@@ -3,6 +3,7 @@
  * Fixed possible metadata updates on an user chosen path.
  * Fix: Validated input pathname could be swapped before opening.
  * New traditional Chinese translation of the manual.
+ * New Latvian translations of the UI messages and manual.
 
 2026-08-27: Version 7.5.7
 

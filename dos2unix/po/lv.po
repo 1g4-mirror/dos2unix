@@ -1,0 +1,704 @@
+# Latvian translation of dos2unix.
+# Copyright (C) 2026 Erwin Waterlander (msgids)
+# This file is distributed under the same license as the dos2unix package.
+# Rihards Priedītis <rprieditis@gmail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: dos2unix 7.5.7-beta3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 20:31+0100\n"
+"PO-Revision-Date: 2026-11-10 18:57+0200\n"
+"Last-Translator: Rihards Priedītis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <translation-team-lv@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n%10==1 && n%100!=11 ? 1 : 2);\n"
+"X-Generator: Poedit 3.10\n"
+
+#: dos2unix.c:79
+#, c-format
+msgid ""
+"Copyright (C) 2009-%d Erwin Waterlander\n"
+"Copyright (C) 1998      Christian Wurll (Version 3.1)\n"
+"Copyright (C) 1998      Bernd Johannes Wuebben (Version 3.0)\n"
+"Copyright (C) 1994-1995 Benjamin Lin\n"
+"All rights reserved.\n"
+"\n"
+msgstr ""
+"Autortiesības © 2009-%d Erwin Waterlander\n"
+"Autortiesības © 1998      Christian Wurll (versija 3.1)\n"
+"Autortiesības © 1998      Bernd Johannes Wuebben (versija 3.0)\n"
+"Autortiesības © 1994-1995 Benjamin Lin\n"
+"Visas tiesības aizsargātas.\n"
+"\n"
+
+#: dos2unix.c:168 dos2unix.c:294 dos2unix.c:423 dos2unix.c:537 unix2dos.c:192
+#: unix2dos.c:273 unix2dos.c:390 unix2dos.c:468
+msgid "Added line break to last line.\n"
+msgstr "Pēdējai rindai pievienots rindas pārnesums.\n"
+
+#: dos2unix.c:338 dos2unix.c:617 unix2dos.c:319 unix2dos.c:552
+#, c-format
+msgid "program error, invalid conversion mode %d\n"
+msgstr "programmas kļūda, nederīgs pārveides režīms %d\n"
+
+#: dos2unix.c:596 unix2dos.c:533
+#, c-format
+msgid "using code page %d.\n"
+msgstr "izmanto kodu lappusi %d.\n"
+
+#: dos2unix.c:655 unix2dos.c:590
+msgid "error: Value of environment variable DOS2UNIX_LOCALEDIR is too long.\n"
+msgstr "kļūda: vides mainīgā DOS2UNIX_LOCALEDIR vērtība ir pārāk gara.\n"
+
+#: unix2dos.c:69
+#, c-format
+msgid ""
+"Copyright (C) 2009-%d Erwin Waterlander\n"
+"Copyright (C) 1994-1995 Benjamin Lin\n"
+"All rights reserved.\n"
+"\n"
+msgstr ""
+"Autortiesības © 2009-%d Erwin Waterlander\n"
+"Autortiesības © 1994-1995 Benjamin Lin\n"
+"Visas tiesības aizsargātas.\n"
+"\n"
+
+#: common.c:105
+#, c-format
+msgid "Failed to write to temporary output file %s:"
+msgstr "Neizdevās rakstīt pagaidu izvades failā %s:"
+
+#: common.c:107
+#, c-format
+msgid "Failed to close input file %s:"
+msgstr "Neizdevās aizvērt ievades failu %s:"
+
+#: common.c:654
+msgid ""
+"Redistribution and use in source and binary forms, with or without\n"
+"modification, are permitted provided that the following conditions\n"
+"are met:\n"
+"1. Redistributions of source code must retain the above copyright\n"
+"   notice, this list of conditions and the following disclaimer.\n"
+"2. Redistributions in binary form must reproduce the above copyright\n"
+"   notice in the documentation and/or other materials provided with\n"
+"   the distribution.\n"
+"\n"
+msgstr ""
+"Pārdale un lietošana pirmkoda un binārā formā, ar vai bez\n"
+"izmaiņām, ir atļauta, ja tiek ievēroti šādi nosacījumi:\n"
+"1. Pirmkoda pārdalē jāsaglabā iepriekš minētais autortiesību\n"
+"   paziņojums, šis nosacījumu saraksts un šī atruna.\n"
+"2. Pārdalē binārā formā jāatveido iepriekš minētais autortiesību\n"
+"   paziņojums dokumentācijā un/vai citos materiālos, kas tiek\n"
+"   piegādāti kopā ar izplatīto programmatūru.\n"
+"\n"
+
+#: common.c:664
+msgid ""
+"THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY\n"
+"EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n"
+"IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\n"
+"PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE\n"
+"FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n"
+"CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT\n"
+"OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR\n"
+"BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,\n"
+"WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE\n"
+"OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN\n"
+"IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+msgstr ""
+"AUTORS ŠO PROGRAMMATŪRU NODROŠINA „TĀDU, KĀDA TĀ IR”, UN JEBKĀDAS\n"
+"TIEŠAS VAI NETIEŠAS GARANTIJAS, TOSTARP, BET NE TIKAI, NETIEŠĀS\n"
+"GARANTIJAS PAR PĀRDODAMĪBU UN PIEMĒROTĪBU KONKRĒTAM MĒRĶIM, TIEK\n"
+"NOLIEGTAS.  AUTORS NEKĀDĀ GADĪJUMĀ NEATBILD PAR JEBKĀDIEM TIEŠIEM,\n"
+"NETIEŠIEM, NEJAUŠIEM, ĪPAŠIEM, SODA VAI IZRIETOŠIEM ZAUDĒJUMIEM\n"
+"(TOSTARP, BET NE TIKAI, AIZSTĀJĒJPRECU VAI PAKALPOJUMU IEGĀDI;\n"
+"LIETOJUMA, DATU VAI PEĻŅAS ZAUDĒJUMU; VAI DARBĪBAS PĀRTRAUKUMU),\n"
+"KAS RADUŠIES JEBKĀDĀ VEIDĀ UN SASKAŅĀ AR JEBKURU ATBILDĪBAS TEORIJU —\n"
+"LĪGUMA, STINGRAS ATBILDĪBAS VAI CIVILTIESISKA PĀRKĀPUMA (TOSTARP\n"
+"NOLAIDĪBAS VAI CITĀDI) DĒĻ, KAS JEBKĀDĀ VEIDĀ IZRIET NO ŠĪS\n"
+"PROGRAMMATŪRAS LIETOŠANAS, PAT JA PAR ŠĀDU ZAUDĒJUMU IESPĒJAMĪBU\n"
+"BIJA BRĪDINĀTS.\n"
+
+#: common.c:689
+#, c-format
+msgid "Usage: %s [options] [file ...] [-n infile outfile ...]\n"
+msgstr "Lietošana: %s [opcijas] [fails ...] [-n ievades_fails izvades_fails ...]\n"
+
+#: common.c:691
+msgid " --allow-chown         allow file ownership change\n"
+msgstr " --allow-chown         atļaut mainīt faila īpašnieku\n"
+
+#: common.c:693
+msgid " -ascii                default conversion mode\n"
+msgstr " -ascii                noklusējuma pārveides režīms\n"
+
+#: common.c:694
+msgid " -iso                  conversion between DOS and ISO-8859-1 character set\n"
+msgstr " -iso                  pārveide starp DOS un ISO-8859-1 rakstzīmju kopu\n"
+
+#: common.c:695
+msgid "   -1252               use Windows code page 1252 (Western European)\n"
+msgstr "   -1252               izmantot Windows kodu lappusi 1252 (Rietumeiropas)\n"
+
+#: common.c:696
+msgid "   -437                use DOS code page 437 (US) (default)\n"
+msgstr "   -437                izmantot DOS kodu lappusi 437 (ASV) (noklusējums)\n"
+
+#: common.c:697
+msgid "   -850                use DOS code page 850 (Western European)\n"
+msgstr "   -850                izmantot DOS kodu lappusi 850 (Rietumeiropas)\n"
+
+#: common.c:698
+msgid "   -860                use DOS code page 860 (Portuguese)\n"
+msgstr "   -860                izmantot DOS kodu lappusi 860 (portugāļu)\n"
+
+#: common.c:699
+msgid "   -863                use DOS code page 863 (French Canadian)\n"
+msgstr "   -863                izmantot DOS kodu lappusi 863 (Kanādas franču)\n"
+
+#: common.c:700
+msgid "   -865                use DOS code page 865 (Nordic)\n"
+msgstr "   -865                izmantot DOS kodu lappusi 865 (Ziemeļvalstu)\n"
+
+#: common.c:701
+msgid " -7                    convert 8 bit characters to 7 bit space\n"
+msgstr " -7                    pārveidot 8 bitu rakstzīmes uz 7 bitu telpu\n"
+
+#: common.c:703
+msgid " -b, --keep-bom        keep Byte Order Mark\n"
+msgstr " -b, --keep-bom        paturēt baitu secības zīmi (BOM)\n"
+
+#: common.c:705
+msgid " -b, --keep-bom        keep Byte Order Mark (default)\n"
+msgstr " -b, --keep-bom        paturēt baitu secības zīmi (BOM) (noklusējums)\n"
+
+#: common.c:706
+msgid ""
+" -c, --convmode        conversion mode\n"
+"   convmode            ascii, 7bit, iso, mac, default to ascii\n"
+msgstr ""
+" -c, --convmode        pārveides režīms\n"
+"   convmode            ascii, 7bit, iso, mac; noklusējums ascii\n"
+
+#: common.c:709
+msgid ""
+" -D, --display-enc     set encoding of displayed text messages\n"
+"   encoding            ansi, unicode, utf8, default to ansi\n"
+msgstr ""
+" -D, --display-enc     iestatīt parādīto teksta ziņojumu kodējumu\n"
+"   encoding            ansi, unicode, utf8; noklusējums ansi\n"
+
+#: common.c:712
+msgid " -e, --add-eol         add a line break to the last line if there isn't one\n"
+msgstr " -e, --add-eol         pievienot pēdējai rindai rindas pārnesumu, ja tā nav\n"
+
+#: common.c:713
+msgid " --error-binary        return an error when a binary file is skipped\n"
+msgstr " --error-binary        atgriezt kļūdu, ja izlaists binārs fails\n"
+
+#: common.c:714
+msgid " -f, --force           force conversion of binary files\n"
+msgstr " -f, --force           piespiedu kārtā pārveidot binārus failus\n"
+
+#: common.c:717
+msgid " -gb, --gb18030        convert UTF-16 to GB18030\n"
+msgstr " -gb, --gb18030        pārveidot UTF-16 uz GB18030\n"
+
+#: common.c:720
+msgid " -h, --help            display this help text\n"
+msgstr " -h, --help            parādīt šo palīdzības tekstu\n"
+
+#: common.c:721
+msgid ""
+" -i, --info[=FLAGS]    display file information\n"
+"   file ...            files to analyze\n"
+msgstr ""
+" -i, --info[=FLAGS]    parādīt informāciju par failu\n"
+"   fails ...           analizējamie faili\n"
+
+#: common.c:723
+msgid " -k, --keepdate        keep output file date\n"
+msgstr " -k, --keepdate        saglabāt izvades faila datumu\n"
+
+#: common.c:724
+msgid " -L, --license         display software license\n"
+msgstr " -L, --license         parādīt programmatūras licenci\n"
+
+#: common.c:725
+msgid " -l, --newline         add additional newline\n"
+msgstr " -l, --newline         pievienot papildu jaunu rindu\n"
+
+#: common.c:726
+msgid " -m, --add-bom         add Byte Order Mark (default UTF-8)\n"
+msgstr " -m, --add-bom         pievienot baitu secības zīmi (noklusējums UTF-8)\n"
+
+#: common.c:727
+msgid ""
+" -n, --newfile         write to new file\n"
+"   infile              original file in new-file mode\n"
+"   outfile             output file in new-file mode\n"
+msgstr ""
+" -n, --newfile         rakstīt jaunā failā\n"
+"   ievades_fails       sākotnējais fails jaunā faila režīmā\n"
+"   izvades_fails       izvades fails jaunā faila režīmā\n"
+
+#: common.c:731
+msgid " --no-allow-chown      don't allow file ownership change (default)\n"
+msgstr " --no-allow-chown      neatļaut mainīt faila īpašnieku (noklusējums)\n"
+
+#: common.c:733
+msgid " --no-add-eol          don't add a line break to the last line if there isn't one (default)\n"
+msgstr ""
+" --no-add-eol          nepievienot pēdējai rindai rindas pārnesumu, ja tā nav\n"
+"                       (noklusējums)\n"
+
+#: common.c:734
+msgid " --no-error-binary     don't return an error when a binary file is skipped (default)\n"
+msgstr " --no-error-binary     neatgriezt kļūdu, ja izlaists binārs fails (noklusējums)\n"
+
+#: common.c:735
+msgid " -O, --to-stdout       write to standard output\n"
+msgstr " -O, --to-stdout       rakstīt standarta izvadē\n"
+
+#: common.c:736
+msgid ""
+" -o, --oldfile         write to old file (default)\n"
+"   file ...            files to convert in old-file mode\n"
+msgstr ""
+" -o, --oldfile         rakstīt vecajā failā (noklusējums)\n"
+"   fails ...           pārveidojamie faili vecā faila režīmā\n"
+
+#: common.c:738
+msgid " -q, --quiet           quiet mode, suppress all warnings\n"
+msgstr " -q, --quiet           klusais režīms, apspiest visus brīdinājumus\n"
+
+#: common.c:740
+msgid " -r, --remove-bom      remove Byte Order Mark (default)\n"
+msgstr " -r, --remove-bom      noņemt baitu secības zīmi (noklusējums)\n"
+
+#: common.c:742
+msgid " -r, --remove-bom      remove Byte Order Mark\n"
+msgstr " -r, --remove-bom      noņemt baitu secības zīmi\n"
+
+#: common.c:743
+msgid " -s, --safe            skip binary files (default)\n"
+msgstr " -s, --safe            izlaist binārus failus (noklusējums)\n"
+
+#: common.c:745
+msgid " -u,  --keep-utf16     keep UTF-16 encoding\n"
+msgstr " -u,  --keep-utf16  saglabāt UTF-16 kodējumu\n"
+
+#: common.c:746
+msgid " -ul, --assume-utf16le assume that the input format is UTF-16LE\n"
+msgstr " -ul, --assume-utf16le pieņemt, ka ievades formāts ir UTF-16LE\n"
+
+#: common.c:747
+msgid " -ub, --assume-utf16be assume that the input format is UTF-16BE\n"
+msgstr " -ub, --assume-utf16be pieņemt, ka ievades formāts ir UTF-16BE\n"
+
+#: common.c:749
+msgid " -v,  --verbose        verbose operation\n"
+msgstr " -v,  --verbose  detalizēta darbība\n"
+
+#: common.c:751
+msgid " -F, --follow-symlink  follow symbolic links and convert the targets\n"
+msgstr " -F, --follow-symlink  sekot simboliskajām saitēm un pārveidot to mērķus\n"
+
+#: common.c:754
+msgid ""
+" -R, --replace-symlink replace symbolic links with converted files\n"
+"                         (original target files remain unchanged)\n"
+msgstr ""
+" -R, --replace-symlink aizstāt simboliskās saites ar pārveidotajiem failiem\n"
+"                         (sākotnējie mērķa faili paliek nemainīti)\n"
+
+#: common.c:756
+msgid " -S, --skip-symlink    keep symbolic links and targets unchanged (default)\n"
+msgstr ""
+" -S, --skip-symlink    saglabāt simboliskās saites un mērķus nemainītus\n"
+"                       (noklusējums)\n"
+
+#: common.c:758
+msgid " -V, --version         display version number\n"
+msgstr " -V, --version         parādīt versijas numuru\n"
+
+#: common.c:770
+msgid "DOS 16 bit version (Watcom C).\n"
+msgstr "DOS 16 bitu versija (Watcom C).\n"
+
+#: common.c:772
+msgid "DOS 16 bit version (Turbo C).\n"
+msgstr "DOS 16 bitu versija (Turbo C).\n"
+
+#: common.c:774
+msgid "DOS 32 bit version (Watcom C).\n"
+msgstr "DOS 32 bitu versija (Watcom C).\n"
+
+#: common.c:776
+msgid "DOS 32 bit version (DJGPP).\n"
+msgstr "DOS 32 bitu versija (DJGPP).\n"
+
+#: common.c:778
+msgid "MSYS version.\n"
+msgstr "MSYS versija.\n"
+
+#: common.c:780
+msgid "Cygwin version.\n"
+msgstr "Cygwin versija.\n"
+
+#: common.c:782
+msgid "Windows 64 bit version (MinGW-w64).\n"
+msgstr "Windows 64 bitu versija (MinGW-w64).\n"
+
+#: common.c:784
+msgid "Windows 32 bit version (Watcom C).\n"
+msgstr "Windows 32 bitu versija (Watcom C).\n"
+
+#: common.c:786
+msgid "Windows 32 bit version (MinGW-w64).\n"
+msgstr "Windows 32 bitu versija (MinGW-w64).\n"
+
+#: common.c:788
+msgid "Windows 32 bit version (MinGW).\n"
+msgstr "Windows 32 bitu versija (MinGW).\n"
+
+#: common.c:790
+#, c-format
+msgid "Windows 64 bit version (MSVC %d).\n"
+msgstr "Windows 64 bitu versija (MSVC %d).\n"
+
+#: common.c:792
+#, c-format
+msgid "Windows 32 bit version (MSVC %d).\n"
+msgstr "Windows 32 bitu versija (MSVC %d).\n"
+
+#: common.c:794
+msgid "OS/2 version (Watcom C).\n"
+msgstr "OS/2 versija (Watcom C).\n"
+
+#: common.c:796
+msgid "OS/2 version (EMX).\n"
+msgstr "OS/2 versija (EMX).\n"
+
+#: common.c:798
+#, c-format
+msgid "%s version.\n"
+msgstr "%s versija.\n"
+
+#: common.c:804
+msgid "With Unicode UTF-16 support.\n"
+msgstr "Ar Unicode UTF-16 atbalstu.\n"
+
+#: common.c:806
+msgid "Without Unicode UTF-16 support.\n"
+msgstr "Bez Unicode UTF-16 atbalsta.\n"
+
+#: common.c:810
+msgid "With Unicode file name support.\n"
+msgstr "Ar Unicode failu nosaukumu atbalstu.\n"
+
+#: common.c:812
+msgid "Without Unicode file name support.\n"
+msgstr "Bez Unicode failu nosaukumu atbalsta.\n"
+
+#: common.c:816
+msgid "With native language support.\n"
+msgstr "Ar dzimtās valodas atbalstu.\n"
+
+#: common.c:821
+msgid "With support to preserve the user and group ownership of files.\n"
+msgstr "Ar atbalstu failu lietotāja un grupas īpašumtiesību saglabāšanai.\n"
+
+#: common.c:823
+msgid "Without support to preserve the user and group ownership of files.\n"
+msgstr "Bez atbalsta failu lietotāja un grupas īpašumtiesību saglabāšanai.\n"
+
+#: common.c:1039
+msgid "Path for temporary output file is too long:"
+msgstr "Pagaidu izvades faila ceļš ir pārāk garš:"
+
+#: common.c:1325 common.c:1332 common.c:1339 common.c:1346 common.c:1358
+#: common.c:1365
+#, c-format
+msgid "Writing %s BOM.\n"
+msgstr "Raksta %s BOM.\n"
+
+#: common.c:1325 common.c:1378 common.c:2085 common.c:2106
+msgid "UTF-16LE"
+msgstr "UTF-16LE"
+
+#: common.c:1332 common.c:1381 common.c:2087 common.c:2108
+msgid "UTF-16BE"
+msgstr "UTF-16BE"
+
+#: common.c:1339 common.c:1358 common.c:1387 common.c:2098
+msgid "GB18030"
+msgstr "GB18030"
+
+#: common.c:1346 common.c:1365 common.c:1384 common.c:2100
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: common.c:1410
+#, c-format
+msgid "Input file %s has %s BOM.\n"
+msgstr "Ievades failam %s ir %s BOM.\n"
+
+#: common.c:1451 common.c:1493
+msgid "Assuming UTF-16LE encoding.\n"
+msgstr "Pieņem UTF-16LE kodējumu.\n"
+
+#: common.c:1455 common.c:1497
+msgid "Assuming UTF-16BE encoding.\n"
+msgstr "Pieņem UTF-16BE kodējumu.\n"
+
+#: common.c:1660
+#, c-format
+msgid "problems resolving symbolic link '%s'\n"
+msgstr "problēmas, atrisinot simbolisko saiti '%s'\n"
+
+#: common.c:1678
+#, c-format
+msgid "Failed to open temporary output file: %s\n"
+msgstr "Neizdevās atvērt pagaidu izvades failu: %s\n"
+
+#: common.c:1690
+#, c-format
+msgid "using %s as temporary file\n"
+msgstr "izmanto %s kā pagaidu failu\n"
+
+#: common.c:1757 common.c:1785
+#, c-format
+msgid "Failed to change the permissions of temporary output file %s:"
+msgstr "Neizdevās mainīt pagaidu izvades faila %s atļaujas:"
+
+#: common.c:1773
+#, c-format
+msgid "The user and/or group ownership of file %s is not preserved.\n"
+msgstr "Faila %s lietotāja un/vai grupas īpašumtiesības netiek saglabātas.\n"
+
+#: common.c:1795
+#, c-format
+msgid "Failed to change the owner and group of temporary output file %s:"
+msgstr "Neizdevās mainīt pagaidu izvades faila %s īpašnieku un grupu:"
+
+#: common.c:1877
+#, c-format
+msgid "problems renaming '%s' to '%s':"
+msgstr "problēmas, pārdēvējot '%s' par '%s':"
+
+#: common.c:1881
+#, c-format
+msgid "          which is the target of symbolic link '%s'\n"
+msgstr "          kas ir simboliskās saites '%s' mērķis\n"
+
+#: common.c:1883
+#, c-format
+msgid "          output file remains in '%s'\n"
+msgstr "          izvades fails paliek '%s'\n"
+
+#: common.c:2060 common.c:2155
+#, c-format
+msgid "Skipping binary file %s\n"
+msgstr "Izlaiž bināro failu %s\n"
+
+#: common.c:2063 common.c:2158
+#, c-format
+msgid "code page %d is not supported.\n"
+msgstr "kodu lappuse %d netiek atbalstīta.\n"
+
+#: common.c:2067 common.c:2162 common.c:2250
+#, c-format
+msgid "Skipping UTF-16 file %s, the size of wchar_t is %d bytes.\n"
+msgstr "Izlaiž UTF-16 failu %s, wchar_t izmērs ir %d baiti.\n"
+
+#: common.c:2070 common.c:2165
+#, c-format
+msgid "Skipping UTF-16 file %s, an UTF-16 conversion error occurred on line %u.\n"
+msgstr "Izlaiž UTF-16 failu %s, rindā %u radās UTF-16 pārveides kļūda.\n"
+
+#: common.c:2074 common.c:2169
+#, c-format
+msgid "Skipping UTF-16 file %s, UTF-16 conversion is not supported in this version of %s.\n"
+msgstr "Izlaiž UTF-16 failu %s, UTF-16 pārveide netiek atbalstīta šajā %s versijā.\n"
+
+#: common.c:2140 common.c:2239
+#, c-format
+msgid "Skipping %s, not a regular file.\n"
+msgstr "Izlaiž %s, tas nav parasts fails.\n"
+
+#: common.c:2144
+#, c-format
+msgid "Skipping %s, output file %s is a symbolic link.\n"
+msgstr "Izlaiž %s, izvades fails %s ir simboliskā saite.\n"
+
+#: common.c:2146
+#, c-format
+msgid "Skipping symbolic link %s.\n"
+msgstr "Izlaiž simbolisko saiti %s.\n"
+
+#: common.c:2149 common.c:2244
+#, c-format
+msgid "Skipping symbolic link %s, target is not a regular file.\n"
+msgstr "Izlaiž simbolisko saiti %s, mērķis nav parasts fails.\n"
+
+#: common.c:2152
+#, c-format
+msgid "Skipping %s, target of symbolic link %s is not a regular file.\n"
+msgstr "Izlaiž %s, simboliskās saites %s mērķis nav parasts fails.\n"
+
+#: common.c:2177
+#, c-format
+msgid "converting file %s to file %s in Unix format...\n"
+msgstr "pārveido failu %s par failu %s Unix formātā...\n"
+
+#: common.c:2179
+#, c-format
+msgid "converting file %s to Unix format...\n"
+msgstr "pārveido failu %s Unix formātā...\n"
+
+#: common.c:2183
+#, c-format
+msgid "converting file %s to file %s in Mac format...\n"
+msgstr "pārveido failu %s par failu %s Mac formātā...\n"
+
+#: common.c:2185
+#, c-format
+msgid "converting file %s to Mac format...\n"
+msgstr "pārveido failu %s Mac formātā...\n"
+
+#: common.c:2188
+#, c-format
+msgid "converting file %s to file %s in DOS format...\n"
+msgstr "pārveido failu %s par failu %s DOS formātā...\n"
+
+#: common.c:2190
+#, c-format
+msgid "converting file %s to DOS format...\n"
+msgstr "pārveido failu %s DOS formātā...\n"
+
+#. TRANSLATORS:
+#. 1st %s is encoding of input file.
+#. 2nd %s is name of input file.
+#. 3rd %s is encoding of output file.
+#. 4th %s is name of output file.
+#. E.g.: converting UTF-16LE file in.txt to UTF-8 file out.txt in Unix format...
+#: common.c:2202
+#, c-format
+msgid "converting %s file %s to %s file %s in Unix format...\n"
+msgstr "pārveido %s failu %s par %s failu %s Unix formātā...\n"
+
+#. TRANSLATORS:
+#. 1st %s is encoding of input file.
+#. 2nd %s is name of input file.
+#. 3rd %s is encoding of output (input file is overwritten).
+#. E.g.: converting UTF-16LE file foo.txt to UTF-8 Unix format...
+#: common.c:2209
+#, c-format
+msgid "converting %s file %s to %s Unix format...\n"
+msgstr "pārveido %s failu %s par %s Unix formātā...\n"
+
+#: common.c:2213
+#, c-format
+msgid "converting %s file %s to %s file %s in Mac format...\n"
+msgstr "pārveido %s failu %s par %s failu %s Mac formātā...\n"
+
+#: common.c:2215
+#, c-format
+msgid "converting %s file %s to %s Mac format...\n"
+msgstr "pārveido %s failu %s par %s Mac formātā...\n"
+
+#: common.c:2218
+#, c-format
+msgid "converting %s file %s to %s file %s in DOS format...\n"
+msgstr "pārveido %s failu %s par %s failu %s DOS formātā...\n"
+
+#: common.c:2220
+#, c-format
+msgid "converting %s file %s to %s DOS format...\n"
+msgstr "pārveido %s failu %s par %s DOS formātā...\n"
+
+#: common.c:2227
+#, c-format
+msgid "problems converting file %s to file %s\n"
+msgstr "problēmas, pārveidojot failu %s par failu %s\n"
+
+#: common.c:2229
+#, c-format
+msgid "problems converting file %s\n"
+msgstr "problēmas, pārveidojot failu %s\n"
+
+#: common.c:2392 common.c:2449
+#, c-format
+msgid "cannot read from input file %s:"
+msgstr "nevar lasīt no ievades faila %s:"
+
+#: common.c:2633
+#, c-format
+msgid "wrong flag '%c' for option -i or --info\n"
+msgstr "nepareizs karogs '%c' opcijai -i vai --info\n"
+
+#: common.c:2774 common.c:2817
+#, c-format
+msgid "active code page: %d\n"
+msgstr "aktīvā kodu lappuse: %d\n"
+
+#: common.c:2829
+#, c-format
+msgid "invalid %s conversion mode specified\n"
+msgstr "norādīts nederīgs %s pārveides režīms\n"
+
+#: common.c:2837 common.c:2867
+#, c-format
+msgid "option '%s' requires an argument\n"
+msgstr "opcijai '%s' nepieciešams arguments\n"
+
+#: common.c:2859
+#, c-format
+msgid "invalid %s display encoding specified\n"
+msgstr "norādīts nederīgs %s parādīšanas kodējums\n"
+
+#: common.c:2879 common.c:2893 common.c:2905
+#, c-format
+msgid "target of file %s not specified in new-file mode\n"
+msgstr "jaunā faila režīmā nav norādīts faila %s mērķis\n"
+
+#: common.c:2988
+#, c-format
+msgid "cannot read from input file: %s\n"
+msgstr "nevar lasīt no ievades faila: %s\n"
+
+#: common.c:2998 common.c:3010
+#, c-format
+msgid "cannot write to output file: %s\n"
+msgstr "nevar rakstīt izvades failā: %s\n"
+
+#: common.c:3041 common.c:3082
+msgid "error: Invalid surrogate pair. Missing low surrogate.\n"
+msgstr "kļūda: nederīgs aizstājējpāris. Trūkst apakšējā aizstājēja.\n"
+
+#: common.c:3100
+msgid "error: Invalid surrogate pair. Missing high surrogate.\n"
+msgstr "kļūda: nederīgs aizstājējpāris. Trūkst augšējā aizstājēja.\n"
+
+#: common.c:3203
+#, c-format
+msgid "Converted %u out of %u line breaks.\n"
+msgstr "Pārveidoti %u no %u rindu pārnesumiem.\n"
+
+#: common.c:3217
+#, c-format
+msgid "Binary symbol 0x00%02X found at line %u\n"
+msgstr "Binārs simbols 0x00%02X atrasts rindā %u\n"
+
+#: common.c:3241
+#, c-format
+msgid "Binary symbol 0x%02X found at line %u\n"
+msgstr "Binārs simbols 0x%02X atrasts rindā %u\n"

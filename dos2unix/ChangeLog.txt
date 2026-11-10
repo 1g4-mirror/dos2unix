@@ -1,3 +1,6 @@
+2026-11-10 Rihards Priedītis <rprieditis@gmail.com>
+	* New Latvian translations of the UI messages and manual.
+
 2026-11-10 <acts1631kjv@proton.me>
 	* Fix: Validated input pathname could be swapped before opening.
 	  (Found by AI). Could happen if a privileged process converts files

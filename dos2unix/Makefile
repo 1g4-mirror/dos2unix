@@ -1,6 +1,6 @@
 # Author: Erwin Waterlander
 #
-#   Copyright (C) 2009-2025 Erwin Waterlander
+#   Copyright (C) 2009-2026 Erwin Waterlander
 #   All rights reserved.
 #
 #   Redistribution and use in source and binary forms, with or without
@@ -510,6 +510,9 @@ man/it/man1/$(PACKAGE).$(HTMLEXT) : man/it/man1/$(PACKAGE).pod
 
 man/ko/man1/$(PACKAGE).$(HTMLEXT) : man/ko/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/맥 에서 유닉스에서, 그 반대로의 텍스트 파일 형식 변환 프로그램" $< > $@
+
+man/lv/man1/$(PACKAGE).$(HTMLEXT) : man/lv/man1/$(PACKAGE).pod
+	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac teksta failu formāta pārveidotājs uz Unix formātu un otrādi" $< > $@
 
 man/nl/man1/$(PACKAGE).$(HTMLEXT) : man/nl/man1/$(PACKAGE).pod
 	PERL_UNICODE=SDA pod2html --title="$(PACKAGE) $(DOS2UNIX_VERSION) - DOS/Mac naar Unix en vice versa tekstbestand formaat omzetter" $< > $@

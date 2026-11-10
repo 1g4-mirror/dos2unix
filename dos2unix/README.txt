@@ -104,6 +104,7 @@ TRANSLATORS
         Japanese              Yasuaki Taniguchi            Version 7.1.1
         Japanese              Takeshi Hamasaki             Version 7.3.4 - 7.5.7
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.7
+        Latvian               Rihards Priedītis            Version 7.5.7
         Norwegian Bokmaal     Åka Sikrom                   Version 6.0.6 - 7.4.0
         Norwegian Bokmaal     Johnny A. Solbu              Version 7.5.0 - 7.5.7
         Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.7
@@ -136,6 +137,7 @@ TRANSLATORS
         German                Mario Blättermann            Version 6.0.5 - 7.5.6
         German                Roland Illig                 Version 7.4.2
         Korean                Seong-ho Cho                 Version 7.4.4 - 7.5.6
+        Latvian               Rihards Priedītis            Version 7.5.7
         Polish                Jakub Bogusz                 Version 6.0.5 - 7.5.6
         Romanian              Remus-Gabriel Chelu          Version 7.4.4 - 7.5.6
         Serbian               Мирослав Николић             Version 7.4.3 - 7.5.6
@@ -210,6 +212,7 @@ ACKNOWLEDGEMENTS
         acts1631kjv           Fixed the processing of files containing only half a BOM.
         acts1631kjv           Fixed conversion of CR-CR-LF in unix2dos.
 	acts1631kjv           Fixed possible metadata updates on an user chosen path.
+	acts1631kjv           Fix: Validated input pathname could be swapped before opening.
 
 
 FINDUTILS
